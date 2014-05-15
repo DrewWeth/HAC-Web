@@ -67,7 +67,7 @@
 								<li><a href="guilds.php">Guild List</a></li>
 								<li><a href="guildwar.php">Guild Wars</a></li>
 							</ul>
-						<?php } ?></li>
+						<?php } ?>
 			          </ul>
 			        </li>
 			    </ul>
