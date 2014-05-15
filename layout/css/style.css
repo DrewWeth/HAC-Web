@@ -11,9 +11,8 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 body { 
-  font: normal .80em arial, sans-serif;
-  background: #F8F7EE url(../images/pattern.png);
-  color: #7A7A68;
+  /* background: #F8F7EE url(../images/pattern.png); */
+  color: #2c4762;
 }
 /*
 p { 
