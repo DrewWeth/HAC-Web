@@ -6,8 +6,11 @@
   <link rel="stylesheet" type="text/css" href="layout/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="layout/css/style.css" />
 
+  <script type='text/javascript' src="layout/js/bootstrap.min.js"></script>
+  <script type='text/javascript' src='layout/js/jquery-1.8.2.js'></script>
+
+
   <!-- modernizr enables HTML5 elements and feature detects -->
-  <script type="text/javascript" src="layout/js/modernizr-1.5.min.js"></script>
 </head>
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
