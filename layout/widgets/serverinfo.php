@@ -1,7 +1,8 @@
 <div class="sidebar">
 		<h2>Server Information</h2>
 		<div class="inner">
-			<table class="table">
+		<tbody>
+			<table class="table table-striped">
 				<tr>
 					<td>
 						<?php
@@ -40,5 +41,6 @@
 					</td>
 				</tr>
 			</table>
+		</tbody>
 		</div>
 </div>
