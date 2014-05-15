@@ -25,7 +25,7 @@
 					if ($config['status']['status_check']) {
 						@$sock = fsockopen ($config['status']['status_ip'], $config['status']['status_port'], $errno, $errstr, 1);
 						if(!$sock) {
-							echo "<span style="color:red;font-weight:bold;"><center>Server Offline!</center></span><br/>";
+							echo "<span style='color:red;font-weight:bold;'><center>Server Offline!</center></span><br/>";
 							$status = false;
 						}
 						else {
