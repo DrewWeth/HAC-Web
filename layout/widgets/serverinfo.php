@@ -4,22 +4,6 @@
 		<table>
 			<tr>
 				<td>
-					<?php if ($status) {
-					?>
-						<a href="onlinelist.php"><?php echo user_count_online();?> player online</a>
-					<?php
-					}
-					?>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<?php echo user_count_accounts();?> registered accounts
-				</td>
-			</tr>
-
-			<tr>
-				<td>
 					<?php
 					$status = true;
 					if ($config['status']['status_check']) {
@@ -38,6 +22,21 @@
 						}
 					}
 					?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<?php if ($status) {
+					?>
+						<a href="onlinelist.php"><?php echo user_count_online();?> player online</a>
+					<?php
+					}
+					?>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<a href="register.php"><?php echo user_count_accounts();?> registered accounts</a>
 				</td>
 			</tr>
 		</table>
