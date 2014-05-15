@@ -3,10 +3,9 @@
   <meta name="description" content="website description" />
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
-    <script type='text/javascript' src='layout/js/jquery-2.1.1.min.js'></script>
-
+  
+  <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
   <script type='text/javascript' src="layout/js/bootstrap.min.js"></script>
-
   <link rel="stylesheet" type="text/css" href="layout/css/bootstrap.css" />
   <link rel="stylesheet" type="text/css" href="layout/css/style.css" />
 
