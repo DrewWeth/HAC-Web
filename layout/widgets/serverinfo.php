@@ -4,7 +4,7 @@
 		<tbody>
 			<table class="table table-striped">
 				<tr>
-					<td>
+					<td><center>
 						<?php
 						$status = true;
 						if ($config['status']['status_check']) {
@@ -23,7 +23,7 @@
 							}
 						}
 						?>
-					</td>
+					</center></td>
 				</tr>
 				<tr>
 					<td>
