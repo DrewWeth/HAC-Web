@@ -156,7 +156,7 @@ header {
 }
 
 #logo_text h1 a .logo_colour { 
-  color: ##C00000;
+  color: #C00000;
 }
 
 #logo_text a:hover .logo_colour { 
@@ -373,6 +373,7 @@ table tr th, table tr td {
   padding: 7px 4px;
   text-align: left;
 }
+*/
 
 tr.yellow td {
   background: #555555;
@@ -386,7 +387,6 @@ table tr td {
   color: #47433F;
   border-top: 1px solid #FFF;
 }
-*/
 
 /* guild war */
 tr.special:hover td {
@@ -553,7 +553,7 @@ ul#nav li a:hover,ul#nav li a:focus {
   max-width: 720px;
 }
 #news {
-  width: 735px;
+  width: 100%;
 }
 
 /* /////////\/\\\\\\\\
