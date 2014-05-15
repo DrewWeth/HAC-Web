@@ -179,8 +179,7 @@ nav {
 }
 */
 #site_content { 
-  width: 75%;
-  float: left;
+  width: 100%;
   overflow: hidden;
   margin: 0px auto 0 auto;
   padding: 15px 0 40px 0;
