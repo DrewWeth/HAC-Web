@@ -133,7 +133,7 @@
 	$config['salt'] = false; // Some noob 0.3.6 servers don't support salt.
 	
 	// Restricted names
-	$config['invalidNameTags'] = array("god", "gm", "cm", "gamemaster", "hac" "hoster", "admin", "admim", "adm", "owner", "staff");
+	$config['invalidNameTags'] = array("god", "gm", "cm", "gamemaster", "hac", "hoster", "admin", "admim", "adm", "owner", "staff");
 	
 	// Level requirement to create guild? (Just set it to 1 to allow all levels).
 	$config['create_guild_level'] = 8;
