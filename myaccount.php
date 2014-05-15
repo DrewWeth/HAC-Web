@@ -148,6 +148,7 @@ if (!empty($_POST['selected_comment'])) {
 				</table>
 			</tbody>
 			<!-- FORMS TO HIDE CHARACTER-->
+			<h3>Options</h3>
 			<tbody>
 				<table class="table table-striped">
 
