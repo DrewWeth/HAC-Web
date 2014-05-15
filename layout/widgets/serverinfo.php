@@ -2,7 +2,7 @@
 	<div class="container">
 		<h2>Server Information</h2>
 		<div class="inner">
-			<table class="table table-striped">
+			<table class="table">
 				<tr>
 					<td>
 						<?php

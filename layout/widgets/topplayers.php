@@ -13,7 +13,7 @@
 		}
 
 		$count = 1;
-		echo "<table class=\"table table-striped\">";
+		echo "<table class=\"table\">";
 		foreach($players as $player) {
 			echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a> (". $player['level'] .")</td></tr>";
 			$count++;
