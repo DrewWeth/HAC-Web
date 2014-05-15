@@ -47,7 +47,7 @@
 	// Town ids and names: (In RME map editor, open map, click CTRL + T to view towns, their names and their IDs. 
 	// townID => 'townName' etc: ['3'=>'Thais']
 	$config['towns'] = array(
-		0 => 'Aleda',
+		'0' => 'Aleda'
 	);
 	
 	// Leave on black square in map and player should get teleported to their selected town.

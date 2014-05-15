@@ -4,7 +4,7 @@ include 'layout/overall/header.php';
 
 if (empty($_POST) === false) {
 	// $_POST['']
-	$required_fields = array('name', 'selected_town');
+	$required_fields = array('name');
 	foreach($_POST as $key=>$value) {
 		if (empty($value) && in_array($key, $required_fields) === true) {
 			$errors[] = 'You need to fill in all fields.';
@@ -44,10 +44,7 @@ if (empty($_POST) === false) {
 			if (!in_array((int)$_POST['selected_vocation'], $config['available_vocations'])) {
 				$errors[] = 'Permission Denied. Wrong vocation.';
 			}
-			// Validate town id
-			if (!in_array((int)$_POST['selected_town'], $config['available_towns'])) {
-				$errors[] = 'Permission Denied. Wrong town.';
-			}
+			
 			// Validate gender id
 			if (!in_array((int)$_POST['selected_gender'], array(0, 1))) {
 				$errors[] = 'Permission Denied. Wrong gender.';
@@ -55,9 +52,7 @@ if (empty($_POST) === false) {
 			if (vocation_id_to_name($_POST['selected_vocation']) === false) {
 				$errors[] = 'Failed to recognize that vocation, does it exist?';
 			}
-			if (town_id_to_name($_POST['selected_town']) === false) {
-				$errors[] = 'Failed to recognize that town, does it exist?';
-			}
+
 			if (gender_exist($_POST['selected_gender']) === false) {
 				$errors[] = 'Failed to recognize that gender, does it exist?';
 			}
@@ -88,7 +83,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			'name'		=>	format_character_name($_POST['name']),
 			'account_id'=>	$session_user_id,
 			'vocation'	=>	$_POST['selected_vocation'],
-			'town_id'	=>	$_POST['selected_town'],
+			'town_id'	=>	1,
 			'sex'		=>	$_POST['selected_gender'],
 			'lastip'	=>	ip2long(getIP()),
 			'created'	=>	time()
@@ -124,19 +119,11 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 				<!-- Available genders to select from when creating character -->
 				Gender:<br>
 				<select name="selected_gender">
-				<option value="1">Male(boy)</option>
-				<option value="0">Female(girl)</option>
+				<option value="1">Male</option>
+				<option value="0">Female</option>
 				</select>
 			</li>
-			<li>
-				<!-- Available towns to select from when creating character -->
-				Town:<br>
-				<select name="selected_town">
-				<?php foreach ($config['available_towns'] as $tid) { ?>
-				<option value="<?php echo $tid; ?>"><?php echo town_id_to_name($tid); ?></option>
-				<?php } ?>
-				</select>
-			</li>
+			
 			<?php
 				/* Form file */
 				Token::create();
