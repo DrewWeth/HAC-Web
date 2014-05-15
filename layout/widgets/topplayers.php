@@ -1,5 +1,5 @@
 <div class="sidebar">
-	<h3>Top 5 players</h3>
+	<h2>Top 5 players</h2>
 	<?php
 
 	$cache = new Cache('engine/cache/topPlayer');

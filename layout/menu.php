@@ -5,12 +5,13 @@
 
 	<li><a href="forum.php">Community</a>
 		<ul> <!-- (sub)dropdown COMMUNITY -->
+			<li><a href="highscores.php">Highscores</a></li>
 			<li><a href="houses.php">Houses</a></li>
 			<li><a href="deaths.php">Deaths</a></li>
 			<li><a href="killers.php">Killers</a></li>
 		</ul>
 	</li>
-	<li><a href="http://www.github.com/DrewWeth">Forum</a></li>
+	<li><a href="forum.php">Forum</a></li>
 	
 	<li><a href="shop.php">Shop</a>
 		<ul> <!-- (sub)dropdown SHOP -->

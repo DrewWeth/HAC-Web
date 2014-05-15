@@ -3,10 +3,10 @@
 	// TFS 0.2 = TFS_02
 	// TFS 0.3 = TFS_03 (If ur using 0.3.6, set $config['salt'] to false)!
 	// TFS 0.4 = TFS_03
-	$config['TFSVersion'] = 'TFS_02';
+	$config['TFSVersion'] = 'TFS_03';
 	
 	$config['site_title'] = 'Honor And Chaos';
-	$config['site_title_context'] = '2D Isometric MMORPG';
+	$config['site_title_context'] = 'RPG/PVP';
 	
 	// ------------------------ \\
 	// MYSQL CONNECTION DETAILS \\
@@ -47,16 +47,7 @@
 	// Town ids and names: (In RME map editor, open map, click CTRL + T to view towns, their names and their IDs. 
 	// townID => 'townName' etc: ['3'=>'Thais']
 	$config['towns'] = array(
-		0 => 'Town 0',
-		1 => 'Town 1',
-		2 => 'Town 2',
-		3 => 'Town 3',
-		4 => 'Town 4',
-		5 => 'Town 5',
-		6 => 'Town 6',
-		7 => 'Town 7',
-		8 => 'Town 8',
-		9 => 'Town 9',
+		0 => 'Aleda',
 	);
 	
 	// Leave on black square in map and player should get teleported to their selected town.
@@ -72,7 +63,7 @@
 		1 => 'Accepted',
 		2 => 'Rejected',
 		3 => 'Cancelled',
-		4 => '???',
+		4 => 'Status',
 		5 => 'Ended',
 	);
 	
@@ -120,7 +111,7 @@
 	$config['maxL'] = 20;
 	
 	// Maximum allowed character name words. Etc 2 words = "Bob Kåre", 3 words: "Bob Arne Kåre" as max char name words.
-	$config['maxW'] = 2;
+	$config['maxW'] = 3;
 	
 	// -------------- \\
 	// WEBSITE STUFF  \\
@@ -138,11 +129,11 @@
 		'status_port' => "7171",
 		);
 
-	$config['validate_IP'] = true; // Only allow legal IP addresses to register and create character.
+	$config['validate_IP'] = false; // Only allow legal IP addresses to register and create character.
 	$config['salt'] = false; // Some noob 0.3.6 servers don't support salt.
 	
 	// Restricted names
-	$config['invalidNameTags'] = array("god", "gm", "cm", "gamemaster", "hoster", "admin", "admim", "adm", "owner", "staff");
+	$config['invalidNameTags'] = array("god", "gm", "cm", "gamemaster", "hac" "hoster", "admin", "admim", "adm", "owner", "staff");
 	
 	// Level requirement to create guild? (Just set it to 1 to allow all levels).
 	$config['create_guild_level'] = 8;
@@ -204,7 +195,7 @@
 	// IMPORTANT! Write a character name(that exist) that will represent website bans!
 	// Or remember to create character "God Website" character exist.
 	// If you don't do this, bann from admin panel won't work properly.
-	$config['website_char'] = 'God Website';
+	$config['website_char'] = 'Account Manager';
 	
 	// date format
 	$config['date'] = "d F Y (H:i)";
@@ -219,7 +210,9 @@
 		2 => 'Tutor',
 		3 => 'Gamemaster',
 		4 => 'Community Manager',
-		5 => 'God',
+		5 => 'God (5)',
+		6 => '(6)',
+		7 => 'Owner (7)',
 	);
 	
 	// Enable OS advanced feautures? false = no, true = yes
@@ -333,7 +326,7 @@
 	*/
 	$config['ip_security'] = array(
 		'time_period' => 10, // In seconds
-		'max_activity' => 10, // page clicks/visits
+		'max_activity' => 13, // page clicks/visits
 		'max_post' => 6, // register, create, highscore, character search such actions
 		'max_account' => 1, // register
 		'max_character' => 1, // create char
@@ -390,7 +383,7 @@
 	// If useDB is set to true, player can shop in-game as well using Znote LUA shop system plugin.
 	$config['shop'] = array(
 		'enabled' => true,
-		'useDB' => false, // Fetch offers from database, or the below config array
+		'useDB' => true, // Fetch offers from database, or the below config array
 		'showImage' => true,
 		'imageServer' => 'items.znote.eu',
 	);
@@ -400,37 +393,27 @@
 		// offer 1
 		1 => array(
 			'type' => 1, // 1 = item id offers, 2 = premium days [itemid ignored], 3 = sex change[itemid & count ignored], 4+ = custom.
-			'itemid' => 2160, // item to get in-game
-			'count' => 5, //if type is 2, this represents premium days
-			'describtion' => "Crystal coin.", // Describtion shown on website
-			'points' => 100, // How many points this offer costs
+			'itemid' => 8925, // item to get in-game
+			'count' => 1, //if type is 2, this represents premium days
+			'describtion' => "A solar axe", // Describtion shown on website
+			'points' => 3 // How many points this offer costs
 		),
 		
 		// offer 2
 		2 => array(
 			'type' => 1,
-			'itemid' => 2392,
+			'itemid' => 8931,
 			'count' => 1,
-			'describtion' => "Fire sword.",
-			'points' => 10,
+			'describtion' => "An ember sword",
+			'points' => 3
 		),
-		
-		// offer 3
+
 		3 => array(
-			'type' => 2,
-			'itemid' => 12466, // Item to display on page
-			'count' => 7,
-			'describtion' => "Premium membership.",
-			'points' => 25,
-		),
-		
-		// offer 4
-		4 => array(
-			'type' => 3,
-			'itemid' => 12666,
+			'type' => 1,
+			'itemid' => 2444,
 			'count' => 3,
-			'describtion' => "Change character gender.",
-			'points' => 10,
-		),
+			'describtion' => "A hammer of wrath",
+			'points' => 2
+		)
 	);
 ?>
