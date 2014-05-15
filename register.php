@@ -106,7 +106,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	}
 ?>
 	<form action="" method="post">
-		<table>
+		<table border="0">
 			<tr>
 				<td>Account Name</td>
 				<td><input type="text" name="username"></td>
@@ -127,8 +127,8 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			if ($config['use_captcha']) {
 				?>
 				<tr>
-					<td><b>Write the image symbols in the text field to verify that you are a human:</b>
-					<img id="captcha" src="captcha/securimage_show.php" alt="CAPTCHA Image" /><br>
+					<td>Verification</td>
+					<td><img id="captcha" src="captcha/securimage_show.php" alt="CAPTCHA Image" /><br>
 					<input type="text" name="captcha_code" size="10" maxlength="6" />
 					<a href="#" onclick="document.getElementById('captcha').src = 'captcha/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br><br>
 					</td>
