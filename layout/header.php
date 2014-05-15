@@ -42,8 +42,12 @@
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
 			          <ul class="dropdown-menu">
-			         	<li><a href="highscores.php">Highscores</a></li>
-						<li><a href="houses.php">Houses</a></li>
+			         	<li>
+			         		<form id="my_form" action="highscores.php" method="post">
+			         			<select name="selected" value="7"></select>
+								<a href="javascript:{}" onclick="document.getElementById('my_form').submit(); return false;">Highscores</a>
+							</form></li>	
+			         	<li><a href="houses.php">Houses</a></li>
 						<li><a href="deaths.php">Deaths</a></li>
 						<li><a href="killers.php">Killers</a></li>
 			          </ul>
