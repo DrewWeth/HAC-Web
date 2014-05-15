@@ -13,10 +13,12 @@
 	}
 
 	$count = 1;
+	echo "<table>";
 	foreach($players as $player) {
-		echo "$count - <a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a> (". $player['level'] .").<br>";
+		echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a> (". $player['level'] .")</td></tr>";
 		$count++;
 	}
+	echo "</table>";
 	?>
 	<br>
 </div>

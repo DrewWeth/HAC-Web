@@ -122,11 +122,8 @@ if (!empty($_POST['selected_comment'])) {
 	$char_count = user_character_list_count($session_user_id);
 	?>
 	<div id="myaccount">
-		<h1>My account</h1>
-		<p>Welcome to your account page, <?php echo $user_data['name']; ?></p>
-
-		<h2>Character List: <?php echo $char_count; ?> characters.</h2>
-		<?php
+		<h2>Account Management</h2><hr>
+		<h3>Characters<h3>
 		// Echo character list!
 		$char_array = user_character_list($user_data['id']);
 		// Design and present the list
