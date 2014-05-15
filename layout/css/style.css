@@ -179,7 +179,7 @@ nav {
 }
 */
 #site_content { 
-  width: 1000px;
+  width: 100%;
   overflow: hidden;
   margin: 0px auto 0 auto;
   padding: 15px 0 40px 0;
@@ -187,12 +187,12 @@ nav {
 
 #sidebar_container { 
   float: right;
-  width: 224px;
+  width: 25%;
 }
 
 .sidebar { 
   float: right;
-  width: 25%;
+  width: 100%;
   margin: 0 0 17px 0;
   background: #FFF;
   border: 1px solid #eee;
