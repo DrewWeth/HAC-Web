@@ -32,12 +32,12 @@
 				</tr>
 				</form>
 				<tr>
-					<td>
+					<td rowspan="2">
 						<center><a href="register.php">Create Account</a></center>
 					</td>
 				</tr>
 				<tr>
-					<td>
+					<td rowspan="2">
 						<center>Lost <a href="recovery.php?mode=username">username</a> or <a href="recovery.php?mode=password">password</a>?></center>
 					</td>
 				</tr>
