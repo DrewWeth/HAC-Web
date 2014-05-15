@@ -130,27 +130,32 @@ if (!empty($_POST['selected_comment'])) {
 		// Design and present the list
 		if ($char_array) {
 			?>
-			<table id="myaccountTable">
-				<tr class="yellow">
-					<td>NAME</td><td>LEVEL</td><td>VOCATION</td><td>TOWN</td><td>LAST LOGIN</td><td>STATUS</td><td>HIDE</td>
-				</tr>
-				<?php
-				$characters = array();
-				foreach ($char_array as $value) {
-					// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
-					echo '<tr>';
-					echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. $value['level'] .'</td><td>'. $value['vocation'] .'</td><td>'. $value['town_id'] .'</td><td>'. $value['lastlogin'] .'</td><td>'. $value['online'] .'</td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
-					echo '</tr>';
-					$characters[] = $value['name'];
-				}
-			?>
-			</table>
+			<tbody>
+				<table class="table table-condensed" id="myaccountTable">
+					<tr class="yellow">
+						<td>NAME</td><td>LEVEL</td><td>VOCATION</td><td>TOWN</td><td>LAST LOGIN</td><td>STATUS</td><td>HIDE</td>
+					</tr>
+					<?php
+					$characters = array();
+					foreach ($char_array as $value) {
+						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
+						echo '<tr>';
+						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. $value['level'] .'</td><td>'. $value['vocation'] .'</td><td>'. $value['town_id'] .'</td><td>'. $value['lastlogin'] .'</td><td>'. $value['online'] .'</td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
+						echo '</tr>';
+						$characters[] = $value['name'];
+					}
+				?>
+				</table>
+			</tbody>
 			<!-- FORMS TO HIDE CHARACTER-->
+			<tbody>
+				<table class="table table-striped">
+
 			<form action="" method="post">
-				<ul>
-					<li>
-						Character hide:<br>
-						<select name="selected_hide">
+				<tr>
+					<td>
+						Character hide</td>
+						<td><select name="selected_hide">
 						<?php
 						for ($i = 0; $i < $char_count; $i++) {
 							if (user_character_hide($characters[$i]) == 1) {
@@ -165,35 +170,43 @@ if (!empty($_POST['selected_comment'])) {
 							/* Form file */
 							Token::create();
 						?>
+					</td><td>
 						<input type="submit" value="Toggle hide">
-					</li>
-				</ul>
+					</td>
+				</tr>
 			</form>
 			<!-- FORMS TO CHANGE CHARACTER COMMENT-->
 			<form action="" method="post">
-				<ul>
-					<li>
-						Character comment:<br>
-						<select name="selected_comment">
-						<?php
-						for ($i = 0; $i < $char_count; $i++) {
-							echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-						}
-						?>
-						</select>
-						<?php
-							/* Form file */
-							Token::create();
-						?>
-						<input type="submit" value="Change comment">
+
+					<tr>
+						<td>Character comment
+						</td>
+						<td>
+							<select name="selected_comment">
+							<?php
+							for ($i = 0; $i < $char_count; $i++) {
+								echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+							}
+							?>
+							</select>
+							<?php
+								/* Form file */
+								Token::create();
+							?>
+						</td>
+						<td>
+							<input type="submit" value="Change comment">
+						</td>
 					</li>
 				</ul>
 			</form>
 			<!-- FORMS TO CHANGE CHARACTER GENDER-->
 			<form action="" method="post">
-				<ul>
-					<li>
-						Change character gender:<br>
+				<tr>
+					<td>
+						Change character gender
+					</td>
+					<td>
 						<select name="change_gender">
 						<?php
 						for ($i = 0; $i < $char_count; $i++) {
@@ -205,15 +218,19 @@ if (!empty($_POST['selected_comment'])) {
 							/* Form file */
 							Token::create();
 						?>
+					</td>
+					<td>
 						<input type="submit" value="Change gender">
-					</li>
-				</ul>
+					</td>
+				</tr>
 			</form>
 			<!-- FORMS TO DELETE CHARACTER-->
 			<form action="" method="post">
-				<ul>
-					<li>
-						Delete character:<br>
+				<tr>
+					<td>
+						Delete character
+					</td>
+					<td>	
 						<select name="selected_delete">
 						<?php
 						for ($i = 0; $i < $char_count; $i++) {
@@ -225,10 +242,14 @@ if (!empty($_POST['selected_comment'])) {
 							/* Form file */
 							Token::create();
 						?>
+					</td>
+					<td>
 						<input type="submit" value="Delete Character">
-					</li>
-				</ul>
+					</td>
+				</tr>
 			</form>
+		</table>
+	</tbody>
 			<?php
 			} else {
 				echo 'You don\'t have any characters. Why don\'t you <a href="createcharacter.php">create one</a>?';
