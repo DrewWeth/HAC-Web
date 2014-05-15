@@ -11,8 +11,11 @@ article, aside, figure, footer, header, hgroup, nav, section {
 }
 
 body { 
-  /* background: #F8F7EE url(../images/pattern.png); */
-  color: #2c4762;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background: #F8F7EE url(../images/pattern.png);
+  color: #7A7A68;
 }
 /*
 p { 
