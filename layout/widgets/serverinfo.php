@@ -1,5 +1,4 @@
 <div class="sidebar">
-	<div class="container">
 		<h2>Server Information</h2>
 		<div class="inner">
 			<table class="table">
@@ -42,5 +41,4 @@
 				</tr>
 			</table>
 		</div>
-	</div>
 </div>
