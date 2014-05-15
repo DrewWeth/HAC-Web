@@ -1,0 +1,6 @@
+Milestone - What I wish to add to Znote AAC in the future. (Znote AAC TODO/wish list).
+- Houses.
+- Multi World.
+- news system
+- Last Deaths list.
+- mini-highscore widgets.
