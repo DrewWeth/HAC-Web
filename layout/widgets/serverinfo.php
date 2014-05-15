@@ -9,7 +9,7 @@
 					if ($config['status']['status_check']) {
 						@$sock = fsockopen ($config['status']['status_ip'], $config['status']['status_port'], $errno, $errstr, 1);
 						if(!$sock) {
-							echo "<span style='color:red;font-weight:bold;'><center>Server Offline!</center></span><br/>";
+							echo "<div class=\"label label-danger\">Server Offline</div>";
 							$status = false;
 						}
 						else {
@@ -18,7 +18,7 @@
 							$data='';
 							while (!feof($sock))$data .= fgets($sock, 1024);
 							fclose($sock);
-							echo "<span style='color:green;font-weight:bold;'><center>Server Online!</center></span><br />";
+							echo "<div class=\"label label-success\">Server Online!</div>";
 						}
 					}
 					?>
