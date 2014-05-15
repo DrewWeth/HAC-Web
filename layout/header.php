@@ -62,12 +62,10 @@
 			        <li class="dropdown">
 			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
 			          <ul class="dropdown-menu">
-							<ul>
-								<?php if ($config['guildwar_enabled'] === true) { ?>
-									<li><a href="guilds.php">Guild List</a></li>
-								<li><a href="guildwar.php">Guild Wars</a></li>
-							</ul>
-						<?php } ?></li>
+							<li><a href="guilds.php">Guild List</a></li>
+						<?php if ($config['guildwar_enabled'] === true) { ?>						
+							<li><a href="guildwar.php">Guild Wars</a></li>					
+						<?php } ?>
 			          </ul>
 			        </li>
 			    </ul>
