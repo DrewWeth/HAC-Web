@@ -43,7 +43,7 @@ h1, h2, h3 {
 h2 { 
   font-size: 160%;
   padding: 9px 0 5px 0;
-  color: #009FBC;
+  color: #428bca;
 }
 
 h3 { 
@@ -52,7 +52,7 @@ h3 {
 }
 
 h4, h6 { 
-  color: #009FBC;
+  color: #428bca;
   padding: 0 0 5px 0;
   font: normal 120% arial;
 }

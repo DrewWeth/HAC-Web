@@ -26,7 +26,7 @@
 				</tr>
 				<tr>
 					<td colspan="2">
-						<center><input type="submit" class="btn btn-default" value="Log in"></center>
+						<center><input type="submit" class="btn btn-primary" value="Log in"></center>
 					</td>
 					<?php
 						/* Form file */

@@ -24,7 +24,7 @@
 							?>
 						</td>
 						<td>
-							<input type="submit" value="Fetch scoreboard">
+							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
 						</form>
 					</td>
 				</tr>
