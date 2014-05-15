@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="layout/css/style.css" />
 
   <script type='text/javascript' src="layout/js/bootstrap.min.js"></script>
-  <script type='text/javascript' src='layout/js/jquery-1.8.2.js'></script>
+  <script type='text/javascript' src='layout/js/jquery-2.1.1.min.js'></script>
 
 
 
