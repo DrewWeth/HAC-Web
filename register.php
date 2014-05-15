@@ -5,7 +5,7 @@ include 'layout/overall/header.php';
 
 if (empty($_POST) === false) {
 	// $_POST['']
-	$required_fields = array('username', 'password', 'password_again', 'email', 'selected');
+	$required_fields = array('username', 'password', 'password_again', 'email');
 	foreach($_POST as $key=>$value) {
 		if (empty($value) && in_array($key, $required_fields) === true) {
 			$errors[] = 'You need to fill in all fields.';
@@ -29,7 +29,7 @@ if (empty($_POST) === false) {
 		}
 		
 		if (user_exist($_POST['username']) === true) {
-			$errors[] = 'Sorry, that username already exist.';
+			$errors[] = 'Sorry, that username already exists.';
 		}
 		
 		// Don't allow "default admin names in config.php" access to register.
@@ -38,7 +38,7 @@ if (empty($_POST) === false) {
 			$errors[] = 'This account name is blocked for registration.';
 		}
 		if (strtolower($_POST['username']) === true) {
-			$errors[] = 'Sorry, that username already exist.';
+			$errors[] = 'Sorry, that username already exists.';
 		}
 		if (preg_match("/^[a-zA-Z0-9]+$/", $_POST['username']) == false) {
 			$errors[] = 'Your account name can only contain characters a-z, A-Z and 0-9.';
@@ -68,9 +68,6 @@ if (empty($_POST) === false) {
 		}
 		if (user_email_exist($_POST['email']) === true) {
 			$errors[] = 'That email address is already in use.';
-		}
-		if ($_POST['selected'] != 1) {
-			$errors[] = 'You are only allowed to have an account if you accept the rules.';
 		}
 		if (validate_ip(getIP()) === false && $config['validate_IP'] === true) {
 			$errors[] = 'Failed to recognize your IP address. (Not a valid IPv4 address).';
@@ -109,61 +106,46 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	}
 ?>
 	<form action="" method="post">
-		<ul>
-			<li>
-				Account Name:<br>
-				<input type="text" name="username">
-			</li>
-			<li>
-				Password:<br>
-				<input type="password" name="password">
-			</li>
-			<li>
-				Password again:<br>
-				<input type="password" name="password_again">
-			</li>
-			<li>
-				Email:<br>
-				<input type="text" name="email">
-			</li>
+		<table>
+			<tr>
+				<td>Account Name</td>
+				<td><input type="text" name="username"></td>
+			</tr>
+			<tr>
+				<td>Password</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>Password again</td>
+				<td><input type="password" name="password_again"></td>
+			</tr>
+			<tr>
+				<td>Email</td>
+				<td><input type="text" name="email"></td>
+			</tr>
 			<?php
 			if ($config['use_captcha']) {
 				?>
-				<li>
-					<b>Write the image symbols in the text field to verify that you are a human:</b>
+				<tr>
+					<td><b>Write the image symbols in the text field to verify that you are a human:</b>
 					<img id="captcha" src="captcha/securimage_show.php" alt="CAPTCHA Image" /><br>
 					<input type="text" name="captcha_code" size="10" maxlength="6" />
 					<a href="#" onclick="document.getElementById('captcha').src = 'captcha/securimage_show.php?' + Math.random(); return false">[ Different Image ]</a><br><br>
-				</li>
+					</td>
+				</tr>
 				<?php
 			}
 			?>
-			<li>
-				<h2>Server Rules</h2>
-				<p>The golden rule: Have fun.</p>
-				<p>If you get pwn3d, don't hate the game.</p>
-				<p>No <a href='http://en.wikipedia.org/wiki/Cheating' target="_blank">cheating</a> allowed.</p>
-				<p>No <a href='http://en.wikipedia.org/wiki/Internet_bot' target="_blank">botting</a> allowed.</p>
-				<p>The staff can delete, ban, do whatever they want with your account and your <br>
-					submitted information. (Including exposing and logging your IP).</p>
-				<p></p>
-			</li>
-			<li>
-				Do you agree to follow the server rules?<br>
-				<select name="selected">
-				  <option value="0">Umh...</option>
-				  <option value="1">Yes.</option>
-				  <option value="2">No.</option>
-				</select>
-			</li>
+			
+			
 			<?php
 				/* Form file */
 				Token::create();
 			?>
-			<li>
-				<input type="submit" value="Create Account">
-			</li>
-		</ul>
+			<tr>
+				<td><input type="submit" value="Create Account"></td>
+			</tr>
+		</table>
 	</form>
 <?php 
 }

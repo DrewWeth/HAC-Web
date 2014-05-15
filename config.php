@@ -295,7 +295,7 @@
 		// SECURITY STUFF  \\
 		// --------------- \\
 	$config['use_token'] = false;
-	$config['use_captcha'] = false;
+	$config['use_captcha'] = true;
 	
 	/*	Store visitor data
 		Store visitor data in the database, logging every IP visitng site, 
