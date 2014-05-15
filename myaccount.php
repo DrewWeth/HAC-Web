@@ -124,6 +124,7 @@ if (!empty($_POST['selected_comment'])) {
 	<div id="myaccount">
 		<h2>Account Management</h2><hr>
 		<h3>Characters<h3>
+		<?php
 		// Echo character list!
 		$char_array = user_character_list($user_data['id']);
 		// Design and present the list
