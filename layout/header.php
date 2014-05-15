@@ -74,9 +74,8 @@
 			    </ul>
 			    <form type="submit" action="characterprofile.php" method="get" class="navbar-form navbar-left" role="search">
 			        <div class="form-group">
-			          <input type="text" class="form-control" name="name" placeholder="Search">
+			          <input type="text" class="form-control" name="name" class="search" placeholder="Search">
 			        </div>
-			        <button type="submit" name="name" class="btn btn-default">Search</button>
 			    </form>
 		    </div><!-- /.navbar-collapse -->
 		  </div><!-- /.container-fluid -->
