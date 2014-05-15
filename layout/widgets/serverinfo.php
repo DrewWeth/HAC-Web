@@ -6,7 +6,7 @@
 				<td>
 					<?php if ($status) {
 					?>
-						<li><a href="onlinelist.php"><?php echo user_count_online();?> player online</a>
+						<a href="onlinelist.php"><?php echo user_count_online();?> player online</a>
 					<?php
 					}
 					?>
