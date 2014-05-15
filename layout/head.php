@@ -4,6 +4,8 @@
   <meta name="keywords" content="website keywords, website keywords" />
   <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
   <link rel="stylesheet" type="text/css" href="layout/css/bootstrap.css" />
+  <link rel="stylesheet" type="text/css" href="layout/css/style.css" />
+
   <!-- modernizr enables HTML5 elements and feature detects -->
   <script type="text/javascript" src="layout/js/modernizr-1.5.min.js"></script>
 </head>
