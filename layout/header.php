@@ -23,63 +23,63 @@
 	  ?></span></a></h1>
 	  <h2><?php echo $config['site_title_context']; ?></h2>
 	</div>
-  </div>
-  <nav class="navbar navbar-default" role="navigation">
-  	<div class="container-fluid">
-  		<div class="navbar-header">
-	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-	        <span class="sr-only">Toggle navigation</span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	        <span class="icon-bar"></span>
-	      </button>
-	      <a class="navbar-brand" href="#">Brand</a>
-	    </div>
-	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-	  		<ul class="nav navbar-nav">
-		        <li><a href="index.php">Home</a></li>
-				<li><a href="downloads.php">Downloads</a></li>
-				<li><a href="serverinfo.php">Server Information</a></li>
+	  <nav class="navbar navbar-default" role="navigation">
+	  	<div class="container-fluid">
+	  		<div class="navbar-header">
+		      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+		        <span class="sr-only">Toggle navigation</span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		        <span class="icon-bar"></span>
+		      </button>
+		      <a class="navbar-brand" href="#">Brand</a>
+		    </div>
+		    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+		  		<ul class="nav navbar-nav">
+			        <li><a href="index.php">Home</a></li>
+					<li><a href="downloads.php">Downloads</a></li>
+					<li><a href="serverinfo.php">Server Information</a></li>
 
-		        <li class="dropdown">
-		          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
-		          <ul class="dropdown-menu">
-		         	<li><a href="highscores.php">Highscores</a></li>
-					<li><a href="houses.php">Houses</a></li>
-					<li><a href="deaths.php">Deaths</a></li>
-					<li><a href="killers.php">Killers</a></li>
-		          </ul>
-		        </li>
+			        <li class="dropdown">
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Community <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			         	<li><a href="highscores.php">Highscores</a></li>
+						<li><a href="houses.php">Houses</a></li>
+						<li><a href="deaths.php">Deaths</a></li>
+						<li><a href="killers.php">Killers</a></li>
+			          </ul>
+			        </li>
 
-		      	<li><a href="forum.php">Forum</a></li>
+			      	<li><a href="forum.php">Forum</a></li>
 
-		      	<li class="dropdown">
-		          <a href="shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
-		          <ul class="dropdown-menu">
-		         	<li><a href="buypoints.php">Buy Points</a></li>
-					<li><a href="shop.php">Shop Offers</a></li>
-		          </ul>
-		        </li>
+			      	<li class="dropdown">
+			          <a href="shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			         	<li><a href="buypoints.php">Buy Points</a></li>
+						<li><a href="shop.php">Shop Offers</a></li>
+			          </ul>
+			        </li>
 
-		        <li class="dropdown">
-		          <a href="guilds.php" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
-		          <ul class="dropdown-menu">
-		         	<?php if ($config['guildwar_enabled'] === true) { ?>
-						<ul>
-							<li><a href="guilds.php">Guild List</a></li>
-							<li><a href="guildwar.php">Guild Wars</a></li>
-						</ul>
-					<?php } ?></li>
-		          </ul>
-		        </li>
-		    </ul>
-		    <form type="submit" action="characterprofile.php" method="get" class="navbar-form navbar-left" role="search">
-		        <div class="form-group">
-		          <input type="text" class="form-control" name="name" placeholder="Search">
-		        </div>
-		        <button type="submit" name="name" class="btn btn-default">Search</button>
-		    </form>
-	    </div><!-- /.navbar-collapse -->
-	  </div><!-- /.container-fluid -->
-	</nav>
+			        <li class="dropdown">
+			          <a href="guilds.php" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
+			          <ul class="dropdown-menu">
+			         	<?php if ($config['guildwar_enabled'] === true) { ?>
+							<ul>
+								<li><a href="guilds.php">Guild List</a></li>
+								<li><a href="guildwar.php">Guild Wars</a></li>
+							</ul>
+						<?php } ?></li>
+			          </ul>
+			        </li>
+			    </ul>
+			    <form type="submit" action="characterprofile.php" method="get" class="navbar-form navbar-left" role="search">
+			        <div class="form-group">
+			          <input type="text" class="form-control" name="name" placeholder="Search">
+			        </div>
+			        <button type="submit" name="name" class="btn btn-default">Search</button>
+			    </form>
+		    </div><!-- /.navbar-collapse -->
+		  </div><!-- /.container-fluid -->
+		</nav>
+	</div>
 </header>

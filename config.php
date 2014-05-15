@@ -326,8 +326,8 @@
 	*/
 	$config['ip_security'] = array(
 		'time_period' => 10, // In seconds
-		'max_activity' => 13, // page clicks/visits
-		'max_post' => 6, // register, create, highscore, character search such actions
+		'max_activity' => 20, // page clicks/visits
+		'max_post' => 10, // register, create, highscore, character search such actions
 		'max_account' => 1, // register
 		'max_character' => 1, // create char
 		'max_forum_post' => 1, // Create threads and post in forum
