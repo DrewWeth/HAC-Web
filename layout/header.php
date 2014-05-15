@@ -52,7 +52,7 @@
 			      	<li><a href="forum.php">Forum</a></li>
 
 			      	<li class="dropdown">
-			          <a href="shop.php" class="dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Shop <b class="caret"></b></a>
 			          <ul class="dropdown-menu">
 			         	<li><a href="buypoints.php">Buy Points</a></li>
 						<li><a href="shop.php">Shop Offers</a></li>
@@ -60,7 +60,7 @@
 			        </li>
 
 			        <li class="dropdown">
-			          <a href="guilds.php" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
+			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
 			          <ul class="dropdown-menu">
 			         	<?php if ($config['guildwar_enabled'] === true) { ?>
 							<ul>
