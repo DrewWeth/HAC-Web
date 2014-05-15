@@ -166,7 +166,7 @@ header {
   padding: 0 0 0 0;
   color: #A8AA94;
 }
-
+/*
 nav { 
   height: 44px;
   width: 100%;
@@ -178,7 +178,7 @@ nav {
   width: 1000px;
   margin: 0 auto 0 auto;
 }
-
+*/
 #site_content { 
   width: 1000px;
   overflow: hidden;
@@ -193,7 +193,7 @@ nav {
 
 .sidebar { 
   float: right;
-  width: 210px;
+  width: 25%;
   margin: 0 0 17px 0;
   background: #FFF;
   border: 1px solid #eee;
@@ -432,7 +432,8 @@ Stylesheet for SooperFish by www.SooperThemes.com
 Author: Jurriaan Roelofs
 **/
 
-/* Configuration of menu width */
+/* Configuration of menu width
+
 html body ul.sf-menu ul,html body ul.sf-menu ul li { 
   width: 200px;
 }
@@ -441,7 +442,7 @@ html body ul.sf-menu ul ul {
   margin: 0 0 0 200px;
 }
 
-/* Framework for proper showing/hiding/positioning */
+
 ul.sf-menu,ul.sf-menu * { 
   margin: 0;
   padding: 0;
@@ -460,7 +461,7 @@ ul.sf-menu li {
 }
   
 ul.sf-menu li:hover { 
-  visibility: inherit; /* fixes IE7 'sticky bug' */ 
+  visibility: inherit; /* fixes IE7 'sticky bug' 
 }
 
 ul.sf-menu a { 
@@ -477,11 +478,11 @@ ul.sf-menu ul {
 }
   
 ul.sf-menu ul a { 
-  zoom: 1; /* IE6/7 fix */ 
+  zoom: 1; /* IE6/7 fix 
 }
 
 ul.sf-menu ul li { 
-  float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 */
+  float: left; /* Must always be floated otherwise there will be a rogue 1px margin-bottom in IE6/7 
   width: 150px;
 }
   
@@ -504,7 +505,7 @@ ul.sf-menu ul ul ul li:hover ul ul,ul.sf-menu ul ul ul li:focus ul ul,ul.sf-menu
   left: -999999px;
 }
 
-/* autoArrows CSS */
+/* autoArrows CSS
 span.sf-arrow { 
   width: 7px;
   height: 7px;
@@ -513,7 +514,7 @@ span.sf-arrow {
   right: 5px;
   display: block;
   background: url(../images/arrows-white.png) no-repeat 0 0;
-  overflow: hidden; /* making sure IE6 doesn't overflow and expand the box */
+  overflow: hidden; /* making sure IE6 doesn't overflow and expand the box 
   font-size: 1px;
 }
 
