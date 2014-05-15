@@ -518,7 +518,7 @@ function get_guilds_list() {
 // Get array of player data related to a guild.
 function get_guild_players($gid) {
 	$gid = (int)$gid; // Sanitizing the parameter id
-	$query = mysql_query("SELECT p.rank_id, p.name, p.level, p.vocation FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid");
+	$query = mysql_query("SELECT AVG(p.level) AS 'average level', p.rank_id, p.name, p.level, p.vocation FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid");
 	$array = array();
 	while ($row = mysql_fetch_assoc($query)) {
 		$array[] = $row;
