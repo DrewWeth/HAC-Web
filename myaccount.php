@@ -147,110 +147,109 @@ if (!empty($_POST['selected_comment'])) {
 				?>
 				</table>
 			</tbody>
-			<!-- FORMS TO HIDE CHARACTER-->
+
 			<h3>Options</h3>
 			<tbody>
 				<table class="table table-striped">
+					<form action="" method="post">
+						<tr>
+							<td>
+								Character hide</td>
+								<td><select name="selected_hide">
+								<?php
+								for ($i = 0; $i < $char_count; $i++) {
+									if (user_character_hide($characters[$i]) == 1) {
+										echo '<option value="'. $characters[$i] .'!0">'. $characters[$i] .'</option>'; 	
+									} else {
+										echo '<option value="'. $characters[$i] .'!1">'. $characters[$i] .'</option>'; 	
+									}
+								}
+								?>
+								</select>
+								<?php
+									/* Form file */
+									Token::create();
+								?>
+							</td><td>
+								<input type="submit" value="Toggle hide">
+							</td>
+						</tr>
+					</form>
+					<!-- FORMS TO CHANGE CHARACTER COMMENT-->
+					<form action="" method="post">
 
-			<form action="" method="post">
-				<tr>
-					<td>
-						Character hide</td>
-						<td><select name="selected_hide">
-						<?php
-						for ($i = 0; $i < $char_count; $i++) {
-							if (user_character_hide($characters[$i]) == 1) {
-								echo '<option value="'. $characters[$i] .'!0">'. $characters[$i] .'</option>'; 	
-							} else {
-								echo '<option value="'. $characters[$i] .'!1">'. $characters[$i] .'</option>'; 	
-							}
-						}
-						?>
-						</select>
-						<?php
-							/* Form file */
-							Token::create();
-						?>
-					</td><td>
-						<input type="submit" value="Toggle hide">
-					</td>
-				</tr>
-			</form>
-			<!-- FORMS TO CHANGE CHARACTER COMMENT-->
-			<form action="" method="post">
-
-					<tr>
-						<td>Character comment
-						</td>
-						<td>
-							<select name="selected_comment">
-							<?php
-							for ($i = 0; $i < $char_count; $i++) {
-								echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-							}
-							?>
-							</select>
-							<?php
-								/* Form file */
-								Token::create();
-							?>
-						</td>
-						<td>
-							<input type="submit" value="Change comment">
-						</td>
-					</li>
-				</ul>
-			</form>
-			<!-- FORMS TO CHANGE CHARACTER GENDER-->
-			<form action="" method="post">
-				<tr>
-					<td>
-						Change character gender
-					</td>
-					<td>
-						<select name="change_gender">
-						<?php
-						for ($i = 0; $i < $char_count; $i++) {
-							echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-						}
-						?>
-						</select>
-						<?php
-							/* Form file */
-							Token::create();
-						?>
-					</td>
-					<td>
-						<input type="submit" value="Change gender">
-					</td>
-				</tr>
-			</form>
-			<!-- FORMS TO DELETE CHARACTER-->
-			<form action="" method="post">
-				<tr>
-					<td>
-						Delete character
-					</td>
-					<td>	
-						<select name="selected_delete">
-						<?php
-						for ($i = 0; $i < $char_count; $i++) {
-							echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-						}
-						?>
-						</select>
-						<?php
-							/* Form file */
-							Token::create();
-						?>
-					</td>
-					<td>
-						<input type="submit" value="Delete Character">
-					</td>
-				</tr>
-			</form>
-		</table>
-	</tbody>
+							<tr>
+								<td>Character comment
+								</td>
+								<td>
+									<select name="selected_comment">
+									<?php
+									for ($i = 0; $i < $char_count; $i++) {
+										echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+									}
+									?>
+									</select>
+									<?php
+										/* Form file */
+										Token::create();
+									?>
+								</td>
+								<td>
+									<input type="submit" value="Change comment">
+								</td>
+							</li>
+						</ul>
+					</form>
+					<!-- FORMS TO CHANGE CHARACTER GENDER-->
+					<form action="" method="post">
+						<tr>
+							<td>
+								Change character gender
+							</td>
+							<td>
+								<select name="change_gender">
+								<?php
+								for ($i = 0; $i < $char_count; $i++) {
+									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+								}
+								?>
+								</select>
+								<?php
+									/* Form file */
+									Token::create();
+								?>
+							</td>
+							<td>
+								<input type="submit" value="Change gender">
+							</td>
+						</tr>
+					</form>
+					<!-- FORMS TO DELETE CHARACTER-->
+					<form action="" method="post">
+						<tr>
+							<td>
+								Delete character
+							</td>
+							<td>	
+								<select name="selected_delete">
+								<?php
+								for ($i = 0; $i < $char_count; $i++) {
+									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+								}
+								?>
+								</select>
+								<?php
+									/* Form file */
+									Token::create();
+								?>
+							</td>
+							<td>
+								<input type="submit" value="Delete Character">
+							</td>
+						</tr>
+					</form>
+				</table>
+			</tbody>
 			<?php
 			} else {
 				echo 'You don\'t have any characters. Why don\'t you <a href="createcharacter.php">create one</a>?';
