@@ -4,14 +4,6 @@
     src: local("glyphicons-halflings-regular"), url('../fonts/glyphicons-halflings-regular.ttf'); 
 } 
 
-html { 
-  height: 100%;
-}
-
-* { 
-  margin: 0;
-  padding: 0;
-}
 
 /* tell the browser to render HTML 5 elements as block */
 article, aside, figure, footer, header, hgroup, nav, section { 
@@ -23,7 +15,7 @@ body {
   background: #F8F7EE url(../images/pattern.png);
   color: #7A7A68;
 }
-
+/*
 p { 
   padding: 0 0 20px 0;
   line-height: 1.7em;
@@ -32,7 +24,7 @@ p {
 img { 
   border: 0;
 }
-
+*/
 h1, h2, h3, h4, h5, h6 { 
   color: #362C20;
   letter-spacing: 0em;
@@ -69,7 +61,7 @@ h5, h6 {
   letter-spacing: normal;
   padding: 0 0 15px 0;
 }
-
+/*
 a, a:hover { 
   outline: none;
   text-decoration: underline;
@@ -79,14 +71,14 @@ a, a:hover {
 a:hover { 
   text-decoration: none;
 }
-
+*/
 blockquote { 
   margin: 20px 0; 
   padding: 10px 20px 0 20px;
   border: 1px solid #E5E5DB;
   background: #FFF;
 }
-
+/*
 ul { 
   margin: 2px 0 22px 17px;
 }
@@ -123,7 +115,7 @@ ol li {
   text-align: center;
   margin: 20px auto;
 }
-
+*/
 #main, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
@@ -532,7 +524,7 @@ ul ul span.sf-arrow {
 }
 
 /* Theming the menu */
-ul#nav { 
+/*ul#nav { 
   float: left;
 }
 
@@ -554,7 +546,7 @@ ul#nav li a {
 ul#nav li a:hover,ul#nav li a:focus { 
   color:#09D4FF;
 }
-
+*/
 .galleryImage {
   max-width: 720px;
 }
