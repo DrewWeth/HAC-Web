@@ -1,7 +1,7 @@
 <div class="sidebar">
 	<h2>Server Information</h2>
 	<div class="inner">
-		<table>
+		<table class="table table-striped">
 			<tr>
 				<td>
 					<?php
