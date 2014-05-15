@@ -9,6 +9,8 @@
 					<td>
 						Userame
 					</td>
+				</tr>
+				<tr>
 					<td>
 						<input type="text" name="username">
 					</td>
@@ -17,6 +19,7 @@
 					<td>
 						Password
 					</td>
+				</tr>
 					<td>
 						<input type="password" name="password">
 					</td>
@@ -31,17 +34,9 @@
 					?>
 				</tr>
 				</form>
-				<tr>
-					<td colspan="2">
-						<center><a href="register.php">Create Account</a></center>
-					</td>
-				</tr>
-				<tr>
-					<td colspan="2">
-						<center>Lost <a href="recovery.php?mode=username">username</a> or <a href="recovery.php?mode=password">password</a>?></center>
-					</td>
-				</tr>
 			</table>
 		</tbody>
+		<center><a href="register.php">Create Account</a></center>
+		<center>Lost <a href="recovery.php?mode=username">username</a> or <a href="recovery.php?mode=password">password</a>?</center>		
 	</div>
 </div>
