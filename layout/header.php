@@ -44,7 +44,9 @@
 			          <ul class="dropdown-menu">
 			         	<li>
 			         		<form id="my_form" action="highscores.php" method="post">
-			         			<select name="selected" value="7"></select>
+			         			<select name="selected">
+			         						<option value="7">Experience</option>
+								</select>
 								<a href="javascript:{}" onclick="document.getElementById('my_form').submit(); return false;">Highscores</a>
 							</form></li>	
 			         	<li><a href="houses.php">Houses</a></li>
