@@ -7,8 +7,6 @@
 					<td>
 
 						<form action="highscores.php" method="post">
-						
-							Select skill type to view:<br>
 							<select name="selected">
 							<option value="7">Experience</option>
 							<option value="5">Shielding</option>
