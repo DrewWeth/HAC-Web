@@ -126,7 +126,7 @@ ol li {
 header { 
   background: ##355371;
   height: 200px;
-  border-bottom: 1px solid #FFF;
+  /* border-bottom: 1px solid #FFF; */
 }
 
 #logo { 
