@@ -136,7 +136,7 @@ if (!empty($_POST['selected_comment'])) {
 			<tbody>
 				<table class="table table-condensed" id="myaccountTable">
 					<tr>
-						<td>Name</td><td>Level<td>Status</td>
+						<td>Name</td><td>Level<td>Vocation</td><td>Town</td><td>Created</td><td>Status</td><td>Visibility</td><td></td>
 					</tr>
 					<?php
 					$characters = array();
@@ -145,6 +145,7 @@ if (!empty($_POST['selected_comment'])) {
 						echo '<tr>';
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. $value['level'] .'</td><td>'. $value['vocation'] .'</td><td>'. $value['town_id'] .'</td><td>'. $value['lastlogin'] .'</td><td>'. $value['online'] .'</td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
 						?>
+						<td>
 						<form action="" method="post">
 								<?php
 									echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
@@ -153,7 +154,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 								<input class="btn btn-danger" type="submit" value="Delete Character">	
 						</form>
-
+						</td>
 						<?php
 						echo '</tr>';
 						$characters[] = $value['name'];
