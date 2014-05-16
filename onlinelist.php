@@ -5,12 +5,12 @@
 $array = online_list();
 if ($array) {
 	?>
-	
-	<table id="onlinelistTable">
-		<tr class="yellow">
-			<td>Name:</td>
-			<td>Level:</td>
-			<td>Vocation:</td>
+	<tbody>
+	<table class="table table-condensed" id="onlinelistTable">
+		<tr>
+			<td>Name</td>
+			<td>Level</td>
+			<td>Vocation</td>
 		</tr>
 			<?php
 			foreach ($array as $value) {

@@ -189,6 +189,7 @@ nav {
 */
 #site_content { 
   width: 1000px;
+  position: relative;
   overflow: hidden;
   margin: 0px auto 0 auto;
   padding: 15px 0 40px 0;
@@ -257,6 +258,7 @@ nav {
 
 .content { 
   text-align: left;
+  position: relative;
   width: 735px;
   margin: 0 0 15px 0;
   float: left;
