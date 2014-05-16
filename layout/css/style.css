@@ -10,11 +10,19 @@ article, aside, figure, footer, header, hgroup, nav, section {
   display:block;
 }
 
+/*
+
+  Background pallet
+  #303335
+
+
+*/
+
 body { 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background: #355371;
+  background: #303335;
   color: #7A7A68;
 }
 /*
@@ -164,6 +172,7 @@ header {
 
 #logo_text h1 a .logo_colour { 
   color: #C00000;
+  font: normal 200%;
 }
 
 #logo_text a:hover .logo_colour { 

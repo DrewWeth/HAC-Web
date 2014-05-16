@@ -5,7 +5,7 @@
 	// TFS 0.4 = TFS_03
 	$config['TFSVersion'] = 'TFS_03';
 	
-	$config['site_title'] = 'Honor And Chaos';
+	$config['site_title'] = 'Honor and Chaos';
 	$config['site_title_context'] = 'RPG/PVP';
 	
 	// ------------------------ \\
