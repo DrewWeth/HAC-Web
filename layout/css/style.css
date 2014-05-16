@@ -14,7 +14,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background: #F8F7EE url(../images/pattern.png);
+  background: #355371;
   color: #7A7A68;
 }
 /*
@@ -124,7 +124,7 @@ ol li {
 }
 
 header { 
-  background: #404040;
+  background: ##355371;
   height: 200px;
   border-bottom: 1px solid #FFF;
 }
