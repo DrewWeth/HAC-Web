@@ -136,7 +136,7 @@ if (!empty($_POST['selected_comment'])) {
 			<tbody>
 				<table class="table table-condensed" id="myaccountTable">
 					<tr>
-						<td>NAME</td><td>STATUS</td><td>HIDE</td>
+						<td>Name</td><td>Level<td>Status</td>
 					</tr>
 					<?php
 					$characters = array();
@@ -144,6 +144,17 @@ if (!empty($_POST['selected_comment'])) {
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						echo '<tr>';
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. $value['level'] .'</td><td>'. $value['vocation'] .'</td><td>'. $value['town_id'] .'</td><td>'. $value['lastlogin'] .'</td><td>'. $value['online'] .'</td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
+						?>
+						<form action="" method="post">
+								<?php
+									echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
+									/* Form file */
+									Token::create();
+								?>
+								<input class="btn btn-danger" type="submit" value="Delete Character">	
+						</form>
+
+						<?php
 						echo '</tr>';
 						$characters[] = $value['name'];
 					}
@@ -226,29 +237,7 @@ if (!empty($_POST['selected_comment'])) {
 						</tr>
 					</form>
 					<!-- FORMS TO DELETE CHARACTER-->
-					<form action="" method="post">
-						<tr>
-							<td>
-								Delete character
-							</td>
-							<td>	
-								<select name="selected_delete">
-								<?php
-								for ($i = 0; $i < $char_count; $i++) {
-									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-								}
-								?>
-								</select>
-								<?php
-									/* Form file */
-									Token::create();
-								?>
-							</td>
-							<td>
-								<input class="btn btn-danger" type="submit" value="Delete Character">
-							</td>
-						</tr>
-					</form>
+					
 				</table>
 			</tbody>
 			<?php
