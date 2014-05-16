@@ -30,20 +30,25 @@
 				}
 				return $string;
 			}
+			?>
+
+			<div id="news">
+			
+			<?php
 			foreach ($news as $n) {
-				?>
-				<table id="news">
-					<tr class="yellow">
-						<td class="zheadline"><?php echo date($config['date'], $n['date']) .' by <a href="characterprofile.php?name='. $n['name'] .'">'. $n['name'] .'</a> - <b>'. TransformToBBCode($n['title']) .'</b>'; ?></td>
-					</tr>
-					<tr>
-						<td>
-							<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
-						</td>
-					</tr>
-				</table>
+			?>
+				<div class="well">
+					<h2>
+						<td class="zheadline"><?php echo TransformToBBCode($n['title']).' ('.date($config['date'], $n['date']).')'; ?>
+					</h2>
+					<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
+				</div>
 				<?php
 			}
+			?>
+			</div>
+			
+			<?php 
 		} else {
 			echo '<p>No news exist.</p>';
 		}

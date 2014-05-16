@@ -112,7 +112,7 @@ if (!empty($_POST['selected_comment'])) {
 					/* Form file */
 					Token::create();
 				?>
-				<li><input type="submit" value="Update Comment"></li>
+				<li><input class="btn btn-default" type="submit" value="Update Comment"></li>
 			</ul>
 		</form>
 		<?php
@@ -123,6 +123,15 @@ if (!empty($_POST['selected_comment'])) {
 	?>
 	<div id="myaccount">
 		<h2>Account Management</h2><hr>
+		<tbody>
+			<table>
+				<tr>
+					<td>
+						<a class="btn btn-success" href='createcharacter.php'>Create Character</a>
+					</td>
+				</tr>
+			</table>
+		</tbody>
 		<h3>Characters</h3>
 		<?php
 		// Echo character list!
@@ -132,9 +141,9 @@ if (!empty($_POST['selected_comment'])) {
 			?>
 			<tbody>
 				<table class="table table-condensed" id="myaccountTable">
-					<tr class="yellow">
-						<td>NAME</td><td>LEVEL</td><td>VOCATION</td><td>TOWN</td><td>LAST LOGIN</td><td>STATUS</td><td>HIDE</td>
-					</tr>
+					<th>
+						<td>NAME</td><td>STATUS</td><td>HIDE</td>
+					</th>
 					<?php
 					$characters = array();
 					foreach ($char_array as $value) {
@@ -171,7 +180,7 @@ if (!empty($_POST['selected_comment'])) {
 									Token::create();
 								?>
 							</td><td>
-								<input type="submit" value="Toggle hide">
+								<input class="btn btn-default" type="submit" value="Toggle hide">
 							</td>
 						</tr>
 					</form>
@@ -195,7 +204,7 @@ if (!empty($_POST['selected_comment'])) {
 									?>
 								</td>
 								<td>
-									<input type="submit" value="Change comment">
+									<input class="btn btn-default" type="submit" value="Change comment">
 								</td>
 							</li>
 						</ul>
@@ -220,7 +229,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 							</td>
 							<td>
-								<input type="submit" value="Change gender">
+								<input class="btn btn-default" type="submit" value="Change gender">
 							</td>
 						</tr>
 					</form>
@@ -244,7 +253,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 							</td>
 							<td>
-								<input type="submit" value="Delete Character">
+								<input class="btn btn-danger" type="submit" value="Delete Character">
 							</td>
 						</tr>
 					</form>

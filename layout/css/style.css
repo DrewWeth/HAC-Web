@@ -598,3 +598,33 @@ ul#nav li a:hover,ul#nav li a:focus {
 .updateTable tr td input {
   width: 500px;
 }
+
+/* Make a link look like a button */
+
+button,
+.buttons a {
+    cursor: pointer;
+    font-size: 9.75pt;  /* maximum size in WebKit to get native look buttons without using zoom */
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -webkit-tap-highlight-color: transparent;
+}
+.buttons a {
+    margin: 2px;
+    padding: 3px 6px 3px;
+    border: 2px outset buttonface;
+    background-color: buttonface;
+    color: buttontext;
+    text-align: center;
+    text-decoration: none;
+    -webkit-appearance: button;
+}
+button img,
+.buttons a img {
+    -webkit-user-drag: none;
+    -ms-user-drag: none;
+}
+.buttons form {
+    display: inline;
+    display: inline-block;
+}

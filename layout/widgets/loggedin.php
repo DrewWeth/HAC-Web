@@ -10,16 +10,6 @@
 				</tr>
 				<tr>
 					<td>
-						<a href='createcharacter.php'>Create Character</a>
-					</td>
-				</tr>
-				<tr>	
-					<td>
-						<a href='changepassword.php'>Change Password</a>
-					</td>
-				</tr>
-				<tr>
-					<td>
 						<a href='settings.php'>Settings</a>
 					</td>
 				</tr>

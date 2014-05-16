@@ -4,10 +4,10 @@
 		<tbody>
 			<table class="table table-striped">
 				<tr>
-					<td>
+					<td class="center">
 
 						<form action="highscores.php" method="post">
-							<select name="selected">
+							<select name="selected" class="form-control">
 							<option value="7">Experience</option>
 							<option value="5">Shielding</option>
 							<option value="3">Axe</option>
@@ -23,7 +23,9 @@
 								Token::create();
 							?>
 						</td>
-						<td>
+					</tr>
+					<tr>
+						<td class="center">
 							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
 						</form>
 					</td>
