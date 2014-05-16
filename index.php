@@ -39,7 +39,7 @@
 			?>
 				<div class="well">
 					<h2>
-						<td class="zheadline"><?php echo TransformToBBCode($n['title']).' ('.date($config['date'], $n['date']).')'; ?>
+						<?php echo TransformToBBCode($n['title'])."<div class=\"news-post-date\">".date($config['date'], $n['date'])."</div>"; ?>
 					</h2>
 					<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
 				</div>

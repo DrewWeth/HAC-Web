@@ -118,6 +118,13 @@ ol li {
   margin: 20px auto;
 }
 */
+
+.news-post-date {
+  top: 5px;
+  right: 5px;
+  position: absolute
+}
+
 #main, #logo, #site_content, footer { 
   margin-left: auto; 
   margin-right: auto;
