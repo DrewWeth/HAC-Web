@@ -1,6 +1,6 @@
 <form action="houses.php" method="post">
-	Select town:<br>
-	<select name="selected">
+	<label>Select town</label>
+	<select class="form-control" name="selected">
 	<?php
 	foreach ($config['towns'] as $id => $name) echo '<option value="'. $id .'">'. $name .'</option>';
 	?>
@@ -9,5 +9,5 @@
 		/* Form file */
 		Token::create();
 	?>
-	<input type="submit" value="Fetch houses">
+	<input type="submit" class="btn btn-primary" value="Fetch houses">
 </form>

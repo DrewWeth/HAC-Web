@@ -15,7 +15,7 @@
 		echo "<tbody>";
 		echo "<table class=\"table table-condensed\">";
 		foreach($players as $player) {
-			echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a>" . $player['level'] ."</td></tr>";
+			echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a></td><td><div class=\"label label-success\">" . $player['level'] ."</div></td></tr>";
 			$count++;
 		}
 		echo "</table>";
