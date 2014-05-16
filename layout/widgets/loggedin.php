@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="well">
 	<h2>Welcome, <?php echo $user_data['name']; ?>.</h2>
 	<div class="inner">
 		<tbody>

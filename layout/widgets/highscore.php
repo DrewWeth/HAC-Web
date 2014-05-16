@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="well">
 	<h2>Search highscores</h2>
 	<div class="inner">
 		<tbody>

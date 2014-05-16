@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="well">
 		<h2>Top 5 players</h2>
 		<?php
 		$cache = new Cache('engine/cache/topPlayer');
@@ -15,7 +15,7 @@
 		echo "<tbody>";
 		echo "<table class=\"table table-condensed\">";
 		foreach($players as $player) {
-			echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a></td><td><span class=\"label label-default\"". $player['level'] ."</span></td></tr>";
+			echo "<tr><td>$count</td><td><a href='characterprofile.php?name=". $player['name']. "'>". $player['name']. "</a>" . $player['level'] ."</td></tr>";
 			$count++;
 		}
 		echo "</table>";

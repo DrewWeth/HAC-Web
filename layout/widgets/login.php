@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="well">
 	<h2>Login / Register</h2>
 	<div class="inner">
 		<tbody>
@@ -12,7 +12,7 @@
 				</tr>
 				<tr>
 					<td>
-						<input type="text" name="username">
+						<input class="form-control" type="text" name="username">
 					</td>
 				</tr>
 				<tr>
@@ -21,7 +21,7 @@
 					</td>
 				</tr>
 					<td>
-						<input type="password" name="password">
+						<input class="form-control" type="password" name="password">
 					</td>
 				</tr>
 				<tr>

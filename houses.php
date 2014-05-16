@@ -35,14 +35,15 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			<h2>
 				<?php echo ucfirst(town_id_to_name($townid)); ?> house list.
 			</h2>
-			<table id="housesTable">
-				<tr class="yellow">
-					<td>Name:</td>
-					<td>Size:</td>
-					<td>Doors:</td>
-					<td>Beds:</td>
-					<td>Price:</td>
-					<td>Owner:</td>
+			<tbody>
+			<table id="housesTable" class="table table-striped">
+				<tr>
+					<td>Name</td>
+					<td>Size</td>
+					<td>Doors</td>
+					<td>Beds</td>
+					<td>Price</td>
+					<td>Owner</td>
 					
 				</tr>
 					<?php
@@ -64,6 +65,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 					}
 					?>
 			</table>
+			</tbody>
 			<?php
 		} else {
 			echo 'Empty list, it appears no houses are listed in this town.';
@@ -101,8 +103,9 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 		if ($house_query !== false && $house_load !== false) {
 			?>
 			<center><h1>House list</h1></center>
+			<tbody>
 			<table>
-				<tr class="yellow">
+				<tr>
 					<td><b>House</b></td>
 					<td><b>Location</b></td>
 					<td><b>Owner</b></td>
@@ -138,6 +141,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 				}
 				?>
 			</table>
+			</tbody>
 			<?php
 		} else echo '<p><font color="red">Something is wrong with the cache.</font></p>';
 	}

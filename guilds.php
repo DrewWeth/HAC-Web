@@ -27,11 +27,11 @@ if ($guilds !== false) {
 ?>
 <tbody>
 	<table class="table table-condensed" id="guildsTable">
-		<th>
+		<tr>
 			<td>Guild name</td>
 			<td>Members</td>
 			<td>Founded</td>
-		</th>
+		</tr>
 			<?php
 			foreach ($guilds as $guild) {
 				$gcount = count_guild_members($guild['id']);

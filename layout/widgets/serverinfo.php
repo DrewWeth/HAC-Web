@@ -1,4 +1,4 @@
-<div class="sidebar">
+<div class="well">
 		<h2>Server Information</h2>
 		<div class="inner">
 		<tbody>

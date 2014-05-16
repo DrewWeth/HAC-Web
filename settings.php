@@ -52,14 +52,14 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 		<ul>
 			<li>
 				email:<br>
-				<input type="text" name="new_email" value="<?php echo $user_data['email']; ?>">
+				<input type="text" class="form-control"  name="new_email" value="<?php echo $user_data['email']; ?>">
 			</li>
 			<?php
 				/* Form file */
 				Token::create();
 			?>
 			<li>
-				<input type="submit" value="Update settings">
+				<input class="btn btn-success" type="submit" value="Update settings">
 			</li>
 		</ul>
 	</form>
@@ -105,7 +105,7 @@ if (empty($_POST) === false) {
 	print_r($errors);
 }
 
-include 'layout/overall/header.php'; ?>
+?>
 
 <h1>Change Password:</h1>
 
@@ -135,22 +135,22 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 		<ul>
 			<li>
 				Current password:<br>
-				<input type="password" name="current_password">
+				<input class="form-control"  type="password" name="current_password">
 			</li>
 			<li>
 				New password:<br>
-				<input type="password" name="new_password">
+				<input class="form-control"  type="password" name="new_password">
 			</li>
 			<li>
 				New password again:<br>
-				<input type="password" name="new_password_again">
+				<input class="form-control" type="password" name="new_password_again">
 			</li>
 			<?php
 				/* Form file */
 				Token::create();
 			?>
 			<li>
-				<input type="submit" value="Change password">
+				<input class="btn btn-success" type="submit" value="Change password">
 			</li>
 		</ul>
 	</form>
