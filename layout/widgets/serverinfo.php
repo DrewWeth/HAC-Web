@@ -2,7 +2,7 @@
 		<h2>Server Information</h2>
 		<div class="inner">
 		<tbody>
-			<table class="table table-striped">
+			<table class="table table-condensed">
 				<tr>
 					<td><center>
 						<?php

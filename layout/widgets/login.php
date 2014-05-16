@@ -2,7 +2,7 @@
 	<h2>Login / Register</h2>
 	<div class="inner">
 		<tbody>
-			<table class="table table-striped">
+			<table class="table table-condensed">
 				<tr>
 					<form action="login.php" method="post">
 					<ul id="login">

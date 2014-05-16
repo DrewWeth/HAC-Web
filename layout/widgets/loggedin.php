@@ -2,7 +2,7 @@
 	<h2>Welcome, <?php echo $user_data['name']; ?>.</h2>
 	<div class="inner">
 		<tbody>
-			<table class="table table-striped">
+			<table class="table table-condensed">
 				<tr>
 					<td>
 						<a href='myaccount.php'>My Account</a>

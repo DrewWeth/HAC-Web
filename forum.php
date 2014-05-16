@@ -527,8 +527,9 @@ if (!empty($_GET)) {
 				?>
 				<font>LinkMap: <a href="forum.php">Forum</a> - <a href="?cat=<?php echo $getCat; ?>"><?php echo $getForum; ?></a></font><br>
 				<font size="5" id="ThreadTitle">Viewing thread: <?php echo "<a href='?forum=". $getForum ."&cat=". $getCat ."&thread=". $threadData['id'] ."'>". $threadData['title'] ."</a>"; ?></font>
-				<table class="znoteTable ThreadTable">
-					<tr class="yellow">
+				<tbody>
+				<table class="table table-striped znoteTable ThreadTable">
+					<tr>
 						<td>
 							<?php 
 								echo date($config['date'],$threadData['created']); 
@@ -545,6 +546,7 @@ if (!empty($_GET)) {
 						</td>
 					</tr>
 				</table>
+				</tbody>
 				<?php
 				if ($admin || $leader) {
 					// PlayerHaveAccess($yourChars, $thread['player_name']) || 
@@ -616,8 +618,9 @@ if (!empty($_GET)) {
 				if ($posts !== false) {
 					foreach($posts as $post) {
 						?>
-						<table class="znoteTable ThreadTable">
-							<tr class="yellow">
+						<tbody>
+						<table class="table table-striped znoteTable ThreadTable">
+							<tr>
 								<td>
 									<?php 
 										echo date($config['date'],$post['created']); 
@@ -634,6 +637,7 @@ if (!empty($_GET)) {
 								</td>
 							</tr>
 						</table>
+						</tbody>
 						<?php
 						if (PlayerHaveAccess($yourChars, $post['player_name']) || $admin) {
 							if ($admin) {
@@ -764,10 +768,10 @@ if (!empty($_GET)) {
 			///// HTML \\\\\
 			if ($threads !== false) {
 				?>
-				<table class="znoteTable" id="forumThreadTable">
-					<tr class="yellow">
-						<td width="80%">Title</td>
-						<td width="20%">By</td>
+				<table class="table table-striped znoteTable" id="forumThreadTable">
+					<tr>
+						<th width="80%">Title</th>
+						<th width="20%">By</th>
 					</tr>
 					<?php
 					foreach($threads as $thread) {
@@ -842,8 +846,9 @@ if (!empty($_GET)) {
 	
 	$guildboard = false;
 	?>
-	<table class="znoteTable" id="forumCategoryTable">
-		<tr class="yellow">
+	<tbody>
+	<table class="table table-striped znoteTable" id="forumCategoryTable">
+		<tr>
 			<td>Forum Boards</td>
 			<?php
 			$guild = false;
@@ -919,12 +924,14 @@ if (!empty($_GET)) {
 		}
 		?>
 	</table>
+	</tbody>
 	<?php
 	if ($guildboard !== false && $guild || $guildboard !== false && $admin) {
 		//
 		?>
+		<tbody>
 		<table class="znoteTable" id="forumCategoryTable">
-			<tr class="yellow">
+			<tr>
 				<td>Guild Boards</td>
 				<?php
 				foreach($charData as $char) {
@@ -993,6 +1000,7 @@ if (!empty($_GET)) {
 			if ($count == 0 && !$admin) echo '<tr><td>You don\'t have access to any guildboards.</td></tr>';
 			?>
 		</table>
+		</tbody>
 		<?php
 	}
 	if ($admin) {
