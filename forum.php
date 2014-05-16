@@ -1,6 +1,7 @@
 
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php';
 protect_page();
+echo "<div class=\"well\">";
 error_reporting(E_ALL ^ E_NOTICE);
 if (!$config['forum']['enabled']) admin_only($user_data);
 /*  -------------------------------
@@ -1043,5 +1044,5 @@ if (!empty($_GET)) {
 
 }
 
-
+echo "</div>";
 include 'layout/overall/footer.php'; ?>

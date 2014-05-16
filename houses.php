@@ -1,4 +1,5 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php';
+echo "div class=\"well\">";
 if ($config['log_ip']) {
 	znote_visitor_insert_detailed_data(3);
 }
@@ -146,4 +147,5 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 		} else echo '<p><font color="red">Something is wrong with the cache.</font></p>';
 	}
 }
+echo "</div>";
 include 'layout/overall/footer.php'; ?>
