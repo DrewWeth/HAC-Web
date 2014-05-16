@@ -22,11 +22,11 @@
 								/* Form file */
 								Token::create();
 							?>
-						</td>
-					</tr>
-					<tr>
-						<td class="center">
-							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<center><input type="submit" class="btn btn-primary" value="Fetch scoreboard"></center>
 						</form>
 					</td>
 				</tr>

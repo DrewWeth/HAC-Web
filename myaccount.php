@@ -121,17 +121,11 @@ if (!empty($_POST['selected_comment'])) {
 	// end
 	$char_count = user_character_list_count($session_user_id);
 	?>
-	<div id="myaccount">
-		<h2>Account Management</h2><hr>
-		<tbody>
-			<table>
-				<tr>
-					<td>
-						<a class="btn btn-success" href='createcharacter.php'>Create Character</a>
-					</td>
-				</tr>
-			</table>
-		</tbody>
+
+	<div class="well" id="myaccount">
+		<h2>Account Management</h2><div class="pull-right"><a class="btn btn-success" href='createcharacter.php'>Create Character</a></div>
+
+		<hr>
 		<h3>Characters</h3>
 		<?php
 		// Echo character list!
@@ -141,9 +135,9 @@ if (!empty($_POST['selected_comment'])) {
 			?>
 			<tbody>
 				<table class="table table-condensed" id="myaccountTable">
-					<th>
+					<tr>
 						<td>NAME</td><td>STATUS</td><td>HIDE</td>
-					</th>
+					</tr>
 					<?php
 					$characters = array();
 					foreach ($char_array as $value) {
@@ -186,28 +180,26 @@ if (!empty($_POST['selected_comment'])) {
 					</form>
 					<!-- FORMS TO CHANGE CHARACTER COMMENT-->
 					<form action="" method="post">
-
-							<tr>
-								<td>Character comment
-								</td>
-								<td>
-									<select name="selected_comment">
-									<?php
-									for ($i = 0; $i < $char_count; $i++) {
-										echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-									}
-									?>
-									</select>
-									<?php
-										/* Form file */
-										Token::create();
-									?>
-								</td>
-								<td>
-									<input class="btn btn-default" type="submit" value="Change comment">
-								</td>
-							</li>
-						</ul>
+						<tr>
+							<td>Character comment
+							</td>
+							<td>
+								<select name="selected_comment">
+								<?php
+								for ($i = 0; $i < $char_count; $i++) {
+									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+								}
+								?>
+								</select>
+								<?php
+									/* Form file */
+									Token::create();
+								?>
+							</td>
+							<td>
+								<input class="btn btn-default" type="submit" value="Change comment">
+							</td>
+						</li>
 					</form>
 					<!-- FORMS TO CHANGE CHARACTER GENDER-->
 					<form action="" method="post">
