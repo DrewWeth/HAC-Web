@@ -23,7 +23,9 @@ if (empty($_GET['name'])) {
 <h3 class="inline">Guilds</h3>
 
 
-
+<table>
+	<tr>
+		<td>
 <form action="" method="post">
 	<select name="selected_char" class="form-control inline">
 		<?php
@@ -32,8 +34,9 @@ if (empty($_GET['name'])) {
 		}
 		?>
 	</select>
-	<input type="text" class="form-control inline" name="guild_name">				
-	<input type="submit" class="btn btn-success inline" value="Create Guild">		
+</td>
+	<td><input type="text" class="form-control inline" name="guild_name"></td>				
+	<td><input type="submit" class="btn btn-success inline" value="Create Guild"></td>		
 </form>
 	
 <?php
