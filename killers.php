@@ -69,8 +69,8 @@ if ($victims) {
 	?>
 	<div class="well">
 	<h1>Latest Killers</h1>
-	<table id="deathsTable">
-		<tr class="yellow">
+	<table class="table table-condensed table-striped" id="deathsTable">
+		<tr>
 			<td>Killer</td>
 			<td>Time</td>
 			<td>Victim</td>
