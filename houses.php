@@ -103,7 +103,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 		if ($house_query !== false && $house_load !== false) {
 			?>
 			<div class="well">
-			<center><h1>House list</h1></center>
+			<center><h1>House List</h1></center>
 			<tbody>
 			<table>
 				<tr>
