@@ -24,7 +24,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 			<tbody>
 			<table>
 				<tr>
-					<td style="width:80%">
+					<td>
 						<font class="profile_font" name="profile_font_level">Level
 					</td>
 					<td>
@@ -78,7 +78,8 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				</tr>
 				<tr><td><font class="profile_font" name="profile_font_comment">Comment</font></td><td><textarea name="profile_comment_textarea" cols="50" rows="1" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></td></tr>
 				<!-- DEATH LIST -->
-				<tr><td>
+				</tbody>
+				</table>
 					<b>Death List:</b><br>
 					<?php
 					if ($config['TFSVersion'] == 'TFS_02') {
@@ -143,7 +144,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 							}
 						}
 						?>
-				</td></tr>
+
 				
 				<!-- END DEATH LIST -->
 				
