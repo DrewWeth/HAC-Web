@@ -22,7 +22,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 			<?php ?>
 			<h1><font class="profile_font" name="profile_font_header">Profile: <?php echo $profile_data['name']; ?></font></h1>
 			<tbody>
-			<table>
+			<table class="table table-condensed table-striped">
 				<tr>
 					<td>
 						<font class="profile_font" name="profile_font_level">Level
