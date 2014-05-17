@@ -4,6 +4,7 @@ if ($config['log_ip']) {
 }
 ?>
 <div class="well">
+	<div class="col-sm-3">
 		<tbody>
 			<table class="table table-condensed">
 				<tr>
@@ -27,13 +28,15 @@ if ($config['log_ip']) {
 						</td>
 					</tr>
 					<tr>
-						<td class="center">
+						<td>
 							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
 						</form>
 					</td>
 				</tr>
 			</table>
 		</tbody>
+	</div>
+	<div class="col-sm-9">
 		<?php
 		if (empty($_POST) === false) {
 			
@@ -118,6 +121,7 @@ if ($config['log_ip']) {
 						</table>
 					</tbody>
 					</div>
+				</div>
 					<?php
 				} else {
 					echo 'Empty list, it appears all players have less than 500 experience points.';
@@ -135,7 +139,7 @@ if ($config['log_ip']) {
 			echo "<h3>Nothing Posted</h3>";
 		}
 		?>
-	
+
 <?php
 /*
 0 fist: SELECT (SELECT `name` from `players` WHERE `player_id`=`id`) AS `name`, `value` FROM `player_skills` WHERE `skillid`=0
