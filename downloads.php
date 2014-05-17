@@ -1,5 +1,5 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php'; ?>
-	<center><h1>Downloads</h1></center>
+	<center><h2>Downloads</h2></center>
 	<h3>Necessary Downloads</h3>
 	<p>In order to play, you need an compatible IP changer and a Tibia client.</p>
 	<ul>
