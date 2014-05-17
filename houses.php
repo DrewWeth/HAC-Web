@@ -29,6 +29,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			$array = isset($array) ? $array : false;
 		}
 		
+		echo "<div class=\"well\">";
 		// Design and present the list
 		if ($array) {
 			?>
@@ -155,4 +156,6 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 	}
 }
 echo "</div>";
+echo "</div>";
+
 include 'layout/overall/footer.php'; ?>
