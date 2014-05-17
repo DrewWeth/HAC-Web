@@ -37,7 +37,6 @@ if ($config['log_ip']) {
 		</tbody>
 	</div>
 	<div class="col-md-9">
-
 		<?php
 		if (empty($_POST) === false) {
 			
@@ -90,16 +89,16 @@ if ($config['log_ip']) {
 					<tbody>
 						<table class="table table-condensed" id="highscoresTable">
 							<tr>
-								<td>Name:</td>
+								<td>Name</td>
 								<?php
-								if ($skillid == 7) echo '<td>Level:</td><td>Experience:</td>';
+								if ($skillid == 7) echo '<td>Level</td><td>Experience</td>';
 								else {
 								?>
-								<td>Value:</td>
+								<td>Value</td>
 								<?php
 								}
 								if ($skillid == 7 || $skillid == 6 || $skillid == 5) {
-									echo '<td>Vocation:</td>';
+									echo '<td>Vocation</td>';
 								}
 								?>
 							</tr>
@@ -121,6 +120,8 @@ if ($config['log_ip']) {
 								?>
 						</table>
 					</tbody>
+					</div>
+
 					<?php
 				} else {
 					echo 'Empty list, it appears all players have less than 500 experience points.';
