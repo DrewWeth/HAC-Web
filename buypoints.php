@@ -10,15 +10,15 @@ if ($paypal['enabled']) {
 ?>
 <div class="well">
 <h2>Buy Points</h2>
-<h2>Buy points using Paypal:</h2>
-<table id="buypointsTable">
-	<tr class="yellow">
-		<td>Price:</td>
-		<td>Points:</td>
+<h3>Buy points using Paypal</h3>
+<table class="table table-condensed table-striped" id="buypointsTable">
+	<tr>
+		<td>Price</td>
+		<td>Points</td>
 		<?php if ($paypal['showBonus']) { ?>
-			<td>Bonus:</td>
+			<td>Bonus</td>
 		<?php } ?>
-		<td>Action:</td>
+		<td>Action</td>
 	</tr>
 		<?php
 		foreach ($prices as $price => $points) {
