@@ -12,6 +12,8 @@
 				<td>
 					<a href="http://remeresmapeditor.com/rmedl.php?file=tibia<?php echo ($config['client']); ?>.exe">Download</a>, install, and start the tibia client if you havent already.
 				</td>
+			</tr>
+			<tr>
 				<td></td><td><a href="http://static.otland.net/ipchanger.exe">Download</a> and run the IP changer with the IP as: <?php echo $_SERVER['SERVER_NAME']; ?>
 </td>
 			</tr>
