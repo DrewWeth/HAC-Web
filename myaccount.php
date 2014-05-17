@@ -143,7 +143,7 @@ if (!empty($_POST['selected_comment'])) {
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
 						?>
 						<td>
-						<form action="" method="post">
+						<form action="" method="post" style='margin: 0; padding: 0'>
 							<?php
 							echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
 							/* Form file */
@@ -152,7 +152,7 @@ if (!empty($_POST['selected_comment'])) {
 							<input class="btn btn-danger" type="submit" value="Delete">	
 						</form>
 						
-							<form action="" method="post">
+							<form action="" method="post" style='margin: 0; padding: 0'>
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
@@ -161,7 +161,7 @@ if (!empty($_POST['selected_comment'])) {
 								<input class="btn btn-default" type="submit" value="Gender">
 							</form>
 						
-							<form action="" method="post">
+							<form action="" method="post" style='margin: 0; padding: 0'>
 								<?php
 								echo '<input type="hidden" name="selected_comment" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
@@ -170,7 +170,7 @@ if (!empty($_POST['selected_comment'])) {
 								<input class="btn btn-default" type="submit" value="Comment">
 							</form>
 					
-							<form action="" method="post">
+							<form action="" method="post" style='margin: 0; padding: 0'>
 								<?php
 								echo '<input type="hidden" name="selected_hide" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
