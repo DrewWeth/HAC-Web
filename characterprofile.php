@@ -24,29 +24,46 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 			<tbody>
 			<table>
 				<tr>
-					<td><font class="profile_font" name="profile_font_level">Level: <?php echo $profile_data['level']; ?></font></td>
+					<td>
+						<font class="profile_font" name="profile_font_level">Level
+					</td>
+					<td>
+						<?php echo $profile_data['level']; ?></font>
+					</td>
 				</tr>
 				<tr>
-					<td><font class="profile_font" name="profile_font_vocation">Vocation: <?php echo vocation_id_to_name($profile_data['vocation']); ?></font></td>
+					<td>
+						<font class="profile_font" name="profile_font_vocation">Vocation
+					</td>
+					<td>
+						<?php echo vocation_id_to_name($profile_data['vocation']); ?></font>
+					</td>
 				<?php 
 				if ($guild_exist) {
 				?>
 				</tr>
 				<tr>
-					<td><font class="profile_font" name="profile_font_vocation"><b><?php echo $guild['rank_name']; ?></b> of <a href="guilds.php?name=<?php echo $guild_name; ?>"><?php echo $guild_name; ?></a></font></td>
+					<td><font class="profile_font" name="profile_font_vocation"><b><?php echo $guild['rank_name']; ?></b> of <a href="guilds.php?name=<?php echo $guild_name; ?>"><?php echo $guild_name; ?></a></font>
+					</td>
+				</tr>
 				<?php
 				}
 				?>
 				<tr>
-					<td><font class="profile_font" name="profile_font_lastlogin">Last Login: <?php
+					<td><font class="profile_font" name="profile_font_lastlogin">Last Login</td> <?php
 					if ($profile_data['lastlogin'] != 0) {
-						echo(date($config['date'],$profile_data['lastlogin']));
+						echo('<td>'.date($config['date'],$profile_data['lastlogin']).'</td>');
 					} else {
-						echo 'Never.';
+						echo '<td>Never</td>';
 					}
 					
-				?></font></td></tr>
-				<tr><td><font class="profile_font" name="profile_font_status">Status:</font> <?php 
+				?></font></tr>
+				<tr>
+					<td>
+						<font class="profile_font" name="profile_font_status">Status:</font>
+					</td> 
+					<td>
+						<?php 
 						if ($profile_data['online'] == 1) {
 							echo '<font class="profile_font" name="profile_font_online" color="green"><b>ONLINE</b></font>';
 						} else {
