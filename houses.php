@@ -56,7 +56,8 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 						echo "<td>". $value['doors'] ."</td>";
 						echo "<td>". $value['beds'] ."</td>";
 						echo "<td>". $value['price'] ."</td>";
-						if ($value['owner'] == 0) echo "<td>None</td>";
+						if ($value['owner'] == 0)
+							echo "<td>None</td>";
 						else {
 							$data = user_character_data($value['owner'], 'name');
 							echo '<td><a href="characterprofile.php?name='. $data['name'] .'">'. $data['name'] .'</a></td>';
