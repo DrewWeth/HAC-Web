@@ -3,7 +3,7 @@
 	// TFS 0.2 = TFS_02
 	// TFS 0.3 = TFS_03 (If ur using 0.3.6, set $config['salt'] to false)!
 	// TFS 0.4 = TFS_03
-	$config['TFSVersion'] = 'TFS_03';
+	$config['TFSVersion'] = 'TFS_02';
 	
 	$config['site_title'] = 'Honor and Chaos';
 	$config['site_title_context'] = 'RPG/PVP';
@@ -149,7 +149,7 @@
 	// Do you need to have premium account to create a guild?
 	$config['guild_require_premium'] = false;
 	
-	$config['guildwar_enabled'] = true;
+	$config['guildwar_enabled'] = false;
 	
 	// Use htaccess rewrite? (basically this makes website.com/username work instead of website.com/characterprofile.php?name=username
 	// Linux users needs to enable mod_rewrite php extention to make it work properly, so set it to false if your lost and using Linux.

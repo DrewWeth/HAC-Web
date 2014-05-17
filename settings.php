@@ -28,6 +28,8 @@ if (empty($_POST) === false) {
 	print_r($errors);
 }
 ?>
+
+<div class="well">
 <h1>Settings</h1>
 
 <?php
@@ -51,7 +53,7 @@ if (isset($_GET['success']) === true && empty($_GET['success']) === true) {
 	<form action="" method="post">
 		<ul>
 			<li>
-				email:<br>
+				Email:<br>
 				<input type="text" class="form-control"  name="new_email" value="<?php echo $user_data['email']; ?>">
 			</li>
 			<?php
@@ -107,7 +109,7 @@ if (empty($_POST) === false) {
 
 ?>
 
-<h1>Change Password:</h1>
+<h1>Change Password</h1>
 
 <?php
 if (isset($_GET['success']) && empty($_GET['success'])) {
@@ -154,6 +156,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			</li>
 		</ul>
 	</form>
+</div>
 <?php
 }
 include 'layout/overall/footer.php';
