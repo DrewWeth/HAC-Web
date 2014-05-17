@@ -21,7 +21,7 @@
 	  }
 	  
 	  ?></span></a></h1>
-	  <h2><?php echo $config['site_title_context']; ?></h2>
+	  <br><h2><?php echo $config['site_title_context']; ?></h2>
 	</div>
 	  <nav class="navbar navbar-default" role="navigation">
 	  	<div class="container-fluid">
