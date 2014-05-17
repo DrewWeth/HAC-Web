@@ -131,7 +131,7 @@ ol li {
 */
 
 .profile-post-address {
-  bottom: 15px;
+  bottom: -15px;
   right: 6px;
   position: absolute
 }
