@@ -207,15 +207,14 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				}
 				?>
 				<!-- END CHARACTER LIST -->
-				<li><font class="profile_font" name="profile_font_share_url">Address: <a href="<?php 
+				<div class="profile-post-address"><font class="profile_font" name="profile_font_share_url">Address: <a href="<?php 
 					if ($config['htwrite']) echo "http://".$_SERVER['HTTP_HOST']."/". $profile_data['name'];
 					else echo "http://".$_SERVER['HTTP_HOST']."/characterprofile.php?name=". $profile_data['name'];
 					
 				?>"><?php
 					if ($config['htwrite']) echo "http://".$_SERVER['HTTP_HOST']."/". $profile_data['name'];
 					else echo "http://".$_SERVER['HTTP_HOST']."/characterprofile.php?name=". $profile_data['name'];
-				?></a></font></li>
-			</ul>
+				?></a></font></div>
 		<!-- END PROFILE MARKUP HERE-->
 		
 		<?php

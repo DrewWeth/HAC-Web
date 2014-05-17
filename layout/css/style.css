@@ -130,6 +130,12 @@ ol li {
 }
 */
 
+.profile-post-address {
+  bottom: 5px;
+  right: 5px;
+  position: absolute
+}
+
 .news-post-date {
   top: 5px;
   right: 5px;
