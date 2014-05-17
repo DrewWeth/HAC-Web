@@ -24,7 +24,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 			<tbody>
 			<table>
 				<tr>
-					<td>
+					<td style="width:80%">
 						<font class="profile_font" name="profile_font_level">Level
 					</td>
 					<td>
@@ -60,7 +60,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				?></font></tr>
 				<tr>
 					<td>
-						<font class="profile_font" name="profile_font_status">Status:</font>
+						<font class="profile_font" name="profile_font_status">Status</font>
 					</td> 
 					<td>
 						<?php 
@@ -70,8 +70,13 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 							echo '<font class="profile_font" name="profile_font_online" color="red"><b>OFFLINE</b></font>';
 						}
 					?></td></tr>
-				<tr><td><font class="profile_font" name="profile_font_created">Created: <?php echo(date($config['date'],$profile_znote_data['created'])); ?></font></td></tr>
-				<tr><td><font class="profile_font" name="profile_font_comment">Comment:</font> <br><textarea name="profile_comment_textarea" cols="70" rows="1" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></td></tr>
+				<tr><td><font class="profile_font" name="profile_font_created">Created:
+					</td>
+					<td>
+						<?php echo(date($config['date'],$profile_znote_data['created'])); ?></font>
+					</td>
+				</tr>
+				<tr><td><font class="profile_font" name="profile_font_comment">Comment</font></td><td><textarea name="profile_comment_textarea" cols="50" rows="1" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></td></tr>
 				<!-- DEATH LIST -->
 				<tr><td>
 					<b>Death List:</b><br>
