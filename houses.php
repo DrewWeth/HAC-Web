@@ -120,6 +120,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 					foreach($house_query as $row) {
 						$house_info[(int)$row['id']] = '<a href="characterprofile.php?name='. $row['name'] .'">'. $row['name'] .'</a>';
 					}
+				}
 				if (is_array($house_load))
 				{
 					foreach ($house_load as $house_fetch){
