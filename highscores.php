@@ -4,7 +4,7 @@ if ($config['log_ip']) {
 }
 ?>
 <div class="well">
-	<div class="col-md-2">
+	<div class="col-md-3">
 		<tbody>
 			<table class="table table-condensed">
 				<tr>
@@ -36,7 +36,7 @@ if ($config['log_ip']) {
 			</table>
 		</tbody>
 	</div>
-	<div class="col-md-10">
+	<div class="col-md-9">
 
 		<?php
 		if (empty($_POST) === false) {
@@ -66,7 +66,7 @@ if ($config['log_ip']) {
 				if ($array) {
 					?>
 					<h2>
-						<?php echo ucfirst(skillid_to_name($skillid)); ?> scoreboard. Next update: 
+						<?php echo ucfirst(skillid_to_name($skillid)); ?>scoreboard.</h2><div class="news-post-date">Next update: 
 							<?php
 								if ($cache->remainingTime() > 0) {
 									$hours = seconds_to_hours($cache->remainingTime());
@@ -86,7 +86,7 @@ if ($config['log_ip']) {
 								}
 								
 							?>. <?php echo remaining_seconds_to_clock($cache->remainingTime());?>
-					</h2>
+					</div>
 					<tbody>
 						<table class="table table-condensed" id="highscoresTable">
 							<tr>
