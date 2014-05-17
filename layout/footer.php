@@ -1,6 +1,3 @@
-<div id="scroll">
-  <a title="Scroll to the top" class="top" href="#"><img src="layout/images/top.png" alt="top" /></a>
-</div>
 <footer>
 <p>&copy; <?php echo $config['site_title'];?>.
 <?php
