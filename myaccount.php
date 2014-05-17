@@ -135,9 +135,6 @@ if (!empty($_POST['selected_comment'])) {
 			?>
 			<tbody>
 				<table class="table table-condensed" id="myaccountTable">
-					<tr>
-						<td>Name</td><td>Level<td>Vocation</td><td>Town</td><td>Created</td><td>Status</td><td>Visibility</td><td></td>
-					</tr>
 					<?php
 					$characters = array();
 					foreach ($char_array as $value) {
@@ -147,14 +144,45 @@ if (!empty($_POST['selected_comment'])) {
 						?>
 						<td>
 						<form action="" method="post">
-								<?php
-									echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
-									/* Form file */
-									Token::create();
-								?>
-								<input class="btn btn-danger" type="submit" value="Delete Character">	
+							<?php
+							echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
+							/* Form file */
+							Token::create();
+							?>
+							<input class="btn btn-danger" type="submit" value="Delete">	
 						</form>
 						</td>
+						<td>
+							<form action="" method="post">
+								<?php
+								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
+								/* Form file */
+								Token::create();
+								?>
+								<input class="btn btn-default" type="submit" value="Change gender">
+							</form>
+						</td>
+						<td>
+							<form action="" method="post">
+								<?php
+								echo '<input type="hidden" name="selected_comment" value="'. $value['name'] .'"/>'; 	
+								/* Form file */
+								Token::create();
+								?>
+								<input class="btn btn-default" type="submit" value="Change comment">
+							</form>
+						</td>
+						<td>
+							<form action="" method="post">
+								<?php
+								echo '<input type="hidden" name="selected_hide" value="'. $value['name'] .'"/>'; 	
+								/* Form file */
+								Token::create();
+								?>
+								<input class="btn btn-default" type="submit" value="Toggle hide">
+							</form>
+						</td>
+
 						<?php
 						echo '</tr>';
 						$characters[] = $value['name'];
@@ -163,84 +191,6 @@ if (!empty($_POST['selected_comment'])) {
 				</table>
 			</tbody>
 
-			<h3>Options</h3>
-			<tbody>
-				<table class="table table-striped">
-					<form action="" method="post">
-						<tr>
-							<td>
-								Character hide</td>
-								<td><select name="selected_hide">
-								<?php
-								for ($i = 0; $i < $char_count; $i++) {
-									if (user_character_hide($characters[$i]) == 1) {
-										echo '<option value="'. $characters[$i] .'!0">'. $characters[$i] .'</option>'; 	
-									} else {
-										echo '<option value="'. $characters[$i] .'!1">'. $characters[$i] .'</option>'; 	
-									}
-								}
-								?>
-								</select>
-								<?php
-									/* Form file */
-									Token::create();
-								?>
-							</td><td>
-								<input class="btn btn-default" type="submit" value="Toggle hide">
-							</td>
-						</tr>
-					</form>
-					<!-- FORMS TO CHANGE CHARACTER COMMENT-->
-					<form action="" method="post">
-						<tr>
-							<td>Character comment
-							</td>
-							<td>
-								<select name="selected_comment">
-								<?php
-								for ($i = 0; $i < $char_count; $i++) {
-									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-								}
-								?>
-								</select>
-								<?php
-									/* Form file */
-									Token::create();
-								?>
-							</td>
-							<td>
-								<input class="btn btn-default" type="submit" value="Change comment">
-							</td>
-						</li>
-					</form>
-					<!-- FORMS TO CHANGE CHARACTER GENDER-->
-					<form action="" method="post">
-						<tr>
-							<td>
-								Change character gender
-							</td>
-							<td>
-								<select name="change_gender">
-								<?php
-								for ($i = 0; $i < $char_count; $i++) {
-									echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-								}
-								?>
-								</select>
-								<?php
-									/* Form file */
-									Token::create();
-								?>
-							</td>
-							<td>
-								<input class="btn btn-default" type="submit" value="Change gender">
-							</td>
-						</tr>
-					</form>
-					<!-- FORMS TO DELETE CHARACTER-->
-					
-				</table>
-			</tbody>
 			<?php
 			} else {
 				echo 'You don\'t have any characters. Why don\'t you <a href="createcharacter.php">create one</a>?';
