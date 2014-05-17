@@ -1,5 +1,4 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php';
-echo "div class=\"well\">";
 if ($config['log_ip']) {
 	znote_visitor_insert_detailed_data(3);
 }
@@ -103,6 +102,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 		$house_load = simplexml_load_file($house['house_file']);
 		if ($house_query !== false && $house_load !== false) {
 			?>
+			<div class="well">
 			<center><h1>House list</h1></center>
 			<tbody>
 			<table>
@@ -143,6 +143,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 				?>
 			</table>
 			</tbody>
+			</div>
 			<?php
 		} else echo '<p><font color="red">Something is wrong with the cache.</font></p>';
 	}
