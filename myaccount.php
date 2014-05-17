@@ -143,7 +143,7 @@ if (!empty($_POST['selected_comment'])) {
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
 						?>
 						<td>
-						<form action="" method="post" style='margin: 0; padding: 0'>
+						<form action="" method="post" style="display:inline;">
 							<?php
 							echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
 							/* Form file */
