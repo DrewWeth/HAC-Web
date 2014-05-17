@@ -3,9 +3,9 @@
 	<ul>
 	<h3>Connection Information</h3>
 	<tbody>
-		<table table="table table-bordered">
+		<table class="table table-bordered">
 			<tr>
-				<td style="width:50%"><center><b>Custom Client</td><td>Original Client</b></center></td>
+				<td style="width:50%"><center><b>Custom Client</b></center></td><td><center><b>Original Client</b></center></td>
 			</tr>
 			<tr>
 				<td><center><a href="https://dl.dropboxusercontent.com/u/7902004/hac_client.zip"><img class="img-responsive" src="https://farm3.staticflickr.com/2912/14016545650_9866bd310b_o.gif"></a></center></td>
