@@ -123,7 +123,7 @@ if (!empty($_POST['selected_comment'])) {
 	?>
 
 	<div class="well" id="myaccount">
-		<h2>Account Management</h2><div class="pull-right"><a class="btn btn-success inline" href='createcharacter.php'>Create Character</a></div>
+		<h2 class="inline">Account Management</h2><div class="pull-right"><a class="btn btn-success inline" href='createcharacter.php'>Create Character</a></div>
 
 		<hr>
 		<h3>Characters</h3>
