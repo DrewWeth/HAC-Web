@@ -8,8 +8,8 @@ $prices = $config['paypal_prices'];
 
 if ($paypal['enabled']) {
 ?>
-
-<h1>Buy Points</h1>
+<div class="well">
+<h2>Buy Points</h2>
 <h2>Buy points using Paypal:</h2>
 <table id="buypointsTable">
 	<tr class="yellow">
@@ -52,6 +52,7 @@ if ($paypal['enabled']) {
 		}
 		?>
 </table>
+</div>
 <?php } ?>
 
 <?php
