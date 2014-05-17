@@ -20,7 +20,7 @@ if (empty($_GET['name'])) {
 // Display the guild list
 ?>
 
-<h3 class="inline">Guilds</h3>
+<h2 class="inline">Guilds</h2>
 
 <tbody>
 	<table class="pull-right">
@@ -42,6 +42,8 @@ if (empty($_GET['name'])) {
 	</table>
 </tbody>
 	
+<hr>
+
 <?php
 $guilds = get_guilds_list();
 if ($guilds !== false) {
