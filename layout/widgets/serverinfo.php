@@ -19,7 +19,7 @@
 								$data='';
 								while (!feof($sock))$data .= fgets($sock, 1024);
 								fclose($sock);
-								echo "<div class=\"label label-success\">Server Online!</div>";
+								echo "<div class=\"label label-primary\">Server Online!</div>";
 							}
 						}
 						?>

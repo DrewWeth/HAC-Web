@@ -149,7 +149,7 @@ if (!empty($_POST['selected_comment'])) {
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-primary" type="submit" value="Gender">
+								<input class="btn btn-default" type="submit" value="Gender">
 							</form>
 						
 							<form action="" class="inline" method="post">
@@ -158,7 +158,7 @@ if (!empty($_POST['selected_comment'])) {
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-primary" type="submit" value="Comment">
+								<input class="btn btn-default" type="submit" value="Comment">
 							</form>
 					
 							<form action="" class="inline" method="post">
@@ -167,7 +167,7 @@ if (!empty($_POST['selected_comment'])) {
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-primary" type="submit" value="Hide">
+								<input class="btn btn-default" type="submit" value="Hide">
 							</form>
 							<form action="" class="inline" method="post">
 								<?php
