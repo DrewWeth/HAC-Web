@@ -22,22 +22,25 @@ if (empty($_GET['name'])) {
 
 <h3 class="inline">Guilds</h3>
 
-
-<table>
-	<tr>
-		<td>
-<form action="" method="post">
-	<select name="selected_char" class="form-control inline">
-		<?php
-		for ($i = 0; $i < $char_count; $i++) {
-			echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-		}
-		?>
-	</select>
-</td>
-	<td><input type="text" class="form-control inline" name="guild_name"></td>				
-	<td><input type="submit" class="btn btn-success inline" value="Create Guild"></td>		
-</form>
+<tbody>
+	<table class="pull-right">
+		<tr>
+			<td>
+				<form action="" method="post">
+					<select name="selected_char" class="form-control">
+						<?php
+						for ($i = 0; $i < $char_count; $i++) {
+							echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+						}
+						?>
+					</select>
+			</td>
+			<td><input type="text" class="form-control" name="guild_name"></td>				
+			<td><input type="submit" class="btn btn-success" value="Create Guild"></td>		
+				</form>
+		</tr>
+	</table>
+</tbody>
 	
 <?php
 $guilds = get_guilds_list();
