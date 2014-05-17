@@ -4,38 +4,7 @@ if ($config['log_ip']) {
 }
 ?>
 <div class="well">
-	<div class="col-sm-3">
-		<tbody>
-			<table class="table table-condensed">
-				<tr>
-					<td>
-						<form action="highscores.php" method="post">
-							<select name="selected" class="form-control">
-							<option value="7">Experience</option>
-							<option value="5">Shielding</option>
-							<option value="3">Axe</option>
-							<option value="2">Sword</option>
-							<option value="1">Club</option>
-							<option value="4">Distance</option>
-							<option value="0">Fist</option>
-							<option value="6">Fish</option>
-							<option value="8">Magic</option>
-							</select> 
-							<?php
-								/* Form file */
-								Token::create();
-							?>
-						</td>
-					</tr>
-					<tr>
-						<td>
-							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
-						</form>
-					</td>
-				</tr>
-			</table>
-		</tbody>
-	</div>
+
 	<?php
 		if (empty($_POST) === false) {
 			
@@ -85,6 +54,45 @@ if ($config['log_ip']) {
 								
 							?>. <?php echo remaining_seconds_to_clock($cache->remainingTime());?>
 					</div>
+
+
+
+
+
+					<div class="col-sm-3">
+						<tbody>
+							<table class="table table-condensed">
+								<tr>
+									<td>
+										<form action="highscores.php" method="post">
+											<select name="selected" class="form-control">
+											<option value="7">Experience</option>
+											<option value="5">Shielding</option>
+											<option value="3">Axe</option>
+											<option value="2">Sword</option>
+											<option value="1">Club</option>
+											<option value="4">Distance</option>
+											<option value="0">Fist</option>
+											<option value="6">Fish</option>
+											<option value="8">Magic</option>
+											</select> 
+											<?php
+												/* Form file */
+												Token::create();
+											?>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
+										</form>
+									</td>
+								</tr>
+							</table>
+						</tbody>
+					
+					</div>
+					<div class="col-sm-9">
 					<tbody>
 						<table class="table table-condensed" id="highscoresTable">
 							<tr>
@@ -119,7 +127,9 @@ if ($config['log_ip']) {
 								?>
 						</table>
 					</tbody>
-					</div>
+				</div>
+
+			</div>
 					<?php
 				} else {
 					echo 'Empty list, it appears all players have less than 500 experience points.';
