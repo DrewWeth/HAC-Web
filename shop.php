@@ -56,7 +56,7 @@ if (!empty($_POST['buy'])) {
 	//var_dump($buy);
 	//echo '<font color="red" size="4">'. $_POST['buy'] .'</font>';
 }
-
+echo "<div class=\"well\">";
 if ($shop['enabled']) {
 ?>
 
@@ -72,13 +72,14 @@ if (!empty($_POST['buy'])) {
 	?><td>You have <?php echo $user_znote_data['points']; ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
 }
 ?>
-<table id="shopTable">
-	<tr class="yellow">
-		<td>Describtion:</td>
-		<?php if ($config['shop']['showImage']) { ?><td>Image:</td><?php } ?>
-		<td>Count/duration:</td>
-		<td>Points:</td>
-		<td>Action:</td>
+<tbody>
+<table class="table table-condensed table-striped" id="shopTable">
+	<tr>
+		<td>Describtion</td>
+		<?php if ($config['shop']['showImage']) { ?><td>Image</td><?php } ?>
+		<td>Count/duration</td>
+		<td>Points</td>
+		<td>Action</td>
 	</tr>
 		<?php
 		foreach ($shop_list as $key => $offers) {
@@ -93,7 +94,7 @@ if (!empty($_POST['buy'])) {
 		?>
 		<form action="" method="POST">
 			<input type="hidden" name="buy" value="<?php echo (int)$key; ?>">
-			<input type="submit" value="  PURCHASE  ">
+			<input class="btn btn-primary" type="submit" value="  PURCHASE  ">
 		</form>
 		<?php
 		echo '</td>';
@@ -101,6 +102,11 @@ if (!empty($_POST['buy'])) {
 		}
 		?>
 </table>
+</tbody>
+
 <?php 
 } else echo '<h1>Buy Points system disabled.</h1><p>Sorry, this functionality is disabled.</p>';
+
+echo '</div>';
+
 include 'layout/overall/footer.php'; ?>
