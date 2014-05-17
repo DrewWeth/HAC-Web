@@ -8,7 +8,7 @@ if ($config['log_ip']) {
 			<table class="table table-condensed">
 				<tr>
 					<td>
-						<form action="highscores.php" class="form-control" method="post">
+						<form action="highscores.php" method="post">
 							<select name="selected" class="form-control">
 							<option value="7">Experience</option>
 							<option value="5">Shielding</option>
