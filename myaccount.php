@@ -140,19 +140,10 @@ if (!empty($_POST['selected_comment'])) {
 					foreach ($char_array as $value) {
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						echo '<tr>';
-						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td><td>'. hide_char_to_name(user_character_hide($value['name'])) .'</td>';
+						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
 						?>
 						<td>
-						<form action="" class="inline" method="post" style="display:inline;">
-							<?php
-							echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
-							/* Form file */
-							Token::create();
-							?>
-							<input class="btn btn-danger" type="submit" value="Delete">	
-						</form>
-						
-							<form action="" class="inline" method="post">
+							<form action="" class="inline pull-right" method="post">
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
@@ -161,7 +152,7 @@ if (!empty($_POST['selected_comment'])) {
 								<input class="btn btn-default" type="submit" value="Gender">
 							</form>
 						
-							<form action="" class="inline" method="post">
+							<form action="" class="inline pull-right" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_comment" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
@@ -170,13 +161,21 @@ if (!empty($_POST['selected_comment'])) {
 								<input class="btn btn-default" type="submit" value="Comment">
 							</form>
 					
-							<form action="" class="inline" method="post">
+							<form action="" class="inline pull-right" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_hide" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
 								Token::create();
 								?>
 								<input class="btn btn-default" type="submit" value="Hide">
+							</form>
+							<form action="" class="inline pull-right" method="post">
+								<?php
+								echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
+								/* Form file */
+								Token::create();
+								?>
+								<input class="btn btn-danger" type="submit" value="Delete">	
 							</form>
 						</td>
 
