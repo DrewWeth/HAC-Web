@@ -21,35 +21,42 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 		<!-- PROFILE MARKUP HERE-->
 			<?php ?>
 			<h1><font class="profile_font" name="profile_font_header">Profile: <?php echo $profile_data['name']; ?></font></h1>
-			<ul>
-				<li><font class="profile_font" name="profile_font_level">Level: <?php echo $profile_data['level']; ?></font></li>
-				<li><font class="profile_font" name="profile_font_vocation">Vocation: <?php echo vocation_id_to_name($profile_data['vocation']); ?></font></li>
+			<tbody>
+			<table>
+				<tr>
+					<td><font class="profile_font" name="profile_font_level">Level: <?php echo $profile_data['level']; ?></font></td>
+				</tr>
+				<tr>
+					<td><font class="profile_font" name="profile_font_vocation">Vocation: <?php echo vocation_id_to_name($profile_data['vocation']); ?></font></td>
 				<?php 
 				if ($guild_exist) {
 				?>
-				<li><font class="profile_font" name="profile_font_vocation"><b><?php echo $guild['rank_name']; ?></b> of <a href="guilds.php?name=<?php echo $guild_name; ?>"><?php echo $guild_name; ?></a></font></li>
+				</tr>
+				<tr>
+					<td><font class="profile_font" name="profile_font_vocation"><b><?php echo $guild['rank_name']; ?></b> of <a href="guilds.php?name=<?php echo $guild_name; ?>"><?php echo $guild_name; ?></a></font></td>
 				<?php
 				}
 				?>
-				<li><font class="profile_font" name="profile_font_lastlogin">Last Login: <?php
+				<tr>
+					<td><font class="profile_font" name="profile_font_lastlogin">Last Login: <?php
 					if ($profile_data['lastlogin'] != 0) {
 						echo(date($config['date'],$profile_data['lastlogin']));
 					} else {
 						echo 'Never.';
 					}
 					
-				?></font></li>
-				<li><font class="profile_font" name="profile_font_status">Status:</font> <?php 
+				?></font></td></tr>
+				<tr><td><font class="profile_font" name="profile_font_status">Status:</font> <?php 
 						if ($profile_data['online'] == 1) {
 							echo '<font class="profile_font" name="profile_font_online" color="green"><b>ONLINE</b></font>';
 						} else {
 							echo '<font class="profile_font" name="profile_font_online" color="red"><b>OFFLINE</b></font>';
 						}
-					?></li>
-				<li><font class="profile_font" name="profile_font_created">Created: <?php echo(date($config['date'],$profile_znote_data['created'])); ?></font></li>
-				<li><font class="profile_font" name="profile_font_comment">Comment:</font> <br><textarea name="profile_comment_textarea" cols="70" rows="10" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></li>
+					?></td></tr>
+				<tr><td><font class="profile_font" name="profile_font_created">Created: <?php echo(date($config['date'],$profile_znote_data['created'])); ?></font></td></tr>
+				<tr><td><font class="profile_font" name="profile_font_comment">Comment:</font> <br><textarea name="profile_comment_textarea" cols="70" rows="1" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></td></tr>
 				<!-- DEATH LIST -->
-				<li>
+				<tr><td>
 					<b>Death List:</b><br>
 					<?php
 					if ($config['TFSVersion'] == 'TFS_02') {
@@ -114,7 +121,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 							}
 						}
 						?>
-				</li>
+				</td></tr>
 				
 				<!-- END DEATH LIST -->
 				
@@ -129,8 +136,9 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						if ($characters && count($characters) > 1) {
 							?>
+							<tbody>
 							<table id="characterprofileTable">
-								<tr class="yellow">
+								<tr>
 									<td>
 										Name:
 									</td>
@@ -164,9 +172,10 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 								}
 							?>
 							</table>
+						</tbody>
 							<?php
 							} else {
-								echo '<b><font color="green">This player has never died.</font></b>';
+								echo '<span class="label label-success">This player has never died</span>';
 							}
 								//Done.
 							?>
