@@ -3,7 +3,7 @@
 	// TFS 0.2 = TFS_02
 	// TFS 0.3 = TFS_03 (If ur using 0.3.6, set $config['salt'] to false)!
 	// TFS 0.4 = TFS_03
-	$config['TFSVersion'] = 'TFS_02';
+	$config['TFSVersion'] = 'TFS_03';
 	
 	$config['site_title'] = 'Honor and Chaos';
 	$config['site_title_context'] = 'RPG/PVP';
