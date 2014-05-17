@@ -12,7 +12,7 @@ if (user_logged_in() === true) {
 } else {
 ?>
 
-<h1>Sorry, you need to be logged in to do that!</h1>
+<h2>Sorry, you need to be logged in to do that!</h2>
 <p>Please register or log in.</p>
 
 <?php 

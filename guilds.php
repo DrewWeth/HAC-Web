@@ -22,26 +22,33 @@ if (empty($_GET['name'])) {
 
 <h2 class="inline">Guilds</h2>
 
-<tbody>
-	<table class="pull-right">
-		<tr>
-			<td>
-				<form action="" method="post">
-					<select name="selected_char" class="form-control">
-						<?php
-						for ($i = 0; $i < $char_count; $i++) {
-							echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-						}
-						?>
-					</select>
-			</td>
-			<td><input type="text" class="form-control" name="guild_name"></td>				
-			<td><input type="submit" class="btn btn-success" value="Create Guild"></td>		
-				</form>
-		</tr>
-	</table>
-</tbody>
-	
+<?php
+if (user_logged_in() === true) {
+?>
+	<tbody>
+		<table class="pull-right">
+			<tr>
+				<td>
+					<form action="" method="post">
+						<select name="selected_char" class="form-control">
+							<?php
+							for ($i = 0; $i < $char_count; $i++) {
+								echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+							}
+							?>
+						</select>
+				</td>
+				<td><input type="text" class="form-control" name="guild_name"></td>				
+				<td><input type="submit" class="btn btn-success" value="Create Guild"></td>		
+					</form>
+			</tr>
+		</table>
+	</tbody>
+<?php
+}
+else
+	echo "<p class=\"pull-right\">Log in to create a guild</p>";
+?>
 <hr>
 
 <?php
