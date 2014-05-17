@@ -151,8 +151,7 @@ if (!empty($_POST['selected_comment'])) {
 							?>
 							<input class="btn btn-danger" type="submit" value="Delete">	
 						</form>
-						</td>
-						<td>
+						
 							<form action="" method="post">
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
@@ -161,8 +160,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 								<input class="btn btn-default" type="submit" value="Gender">
 							</form>
-						</td>
-						<td>
+						
 							<form action="" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_comment" value="'. $value['name'] .'"/>'; 	
@@ -171,8 +169,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 								<input class="btn btn-default" type="submit" value="Comment">
 							</form>
-						</td>
-						<td>
+					
 							<form action="" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_hide" value="'. $value['name'] .'"/>'; 	
