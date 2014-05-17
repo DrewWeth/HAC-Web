@@ -30,6 +30,7 @@
 			<tr><td>300</td><td>-</td><td>2x</td></tr>
 		</table></tbody>
 	<hr>
+<h3>Rates</h3>
 <ul>
 	<li>Magic: 10.0x</li>
 	<li>Skill: 30.0x</li>
