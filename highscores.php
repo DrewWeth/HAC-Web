@@ -4,42 +4,37 @@ if ($config['log_ip']) {
 }
 ?>
 <div class="well">
-	<div class="row">
-		<div class="span3">
-			<tbody>
-				<table class="table table-condensed">
-					<tr>
-						<td class="center">
-							<form action="highscores.php" class="form-control" method="post">
-								<select name="selected" class="form-control">
-								<option value="7">Experience</option>
-								<option value="5">Shielding</option>
-								<option value="3">Axe</option>
-								<option value="2">Sword</option>
-								<option value="1">Club</option>
-								<option value="4">Distance</option>
-								<option value="0">Fist</option>
-								<option value="6">Fish</option>
-								<option value="8">Magic</option>
-								</select> 
-								<?php
-									/* Form file */
-									Token::create();
-								?>
-							</td>
-						</tr>
-						<tr>
-							<td>
-								<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
-							</form>
+		<tbody>
+			<table class="table table-condensed">
+				<tr>
+					<td>
+						<form action="highscores.php" class="form-control" method="post">
+							<select name="selected" class="form-control">
+							<option value="7">Experience</option>
+							<option value="5">Shielding</option>
+							<option value="3">Axe</option>
+							<option value="2">Sword</option>
+							<option value="1">Club</option>
+							<option value="4">Distance</option>
+							<option value="0">Fist</option>
+							<option value="6">Fish</option>
+							<option value="8">Magic</option>
+							</select> 
+							<?php
+								/* Form file */
+								Token::create();
+							?>
 						</td>
 					</tr>
-				</table>
-			</tbody>
-		</div>
-	</div>
-	<div class="span-9">
-		<?php
+					<tr>
+						<td>
+							<input type="submit" class="btn btn-primary" value="Fetch scoreboard">
+						</form>
+					</td>
+				</tr>
+			</table>
+		</tbody>
+	<?php
 		if (empty($_POST) === false) {
 			
 			#if ($_POST['token'] == $_SESSION['token']) {
@@ -123,8 +118,6 @@ if ($config['log_ip']) {
 						</table>
 					</tbody>
 					</div>
-				</div>
-				</div>
 					<?php
 				} else {
 					echo 'Empty list, it appears all players have less than 500 experience points.';
