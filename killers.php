@@ -21,8 +21,9 @@ if ($cache->hasExpired()) {
 if ($killers) {
 ?>
 <h1>Biggest Murders</h1>
-<table id="killersTable">
-	<tr class="yellow">
+<tbody>
+<table class="table table-condensed table-striped" id="killersTable">
+	<tr>
 		<td>Name</td>
 		<td>Kills</td>
 	</tr>
@@ -33,8 +34,9 @@ if ($killers) {
 		echo '</tr>';
 	} ?>
 </table>
+</tbody>
 <?php
-} else echo 'No player kills exist.';
+} else echo "No murders exist.\n";
 
 if ($victims) {
 ?>
@@ -52,7 +54,7 @@ if ($victims) {
 	} ?>
 </table>
 <?php
-} else echo 'No player kills exist.';
+} else echo "No victims exist.\n";
 
 } else if ($config['TFSVersion'] == 'TFS_03') {
 	/////////
