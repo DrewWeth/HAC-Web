@@ -20,7 +20,9 @@ if (empty($_GET['name'])) {
 // Display the guild list
 ?>
 
-<h3>Guilds</h3><a class="btn btn-success pull-right" href="createguild.php">Create Guild</a>
+<div class="well">
+<h3 class="inline">Guilds</h3><a class="btn btn-success pull-right" href="createguild.php">Create Guild</a>
+
 <?php
 $guilds = get_guilds_list();
 if ($guilds !== false) {
@@ -164,7 +166,7 @@ if (user_logged_in() === true) {
 	// Display the specific guild page
 ?>
 
-<h1>Guild: <?php echo sanitize($_GET['name']); 
+<h1>Guild <?php echo sanitize($_GET['name']); 
 ?> </h1>
 <tbody>
 <table class="table table-condensed" id="guildViewTable">
@@ -663,6 +665,8 @@ if ($forumExist !== false) {
 		</li>
 	</ul>
 </form>
+</div>
+
 <?php
 } // display form if user has a character in guild
 } // user logged in
