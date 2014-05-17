@@ -25,14 +25,14 @@ if (empty($_GET['name'])) {
 
 
 <form action="" method="post">
-	<select name="selected_char" class="form-control">
+	<select name="selected_char" class="form-control inline">
 		<?php
 		for ($i = 0; $i < $char_count; $i++) {
 			echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
 		}
 		?>
 	</select>
-	<input type="text" class="form-control" name="guild_name">				
+	<input type="text" class="form-control inline" name="guild_name">				
 	<input type="submit" class="btn btn-success inline" value="Create Guild">		
 </form>
 	
