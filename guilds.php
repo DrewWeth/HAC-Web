@@ -72,7 +72,6 @@ if ($guilds !== false) {
 					echo '<td>'. $guild['name'] .'</td>';
 					echo '<td>'. count_guild_members($guild['id']) .'</td>';
 					echo '<td>'. average_guild_level($guild['id']) .'</td>';
-					
 					echo '<td>'. date($config['date'],$guild['creationdata']) .'</td>';
 					echo '</tr>';
 				}
