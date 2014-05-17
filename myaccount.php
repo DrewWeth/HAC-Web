@@ -112,7 +112,7 @@ if (!empty($_POST['selected_comment'])) {
 					/* Form file */
 					Token::create();
 				?>
-				<li><input class="btn btn-default" type="submit" value="Update Comment"></li>
+				<li><input class="btn btn-primary" type="submit" value="Update Comment"></li>
 			</ul>
 		</form>
 		<?php
@@ -123,7 +123,7 @@ if (!empty($_POST['selected_comment'])) {
 	?>
 
 	<div class="well" id="myaccount">
-		<h2 class="inline">Account Management</h2><div class="pull-right"><a class="btn btn-success inline" href='createcharacter.php'>Create Character</a></div>
+		<h2 class="inline">Account Management</h2><div class="pull-right"><a class="btn btn-primary inline" href='createcharacter.php'>Create Character</a></div>
 
 		<hr>
 		<h3>Characters</h3>
@@ -142,34 +142,34 @@ if (!empty($_POST['selected_comment'])) {
 						echo '<tr>';
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
 						?>
-						<td>
-							<form action="" class="inline pull-right" method="post">
+						<td class="pull-right">
+							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-default" type="submit" value="Gender">
+								<input class="btn btn-primary" type="submit" value="Gender">
 							</form>
 						
-							<form action="" class="inline pull-right" method="post">
+							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_comment" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-default" type="submit" value="Comment">
+								<input class="btn btn-primary" type="submit" value="Comment">
 							</form>
 					
-							<form action="" class="inline pull-right" method="post">
+							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_hide" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
 								Token::create();
 								?>
-								<input class="btn btn-default" type="submit" value="Hide">
+								<input class="btn btn-primary" type="submit" value="Hide">
 							</form>
-							<form action="" class="inline pull-right" method="post">
+							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="selected_delete" value="'. $value['name'] .'"/>'; 	
 								/* Form file */
