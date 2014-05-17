@@ -9,7 +9,7 @@ if ($config['log_ip']) {
 			<table class="table table-condensed">
 				<tr>
 					<td class="center">
-						<form action="highscores.php" method="post">
+						<form action="highscores.php" class="form-control" method="post">
 							<select name="selected" class="form-control">
 							<option value="7">Experience</option>
 							<option value="5">Shielding</option>
@@ -65,8 +65,8 @@ if ($config['log_ip']) {
 				// Design and present the list
 				if ($array) {
 					?>
-					<h2>
-						<?php echo ucfirst(skillid_to_name($skillid)); ?>scoreboard.</h2><div class="news-post-date">Next update: 
+					<h3>
+						<?php echo ucfirst(skillid_to_name($skillid)); ?> scoreboard.</h3><div class="news-post-date">Next update: 
 							<?php
 								if ($cache->remainingTime() > 0) {
 									$hours = seconds_to_hours($cache->remainingTime());
@@ -139,7 +139,6 @@ if ($config['log_ip']) {
 		}
 		?>
 	</div>
-</div>
 <?php
 /*
 0 fist: SELECT (SELECT `name` from `players` WHERE `player_id`=`id`) AS `name`, `value` FROM `player_skills` WHERE `skillid`=0
