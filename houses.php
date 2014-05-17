@@ -60,7 +60,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 							echo "<td>None</td>";
 						else {
 							$data = user_character_data($value['owner'], 'name');
-							echo '<td><a href="characterprofile.php?name='. $data['name'] .'">'. $data['name'] .'</a></td>';
+							echo "<td><a href=\"characterprofile.php?name=\"". $data['name'] ."\">". $data['name'] ."</a></td>";
 						}
 						echo '</tr>';
 						// end foreach
