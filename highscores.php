@@ -4,6 +4,7 @@ if ($config['log_ip']) {
 }
 ?>
 <div class="well">
+	<div class="col-sm-3">
 		<tbody>
 			<table class="table table-condensed">
 				<tr>
@@ -34,6 +35,7 @@ if ($config['log_ip']) {
 				</tr>
 			</table>
 		</tbody>
+	</div>
 	<?php
 		if (empty($_POST) === false) {
 			
