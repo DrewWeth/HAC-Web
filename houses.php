@@ -105,7 +105,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			<div class="well">
 			<center><h1>House List</h1></center>
 			<tbody>
-			<table>
+			<table class="table table-condensed table-striped">
 				<tr>
 					<td><b>House</b></td>
 					<td><b>Location</b></td>
@@ -115,30 +115,35 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 
 				<?php
 				//execute code.
-				foreach($house_query as $row) {
-					$house_info[(int)$row['id']] = '<a href="characterprofile.php?name='. $row['name'] .'">'. $row['name'] .'</a>';
-				}
-				foreach ($house_load as $house_fetch){
-					$house_price = (int)$house_fetch['size'] * $sqmPrice;
-					?>
-					<tr>
-						<td><?php echo htmlspecialchars($house_fetch['name']); ?></td>
-						<td>
-							<?php
-							if (isset($config['towns'][(int)$house_fetch['townid']])) echo htmlspecialchars($config['towns'][(int)$house_fetch['townid']]);
-							else echo '(Missing town)';
-							?>
-						</td>
-						<td>
-							<?php
-							if (isset($house_info[(int)$house_fetch['houseid']])) echo $house_info[(int)$house_fetch['houseid']];
-							else echo 'None [Available]';
-							?>
-						</td>
-						<td><?php echo $house_fetch['size']; ?></td>
-						<td><?php echo $house_price; ?></td>
-					</tr>
-					<?php
+				if (is_array($house_query))
+				{
+					foreach($house_query as $row) {
+						$house_info[(int)$row['id']] = '<a href="characterprofile.php?name='. $row['name'] .'">'. $row['name'] .'</a>';
+					}
+				if (is_array($house_load))
+				{
+					foreach ($house_load as $house_fetch){
+						$house_price = (int)$house_fetch['size'] * $sqmPrice;
+						?>
+						<tr>
+							<td><?php echo htmlspecialchars($house_fetch['name']); ?></td>
+							<td>
+								<?php
+								if (isset($config['towns'][(int)$house_fetch['townid']])) echo htmlspecialchars($config['towns'][(int)$house_fetch['townid']]);
+								else echo '(Missing town)';
+								?>
+							</td>
+							<td>
+								<?php
+								if (isset($house_info[(int)$house_fetch['houseid']])) echo $house_info[(int)$house_fetch['houseid']];
+								else echo 'None [Available]';
+								?>
+							</td>
+							<td><?php echo $house_fetch['size']; ?></td>
+							<td><?php echo $house_price; ?></td>
+						</tr>
+						<?php
+					}
 				}
 				?>
 			</table>
