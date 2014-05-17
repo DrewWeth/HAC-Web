@@ -20,8 +20,22 @@ if (empty($_GET['name'])) {
 // Display the guild list
 ?>
 
-<h3 class="inline">Guilds</h3><a class="btn btn-success pull-right" href="createguild.php">Create Guild</a>
+<h3 class="inline">Guilds</h3>
 
+
+
+<form action="" method="post">
+	<select name="selected_char" class="form-control">
+		<?php
+		for ($i = 0; $i < $char_count; $i++) {
+			echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
+		}
+		?>
+	</select>
+	<input type="text" class="form-control" name="guild_name">				
+	<input type="submit" class="btn btn-success inline" value="Create Guild">		
+</form>
+	
 <?php
 $guilds = get_guilds_list();
 if ($guilds !== false) {
@@ -97,23 +111,7 @@ if (user_logged_in() === true) {
 	// end	
 	?>
 	<!-- FORMS TO CREATE GUILD-->
-	<form action="" method="post">
-		<ul>
-			<li>
-				Create Guild:<br>
-				<select name="selected_char">
-				<?php
-				for ($i = 0; $i < $char_count; $i++) {
-					echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>'; 	
-				}
-				?>
-				</select>
-				<input type="text" name="guild_name">
-				
-				<input type="submit" class="btn btn-success" value="Create Guild">
-			</li>
-		</ul>
-	</form>
+	
 	
 	<?php
 } else echo 'You need to be logged in to create guilds.';
