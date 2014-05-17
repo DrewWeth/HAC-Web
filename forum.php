@@ -282,7 +282,7 @@ if ($admin && !empty($_POST)) {
 						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><input type="submit" name="admin_update_category" value="Update Board" style="width: 100%; height: 30px;"></td>
+						<td colspan="2"><input type="submit" class="btn btn-primary" name="admin_update_category" value="Update Board" style="width: 100%; height: 30px;"></td>
 					</tr>
 				</table>
 			</form>
@@ -470,7 +470,7 @@ if (!empty($_GET)) {
 			<form type="" method="post">
 				<input name="update_post_id" type="hidden" value="<?php echo $post['id']; ?>">
 				<textarea name="update_post_text" style="width: 610px; height: 300px"><?php echo $post['text']; ?></textarea><br>
-				<input type="submit" value="Update Post">
+				<input type="submit" class="btn btn-primary" value="Update Post">
 			</form>
 			<?php
 		} else echo '<p><b><font color="red">You don\'t have permission to edit this post.</font></b></p>';
@@ -493,7 +493,7 @@ if (!empty($_GET)) {
 				<input name="update_thread_id" type="hidden" value="<?php echo $thread['id']; ?>">
 				<input name="update_thread_title" type="text" value="<?php echo $thread['title']; ?>" style="width: 500px;"><br><br>
 				<textarea name="update_thread_text" style="width: 610px; height: 300px"><?php echo $thread['text']; ?></textarea><br>
-				<input type="submit" value="Update Thread">
+				<input type="submit" class="btn btn-primary" value="Update Thread">
 			</form>
 			<?php
 		} else echo '<p><b><font color="red">Edit access denied.</font></b></p>';
@@ -558,19 +558,19 @@ if (!empty($_GET)) {
 							<td>
 								<form action="" method="post">
 									<input type="hidden" name="admin_thread_id" value="<?php echo $threadData['id']; ?>">
-									<input type="submit" name="admin_thread_delete" value="Delete Thread">
+									<input type="submit" class="btn btn-primary" name="admin_thread_delete" value="Delete Thread">
 								</form>
 							</td>
 							<td>
 								<?php if ($threadData['closed'] == 0) { ?>
 									<form action="" method="post">
 										<input type="hidden" name="admin_thread_id" value="<?php echo $threadData['id']; ?>">
-										<input type="submit" name="admin_thread_close" value="Close Thread">
+										<input type="submit" class="btn btn-primary" name="admin_thread_close" value="Close Thread">
 									</form>
 								<?php } else { ?>
 									<form action="" method="post">
 										<input type="hidden" name="admin_thread_id" value="<?php echo $threadData['id']; ?>">
-										<input type="submit" name="admin_thread_open" value="Open Thread">
+										<input type="submit" class="btn btn-primary" name="admin_thread_open" value="Open Thread">
 									</form>
 								<?php } ?>
 							</td>
@@ -578,19 +578,19 @@ if (!empty($_GET)) {
 								<?php if ($threadData['sticky'] == 0) { ?>
 									<form action="" method="post">
 										<input type="hidden" name="admin_thread_id" value="<?php echo $threadData['id']; ?>">
-										<input type="submit" name="admin_thread_sticky" value="Stick thread">
+										<input type="submit" class="btn btn-primary" name="admin_thread_sticky" value="Stick thread">
 									</form>
 								<?php } else { ?>
 									<form action="" method="post">
 										<input type="hidden" name="admin_thread_id" value="<?php echo $threadData['id']; ?>">
-										<input type="submit" name="admin_thread_unstick" value="Unstick thread">
+										<input type="submit" class="btn btn-primary" name="admin_thread_unstick" value="Unstick thread">
 									</form>
 								<?php } ?>
 							</td>
 							<td>
 								<form action="" method="post">
 									<input type="hidden" name="edit_thread_id" value="<?php echo $threadData['id']; ?>">
-									<input type="submit" name="edit_thread" value="Edit Thread">
+									<input type="submit" class="btn btn-primary" name="edit_thread" value="Edit Thread">
 								</form>
 							</td>
 						</tr>
@@ -604,7 +604,7 @@ if (!empty($_GET)) {
 								<td>
 									<form action="" method="post">
 										<input type="hidden" name="edit_thread_id" value="<?php echo $threadData['id']; ?>">
-										<input type="submit" name="edit_thread" value="Edit Thread">
+										<input type="submit" class="btn btn-primary" name="edit_thread" value="Edit Thread">
 									</form>
 								</td>
 							</tr>
@@ -645,7 +645,7 @@ if (!empty($_GET)) {
 								?>
 								<form action="" method="post" class="postButton">
 									<input type="hidden" name="admin_post_id" value="<?php echo $post['id']; ?>">
-									<input type="submit" name="admin_post_delete" value="Delete Post">
+									<input type="submit" class="btn btn-primary" name="admin_post_delete" value="Delete Post">
 								</form>
 								<?php
 							}
@@ -653,7 +653,7 @@ if (!empty($_GET)) {
 								?>
 								<form action="" method="post" class="postButton">
 									<input type="hidden" name="edit_post_id" value="<?php echo $post['id']; ?>">
-									<input type="submit" name="edit_post" value="Edit Post">
+									<input type="submit" class="btn btn-primary" name="edit_post" value="Edit Post">
 								</form>
 								<?php
 							}
@@ -678,7 +678,7 @@ if (!empty($_GET)) {
 								}
 								?>
 							</select>
-							<input name="" type="submit" value="Post Reply">
+							<input name="" type="submit" class="btn btn-primary" value="Post Reply">
 						</form>
 						<?php
 					} else echo '<p><b>You don\'t have permission to post on this thread. [Thread: Closed]</b></p>';
@@ -736,7 +736,7 @@ if (!empty($_GET)) {
 					<input name="create_thread_category" type="hidden" value="<?php echo $new_thread_category; ?>">
 					<input name="create_thread_title" type="text" placeholder="Thread title" style="width: 500px;"><br><br>
 					<textarea name="create_thread_text" style="width: 610px; height: 300px" placeholder="Thread text"></textarea><br>
-					<input type="submit" value="Create Thread">
+					<input type="submit" class="btn btn-primary" value="Create Thread">
 				</form>
 				<?php
 			} else echo '<p><b><font color="red">Permission to create thread denied.</font></b></p>';
@@ -829,7 +829,7 @@ if (!empty($_GET)) {
 							}
 							?>
 						</select>
-						<input type="submit" value="Create new thread">
+						<input type="submit" class="btn btn-primary" value="Create new thread">
 					</form>
 					<?php
 				} else echo '<p>This board is closed.</p>';
@@ -908,13 +908,13 @@ if (!empty($_GET)) {
 						<td style="margin: 0px; padding: 0px; width: 50px;">
 							<form action="" method="post">
 								<input type="hidden" name="admin_category_id" value="<?php echo $category['id']; ?>">
-								<input type="submit" name="admin_category_edit" value="Edit" style="margin: 0px; padding: 0px; width: 50px; height: 22px;">
+								<input type="submit" class="btn btn-primary" name="admin_category_edit" value="Edit" style="margin: 0px; padding: 0px; width: 50px; height: 22px;">
 							</form>
 						</td>
 						<td style="margin: 0px; padding: 0px; width: 75px;">
 							<form action="" method="post">
 								<input type="hidden" name="admin_category_id" value="<?php echo $category['id']; ?>">
-								<input type="submit" name="admin_category_delete" value="Delete" style="margin: 0px; padding: 0px; width: 75px; height: 22px;">
+								<input type="submit" class="btn btn-primary" name="admin_category_delete" value="Delete" style="margin: 0px; padding: 0px; width: 75px; height: 22px;">
 							</form>
 						</td>
 						<?php
@@ -984,13 +984,13 @@ if (!empty($_GET)) {
 						<td style="margin: 0px; padding: 0px; width: 50px;">
 							<form action="" method="post">
 								<input type="hidden" name="admin_category_id" value="<?php echo $board['id']; ?>">
-								<input type="submit" name="admin_category_edit" value="Edit" style="margin: 0px; padding: 0px; width: 50px; height: 22px;">
+								<input type="submit" class="btn btn-primary" name="admin_category_edit" value="Edit" style="margin: 0px; padding: 0px; width: 50px; height: 22px;">
 							</form>
 						</td>
 						<td style="margin: 0px; padding: 0px; width: 75px;">
 							<form action="" method="post">
 								<input type="hidden" name="admin_category_id" value="<?php echo $board['id']; ?>">
-								<input type="submit" name="admin_category_delete" value="Delete" style="margin: 0px; padding: 0px; width: 75px; height: 22px;">
+								<input type="submit" class="btn btn-primary" name="admin_category_delete" value="Delete" style="margin: 0px; padding: 0px; width: 75px; height: 22px;">
 							</form>
 						</td>
 						<?php
@@ -1037,7 +1037,7 @@ if (!empty($_GET)) {
 				?>
 			</select><br><br>
 			
-			<input type="submit" value="Create Board">
+			<input type="submit" class="btn btn-primary" value="Create Board">
 		</form>
 		<?php
 	}
