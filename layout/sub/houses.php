@@ -1,4 +1,3 @@
-<div class="well">
 	<form action="houses.php" method="post">
 			<label>Select town</label>
 			<select class="form-control" name="selected">
@@ -12,4 +11,3 @@
 			?>
 			<input type="submit" class="btn btn-primary" value="Fetch houses">
 	</form>
-</div>

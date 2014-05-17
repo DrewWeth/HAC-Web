@@ -1,5 +1,4 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php'; ?>
-<div class="well">
 	<center><h1>Downloads</h1></center>
 	<h3>Necessary Downloads</h3>
 	<p>In order to play, you need an compatible IP changer and a Tibia client.</p>
@@ -27,7 +26,6 @@
 			If you do not have an account to login with, you need to register an account <a href="register.php">HERE</a>.
 		</li>
 	</ol>
-</div>
 
 <?php 
 include 'layout/overall/footer.php'; ?>

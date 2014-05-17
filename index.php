@@ -37,7 +37,6 @@
 			<?php
 			foreach ($news as $n) {
 			?>
-				<div class="well">
 					<h2>
 						<?php echo TransformToBBCode($n['title'])."</h2><div class=\"news-post-date\">".date($config['date'], $n['date'])."</div>"; ?>
 						<hr>
@@ -46,7 +45,6 @@
 				<?php
 			}
 			?>
-			</div>
 			
 			<?php 
 		} else {

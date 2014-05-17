@@ -67,7 +67,6 @@ if ($victims) {
 		$deaths = $cache->load();
 	}
 	?>
-	<div class="well">
 	<h1>Latest Killers</h1>
 	<table class="table table-condensed table-striped" id="deathsTable">
 		<tr>
@@ -83,7 +82,6 @@ if ($victims) {
 			echo '</tr>';
 		} ?>
 	</table>
-	</div>
 	<?php
 	/////////
 }

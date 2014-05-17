@@ -1,5 +1,4 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php'; ?>
-<div class="well">
 	<center><h1>Server Information</h1></center>
 	<ul>
 	<h3>Connection Information</h3>
@@ -12,5 +11,4 @@
 	<li>Skill: 20.0</li>
 	<li>Loot: 3.0</li>
 	</ul>
-</div>
 <?php include 'layout/overall/footer.php'; ?>

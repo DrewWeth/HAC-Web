@@ -29,7 +29,6 @@ if (empty($_POST) === false) {
 }
 ?>
 
-<div class="well">
 <h1>Settings</h1>
 
 <?php
@@ -156,7 +155,6 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			</li>
 		</ul>
 	</form>
-</div>
 <?php
 }
 include 'layout/overall/footer.php';

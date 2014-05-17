@@ -20,7 +20,6 @@ if (empty($_GET['name'])) {
 // Display the guild list
 ?>
 
-<div class="well">
 <h3 class="inline">Guilds</h3><a class="btn btn-success pull-right" href="createguild.php">Create Guild</a>
 
 <?php
@@ -665,7 +664,6 @@ if ($forumExist !== false) {
 		</li>
 	</ul>
 </form>
-</div>
 
 <?php
 } // display form if user has a character in guild

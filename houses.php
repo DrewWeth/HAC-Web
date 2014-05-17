@@ -29,7 +29,6 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			$array = isset($array) ? $array : false;
 		}
 		
-		echo "<div class=\"well\">";
 		// Design and present the list
 		if ($array) {
 			?>
@@ -104,7 +103,6 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 		$house_load = simplexml_load_file($house['house_file']);
 		if ($house_query !== false && $house_load !== false) {
 			?>
-			<div class="well">
 			<center><h1>House List</h1></center>
 			<tbody>
 			<table class="table table-condensed table-striped">
@@ -147,12 +145,9 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 				?>
 			</table>
 			</tbody>
-			</div>
 			<?php
 		} else echo '<p><font color="red">Something is wrong with the cache.</font></p>';
 	}
 }
-echo "</div>";
-echo "</div>";
 
 include 'layout/overall/footer.php'; ?>

@@ -3,7 +3,6 @@ if ($config['log_ip']) {
 	znote_visitor_insert_detailed_data(3);
 }
 ?>
-<div class="well">
 
 	<?php
 		if (empty($_POST) === false) {
@@ -146,7 +145,6 @@ if ($config['log_ip']) {
 			echo "<h3>Nothing Posted</h3>";
 		}
 		?>
-			</div>
 
 <?php
 /*
