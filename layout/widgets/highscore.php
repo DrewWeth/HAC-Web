@@ -2,7 +2,7 @@
 	<h2>Search highscores</h2>
 	<div class="inner">
 		<tbody>
-			<table class="table table-striped">
+			<table class="table table-striped table-condensed">
 				<tr>
 					<td class="center">
 

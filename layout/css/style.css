@@ -40,6 +40,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #362C20;
   letter-spacing: 0em;
   padding: 0 0 5px 0;
+  margin-bottom: 10px;
 }
 
 h1, h2, h3 { 
@@ -401,7 +402,6 @@ tr.yellow td {
 }
   
 table tr td { 
-  background: #E5E5DB;
   color: #47433F;
   border-top: 1px solid #FFF;
 }
