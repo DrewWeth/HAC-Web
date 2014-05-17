@@ -56,10 +56,11 @@ $guilds = get_guilds_list();
 if ($guilds !== false) {
 ?>
 <tbody>
-	<table class="table table-condensed" id="guildsTable">
+	<table class="table table-condensed table-striped" id="guildsTable">
 		<tr>
-			<td>Guild name</td>
+			<td>Guild Name</td>
 			<td>Members</td>
+			<td>Average Level</td>
 			<td>Founded</td>
 		</tr>
 			<?php
@@ -70,6 +71,8 @@ if ($guilds !== false) {
 					echo '<tr class="special" onclick="javascript:window.location.href=\'' . $url . '\'">';
 					echo '<td>'. $guild['name'] .'</td>';
 					echo '<td>'. count_guild_members($guild['id']) .'</td>';
+					echo '<td>'. average_guild_level($guild['id']) .'</td>';
+					
 					echo '<td>'. date($config['date'],$guild['creationdata']) .'</td>';
 					echo '</tr>';
 				}
@@ -125,14 +128,7 @@ if (user_logged_in() === true) {
 	}
 	// end	
 	?>
-	<!-- FORMS TO CREATE GUILD-->
 	
-	
-	<?php
-} else echo 'You need to be logged in to create guilds.';
-?>
-<!-- end user-->
-
 <?php
 } else { // GUILD OVERVIEW
 	$gid = get_guild_id($_GET['name']);

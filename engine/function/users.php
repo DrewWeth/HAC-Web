@@ -533,6 +533,11 @@ function count_guild_members($gid) {
 	return mysql_result(mysql_query("SELECT COUNT(p.id) AS total FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid"), 0, 'total');
 }
 
+function average_guild_level($gid) {
+	$gid = (int)$gid;
+	return mysql_result(mysql_query("SELECT SUM(p.level)/COUNT(p.id) AS average FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid"), 0, 'total');
+}
+
 //
 // GUILD WAR
 //
