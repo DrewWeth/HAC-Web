@@ -1,7 +1,7 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php'; ?>
 	<center><h2>Downloads</h2></center>
 	<h3>Necessary Downloads</h3>
-	<p>In order to play, you need an compatible IP changer and a Tibia client.</p>
+	<p>In order to play, you need a Tibia client.</p>
 	<ul>
 	<li>Download otland IP changer <a href="http://static.otland.net/ipchanger.exe">HERE</a>.</li>
 	<li>Download Tibia client <?php echo ($config['client'] / 100); ?> <a href="<?php echo $config['client_download']; ?>">HERE</a>.</li>

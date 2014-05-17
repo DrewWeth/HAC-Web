@@ -2,8 +2,23 @@
 	<center><h1>Server Information</h1></center>
 	<ul>
 	<h3>Connection Information</h3>
+	<tbody>
+		<table>
+			<tr>
+				<td>Custom Client</td><td>Original Client</td>
+			</tr>
+			<tr>
+				<td><a href=""><img class="img-responsive" src="https://farm3.staticflickr.com/2912/14016545650_9866bd310b_o.gif"></a></td>
+				<td>
+					<a href="http://remeresmapeditor.com/rmedl.php?file=tibia<?php echo ($config['client']); ?>.exe">Download</a>, install and start the tibia client if you havent already.
+					<a href="http://static.otland.net/ipchanger.exe">Download</a> and run the IP changer with the IP as: <?php echo $_SERVER['SERVER_NAME']; ?>
+				</td>
+			</tr>
+		</table>
+	</tbody>
 	<li>Client version: <?php echo ($config['client'])/100.0; ?></li>
 	<li>IP address: <?php echo $_SERVER['SERVER_NAME']; ?></li>
+	<hr>
 	<h3>Experience Stages</h3>
 	<tbody>
 		<table class="table table-condensed table-striped">
