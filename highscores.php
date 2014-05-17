@@ -139,7 +139,6 @@ if ($config['log_ip']) {
 			echo "<h3>Nothing Posted</h3>";
 		}
 		?>
-	</div>
 <?php
 /*
 0 fist: SELECT (SELECT `name` from `players` WHERE `player_id`=`id`) AS `name`, `value` FROM `player_skills` WHERE `skillid`=0
