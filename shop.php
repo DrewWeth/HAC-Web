@@ -92,11 +92,16 @@ if (user_logged_in() == true)
 		else echo '<td>'. $offers['count'] .'x</td>';
 		echo '<td>'. $offers['points'] .'</td>';
 		echo '<td>';
-		?>
+		
+		if (user_logged_in() == true) { ?>
 		<form action="" method="POST">
 			<input type="hidden" name="buy" value="<?php echo (int)$key; ?>">
 			<input class="btn btn-primary" type="submit" value="  PURCHASE  ">
 		</form>
+		<?php }
+		else ?>
+			<a href="protected.php">PURCHASE</a>
+
 		<?php
 		echo '</td>';
 		echo '</tr>';
