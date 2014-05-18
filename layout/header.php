@@ -58,15 +58,7 @@
 			          </ul>
 			        </li>
 
-			        <li class="dropdown">
-			          <a href="#" class="dropdown-toggle" data-toggle="dropdown">Guilds <b class="caret"></b></a>
-			          <ul class="dropdown-menu">
-							<li><a href="guilds.php">Guild List</a></li>
-						<?php if ($config['guildwar_enabled'] === true) { ?>						
-							<li><a href="guildwar.php">Guild Wars</a></li>					
-						<?php } ?>
-			          </ul>
-			        </li>
+			        <li><a href="guilds.php">Guilds</a></li>
 			    </ul>
 			    <form type="submit" action="characterprofile.php" method="get" class="navbar-form navbar-left" role="search">
 			        <div class="form-group">

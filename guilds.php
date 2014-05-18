@@ -129,7 +129,8 @@ if (user_logged_in() === true) {
 	?>
 	
 <?php
-} else { // GUILD OVERVIEW
+} 
+else { // GUILD OVERVIEW
 	$gid = get_guild_id($_GET['name']);
 	if ($gid === false) {
 		header('Location: guilds.php');
@@ -170,6 +171,7 @@ if (user_logged_in() === true) {
 			}
 		}
 	}
+}
 	// Display the specific guild page
 ?>
 
@@ -677,7 +679,7 @@ if (user_logged_in() === true) {
 
 		<?php
 		}	
-	}
+	
 	} // user logged in
 } // if warname as $_GET
 include 'layout/overall/footer.php';
