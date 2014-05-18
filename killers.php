@@ -67,24 +67,25 @@ if ($victims) {
 		$deaths = $cache->load();
 	}
 	?>
-	<h1>Latest Killers</h1>
-	<table class="table table-condensed table-striped" id="deathsTable">
-		<tr>
-			<td>Killer</td>
-			<td>Time</td>
-			<td>Victim</td>
-		</tr>
-		<?php if (is_array($deaths)) {
-			foreach ($deaths as $death) { 
-				echo '<tr>';
-				echo "<td><a href='characterprofile.php?name=". $death['killed_by'] ."'>". $death['killed_by'] ."</a></td>";
-				echo "<td>". date($config['date'], $death['time']) ."</td>";
-				echo "<td>At level ". $death['level'] .": <a href='characterprofile.php?name=". $death['victim'] ."'>". $death['victim'] ."</a></td>";
-				echo '</tr>';
-			} 
-		}?>
-	</table>
+	<h2>Latest Killers</h2>
+	<?php if (is_array($deaths)) { ?>
+		<table class="table table-condensed table-striped" id="deathsTable">
+			<tr>
+				<td>Killer</td>
+				<td>Time</td>
+				<td>Victim</td>
+			</tr>
+				<?php foreach ($deaths as $death) { 
+					echo '<tr>';
+					echo "<td><a href='characterprofile.php?name=". $death['killed_by'] ."'>". $death['killed_by'] ."</a></td>";
+					echo "<td>". date($config['date'], $death['time']) ."</td>";
+					echo "<td>At level ". $death['level'] .": <a href='characterprofile.php?name=". $death['victim'] ."'>". $death['victim'] ."</a></td>";
+					echo '</tr>';
+				} ?>
+		</table>
+	<?php } else
+		echo "<h3>There are no killers.</h3>";
+	?>
 	<?php
-	/////////
 }
 include 'layout/overall/footer.php'; ?>
