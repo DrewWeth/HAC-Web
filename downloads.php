@@ -26,14 +26,14 @@
 
 			<tr>
 				<td colspan="2">
-					Linux Users
+					<center>Linux Users</center>
 				</td>
 			</tr>	
 			<tr>
-				<td>
+				<td colspan="2">
 					We currently do not have a dedicated linux, Mac, or web client.
 					<hr>
-					However, if you download Wine, free software that allows you to run windows applications on linux machines, you can run our custom client to connect!
+					However, if you download <a href="http://www.winehq.org/">Wine</a>, free software that allows you to run windows applications on linux machines, you can run our custom client to connect!
 				</td>
 				
 			</tr>
