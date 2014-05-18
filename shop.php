@@ -99,10 +99,10 @@ if (user_logged_in() == true)
 			<input class="btn btn-primary" type="submit" value="  PURCHASE  ">
 		</form>
 		<?php }
-		else ?>
-			<a href="protected.php">PURCHASE</a>
-
+		else { ?>
+			<a class="btn btn-success" href="protected.php">PURCHASE</a>
 		<?php
+		}
 		echo '</td>';
 		echo '</tr>';
 		}
