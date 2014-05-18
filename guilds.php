@@ -677,6 +677,7 @@ if (user_logged_in() === true) {
 
 		<?php
 		}	
+	}
 	} // user logged in
 } // if warname as $_GET
 include 'layout/overall/footer.php';
