@@ -126,6 +126,7 @@ if (!empty($_POST['selected_comment'])) {
 
 		<hr>
 		<h3>Characters</h3>
+		<hr>
 		<?php
 		// Echo character list!
 		$char_array = user_character_list($user_data['id']);
@@ -141,7 +142,7 @@ if (!empty($_POST['selected_comment'])) {
 						echo '<tr>';
 						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
 						?>
-						<td class="pull-right">
+						<td style="width:60%">
 							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
