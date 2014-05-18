@@ -5,30 +5,28 @@ if ($config['log_ip']) {
 ?>
 
 <?php
-	if (empty($_POST) === false) {
+if (empty($_POST) === false) {
+	#if ($_POST['token'] == $_SESSION['token']) {
+	
+	/* Token used for cross site scripting security */
+	if (isset($_POST['token']) && Token::isValid($_POST['token'])) {
+		$skillid = (int)$_POST['selected'];
+		$cache = new Cache('engine/cache/highscores');
+
+		if ($cache->hasExpired()) {
+			$tmp = highscore_getAll();
+
+			$cache->setContent($tmp);
+			$cache->save();
+
+			$array = isset($tmp[$skillid]) ? $tmp[$skillid] : $tmp[7];
+		} else {
+			$tmp = $cache->load();
+			$array = $tmp[$skillid];
+		}
 		
-		#if ($_POST['token'] == $_SESSION['token']) {
-		
-		/* Token used for cross site scripting security */
-		if (isset($_POST['token']) && Token::isValid($_POST['token'])) {
-			
-			$skillid = (int)$_POST['selected'];
-			$cache = new Cache('engine/cache/highscores');
-
-			if ($cache->hasExpired()) {
-				$tmp = highscore_getAll();
-
-				$cache->setContent($tmp);
-				$cache->save();
-
-				$array = isset($tmp[$skillid]) ? $tmp[$skillid] : $tmp[7];
-			} else {
-				$tmp = $cache->load();
-				$array = $tmp[$skillid];
-			}
-			
-			if ($skillid < 9) {
-			// Design and present the list
+		if ($skillid < 9) {
+		// Design and present the list
 			if ($array) {
 				?>
 				<h3>
@@ -53,10 +51,6 @@ if ($config['log_ip']) {
 							
 						?>. <?php echo remaining_seconds_to_clock($cache->remainingTime());?>
 				</div>
-
-
-
-
 
 				<div class="col-sm-3">
 					<tbody>
@@ -89,61 +83,64 @@ if ($config['log_ip']) {
 							</tr>
 						</table>
 					</tbody>
-				
 				</div>
 				<div class="col-sm-9">
-				<tbody>
-					<table class="table table-condensed" id="highscoresTable">
-						<tr>
-							<td>Name</td>
-							<?php
-							if ($skillid == 7) echo '<td>Level</td><td>Experience</td>';
-							else {
-							?>
-							<td>Value</td>
-							<?php
-							}
-							if ($skillid == 7 || $skillid == 6 || $skillid == 5) {
-								echo '<td>Vocation</td>';
-							}
-							?>
-						</tr>
-							<?php
-							foreach ($array as $value) {
-								// start foreach
-								if ($value['group_id'] < 2) {
-									echo '<tr>';
-									echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
-									if ($skillid == 7) echo '<td>'. $value['level'] .'</td>';
-									echo '<td>'. $value['value'] .'</td>';
-									if ($skillid == 7 || $skillid == 6 || $skillid == 5) {
-										echo '<td>'. $value['vocation'] .'</td>';
-									}
-									echo '</tr>';
+					<tbody>
+						<table class="table table-condensed" id="highscoresTable">
+							<tr>
+								<td>Name</td>
+								<?php
+								if ($skillid == 7) 
+									echo '<td>Level</td><td>Experience</td>';
+								else {
+									?>
+									<td>Value</td>
+									<?php
 								}
-								// end foreach
-							}
-							?>
-					</table>
-				</tbody>
-
+								if ($skillid == 7 || $skillid == 6 || $skillid == 5) {
+									echo '<td>Vocation</td>';
+								}
+								?>
+							</tr>
+								<?php
+								foreach ($array as $value) {
+									// start foreach
+									if ($value['group_id'] < 2) {
+										echo '<tr>';
+										echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
+										if ($skillid == 7) echo '<td>'. $value['level'] .'</td>';
+											echo '<td>'. $value['value'] .'</td>';
+										if ($skillid == 7 || $skillid == 6 || $skillid == 5) {
+											echo '<td>'. $value['vocation'] .'</td>';
+										}
+										echo '</tr>';
+									}
+									// end foreach
+								}
+								?>
+						</table>
+					</tbody>
+				</div>
 				<?php
-			} else {
+			} // isarray 
+			else 
+			{
 				echo 'Empty list, it appears all players have less than 500 experience points.';
 			}
-			//Done.
-			}
-		} else {
-			echo 'Token appears to be incorrect.<br><br>';
-			//Token::debug($_POST['token']);
-			echo 'Please clear your web cache/cookies <b>OR</b> use another web browser<br>';
-		}
-	}
-	else
+		} //skill 9
+	} // token 
+	else 
 	{
-		echo "<h3>Nothing Posted</h3>";
+		echo 'Token appears to be incorrect.<br><br>';
+		//Token::debug($_POST['token']);
+		echo 'Please clear your web cache/cookies <b>OR</b> use another web browser<br>';
 	}
-	?>
+}
+else
+{
+	echo "<h3>Nothing Posted</h3>";
+}
+?>
 
 <?php
 /*
