@@ -72,13 +72,6 @@
 
 
 <style>
-
-body {
-  margin: 0;
-  background: #222;
-  min-width: 960px;
-}
-
 rect {
   fill: none;
   pointer-events: all;
@@ -93,12 +86,12 @@ circle {
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
-var width = Math.max(960, innerWidth),
-    height = Math.max(500, innerHeight);
+var width = Math.max(innerWidth, innerWidth),
+    height = Math.max(innerHeight, innerHeight);
 
 var i = 0;
 
-var svg = d3.select("body").append("svg")
+var svg = d3.select("site_content").append("svg")
     .attr("width", width)
     .attr("height", height);
 
