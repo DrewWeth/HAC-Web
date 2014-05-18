@@ -74,13 +74,15 @@ if ($victims) {
 			<td>Time</td>
 			<td>Victim</td>
 		</tr>
-		<?php foreach ($deaths as $death) { 
-			echo '<tr>';
-			echo "<td><a href='characterprofile.php?name=". $death['killed_by'] ."'>". $death['killed_by'] ."</a></td>";
-			echo "<td>". date($config['date'], $death['time']) ."</td>";
-			echo "<td>At level ". $death['level'] .": <a href='characterprofile.php?name=". $death['victim'] ."'>". $death['victim'] ."</a></td>";
-			echo '</tr>';
-		} ?>
+		<?php if (is_array($deaths)) {
+			foreach ($deaths as $death) { 
+				echo '<tr>';
+				echo "<td><a href='characterprofile.php?name=". $death['killed_by'] ."'>". $death['killed_by'] ."</a></td>";
+				echo "<td>". date($config['date'], $death['time']) ."</td>";
+				echo "<td>At level ". $death['level'] .": <a href='characterprofile.php?name=". $death['victim'] ."'>". $death['victim'] ."</a></td>";
+				echo '</tr>';
+			} 
+		}?>
 	</table>
 	<?php
 	/////////
