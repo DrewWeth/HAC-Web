@@ -98,7 +98,7 @@ var width = Math.max(960, innerWidth),
 
 var i = 0;
 
-var svg = d3.select("site_content").append("svg")
+var svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
