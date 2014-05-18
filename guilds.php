@@ -644,37 +644,37 @@ if (user_logged_in() === true) {
 		}
 	}
 	if ($bool) {
-$forumExist = mysql_select_single("SELECT `id` FROM `znote_forum` WHERE `guild_id`='$gid' LIMIT 1;");
-if ($forumExist !== false) {
-	?> - <font size="4"><a href="forum.php?cat=<?php echo $forumExist['id']; ?>">Visit Guild Board</a></font><br><br><br><?php
-}
+		$forumExist = mysql_select_single("SELECT `id` FROM `znote_forum` WHERE `guild_id`='$gid' LIMIT 1;");
+		if ($forumExist !== false) {
+			?> - <font size="4"><a href="forum.php?cat=<?php echo $forumExist['id']; ?>">Visit Guild Board</a></font><br><br><br><?php
+		}
 ?>
 
-<form action="" method="post">
-	<ul>
-		<li>
-			Leave Guild:<br>
-			<select name="leave_guild">
-				<option disabled>With...</option>
-			<?php
-			for ($i = 0; $i < $char_count; $i++) {
-				foreach ($players as $player) {
-					if ($player['name'] == $characters[$i]) {
-						$data = get_player_guild_data(user_character_id($player['name']));
-						if ($data['rank_level'] != 3) echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>';
-						else echo '<option disabled>'. $characters[$i] .' [disabled:Leader]</option>';
+		<form action="" method="post">
+			<ul>
+				<li>
+					Leave Guild:<br>
+					<select name="leave_guild">
+						<option disabled>With...</option>
+					<?php
+					for ($i = 0; $i < $char_count; $i++) {
+						foreach ($players as $player) {
+							if ($player['name'] == $characters[$i]) {
+								$data = get_player_guild_data(user_character_id($player['name']));
+								if ($data['rank_level'] != 3) echo '<option value="'. $characters[$i] .'">'. $characters[$i] .'</option>';
+								else echo '<option disabled>'. $characters[$i] .' [disabled:Leader]</option>';
+							}
+						}
 					}
-				}
-			}
-			?>
-			</select>
-			<input class="btn btn-danger" type="submit" value="Leave Guild">
-		</li>
-	</ul>
-</form>
+					?>
+					</select>
+					<input class="btn btn-danger" type="submit" value="Leave Guild">
+				</li>
+			</ul>
+		</form>
 
-<?php
-} // display form if user has a character in guild
+		<?php
+	} // display form if user has a character in guild
 } // user logged in
-} // if warname as $_GET
+ // if warname as $_GET
 include 'layout/overall/footer.php'; ?>
