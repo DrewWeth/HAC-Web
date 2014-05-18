@@ -20,11 +20,11 @@ if (empty($_GET['name'])) {
 // Display the guild list
 ?>
 
-<h2 class="inline">Guilds</h2>
+	<h2 class="inline">Guilds</h2>
 
-<?php
-if (user_logged_in() === true) {
-?>
+	<?php
+	if (user_logged_in() === true) {
+	?>
 	<tbody>
 		<table class="pull-right">
 			<tr>
@@ -633,7 +633,9 @@ if ($war_exist && $config['guildwar_enabled'] === true) {
 		?>
 </table>
 </tbody>
-<?php } ?>
+<?php 
+} 
+?>
 <!-- leave guild with character -->
 <?php
 $bool = false;
@@ -674,7 +676,8 @@ if (user_logged_in() === true) {
 		</form>
 
 		<?php
-	} // display form if user has a character in guild
-} // user logged in
- // if warname as $_GET
-include 'layout/overall/footer.php'; ?>
+		}	
+	} // user logged in
+} // if warname as $_GET
+include 'layout/overall/footer.php';
+?>

@@ -122,7 +122,6 @@ if (!empty($_POST['selected_comment'])) {
 	$char_count = user_character_list_count($session_user_id);
 	?>
 
-	<div class="well" id="myaccount">
 		<h2 class="inline">Account Management</h2><div class="pull-right"><a class="btn btn-primary inline" href='createcharacter.php'>Create Character</a></div>
 
 		<hr>
@@ -194,7 +193,6 @@ if (!empty($_POST['selected_comment'])) {
 			//Done.
 		}
 		?>
-	</div>
 	<?php
 }
 include 'layout/overall/footer.php'; ?>
