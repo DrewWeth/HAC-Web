@@ -129,7 +129,6 @@ if ($config['log_ip']) {
 					</tbody>
 				</div>
 
-			</div>
 					<?php
 				} else {
 					echo 'Empty list, it appears all players have less than 500 experience points.';
@@ -147,6 +146,7 @@ if ($config['log_ip']) {
 			echo "<h3>Nothing Posted</h3>";
 		}
 		?>
+			</div>
 
 <?php
 /*
