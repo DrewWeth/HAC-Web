@@ -68,6 +68,7 @@ if ($victims) {
 	}
 	?>
 	<h2>Latest Killers</h2>
+	<hr>
 	<?php if (is_array($deaths)) { ?>
 		<table class="table table-condensed table-striped" id="deathsTable">
 			<tr>
@@ -84,7 +85,7 @@ if ($victims) {
 				} ?>
 		</table>
 	<?php } else
-		echo "<h3>There are no killers.</h3>";
+		echo "There are no killers.";
 	?>
 	<?php
 }

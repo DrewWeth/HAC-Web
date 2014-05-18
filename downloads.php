@@ -5,7 +5,7 @@
 		<table class="table table-bordered">
 			<tr>
 				<td colspan="2">
-					<center>Windows Users</center>
+					<center><b>Windows Users</b></center>
 				</td>
 			</tr>
 			<tr>
@@ -28,7 +28,7 @@
 
 			<tr>
 				<td colspan="2">
-					<center>Linux Users</center>
+					<center><b>Linux Users</b></center>
 				</td>
 			</tr>	
 			<tr>

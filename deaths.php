@@ -12,9 +12,10 @@ if ($cache->hasExpired()) {
 } else {
 	$deaths = $cache->load();
 }
+echo "<h2>Latest Deaths</h2>";
+
 if ($deaths) {
 ?>
-<h1>Latest Deaths</h1>
 <table id="deathsTable">
 	<tr class="yellow">
 		<td>Victim</td>
