@@ -3,6 +3,7 @@ if ($config['log_ip']) {
 znote_visitor_insert_detailed_data(3);
 }
 ?>
+<div class="container">
 
 <?php
 if (empty($_POST) === false) {
@@ -131,7 +132,7 @@ else
 	echo "<h3>Nothing Posted</h3>";
 }
 ?>
-
+</div>
 <?php
 /*
 0 fist: SELECT (SELECT `name` from `players` WHERE `player_id`=`id`) AS `name`, `value` FROM `player_skills` WHERE `skillid`=0
