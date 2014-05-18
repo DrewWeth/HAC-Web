@@ -175,13 +175,13 @@ else { // GUILD OVERVIEW
 ?> </h1>
 <tbody>
 <table class="table table-condensed" id="guildViewTable">
-	<th>
+	<tr>
 		<td>Rank</td>
 		<td>Name</td>
 		<td>Level</td>
 		<td>Vocation</td>
 		<td>Status</td>
-	</th>
+	</tr>
 		<?php
 		foreach ($players as $player) {
 			$chardata = user_character_data(user_character_id($player['name']), 'online');
