@@ -580,7 +580,7 @@ function get_guild_wars() {
 
 // TFS 0.3 compatibility
 function get_guild_wars03() {
-	$query = mysql_query("SELECT `id`, `guild_id`, `enemy_id`, `status`, `begin`, `end` FROM `guild_wars` ORDER BY `begin` DESC LIMIT 0, 30") or die(mysql_error());
+	$query = mysql_query("SELECT `id`, `guild_id`, `enemy_id`, `status`, `begin`, `end` FROM `guild_wars` ORDER BY `begin` DESC LIMIT 0, 30") or die;
 	$array = array();
 	while($row = mysql_fetch_assoc($query)) {
 		// Generating TFS 0.2 key values for this 0.3 query for web cross compatibility

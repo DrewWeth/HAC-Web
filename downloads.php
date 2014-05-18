@@ -20,8 +20,8 @@
 					<hr>
 					<label>Step Two</label>
 					<a href="http://static.otland.net/ipchanger.exe">Download</a> and run the IP changer with the IP as: <?php echo $_SERVER['SERVER_NAME']; ?>
-					<label></label>
-					<b>Requirements:</b> <a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21">Microsoft .NET Framework 3.5</a>
+					<label>Requirements:</label>
+					<a href="http://www.microsoft.com/download/en/details.aspx?displaylang=en&amp;id=21">Microsoft .NET Framework 3.5</a>
 				</td>
 
 			</tr>
