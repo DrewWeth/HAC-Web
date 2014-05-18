@@ -14,7 +14,7 @@
 						Token::create();
 					?>
 				</td>
-				<td style="width: 70%">
+				<td style="width: 60%">
 					<input type="submit" class="btn btn-primary" value="Fetch houses">
 				</td>
 			</tr>

@@ -850,7 +850,7 @@ if (!empty($_GET)) {
 	<tbody>
 	<table class="table table-striped znoteTable" id="forumCategoryTable">
 		<tr>
-			<td>Forum Boards</td>
+			<th>Forum Boards</th>
 			<?php
 			$guild = false;
 			foreach($charData as $char) {
