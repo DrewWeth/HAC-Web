@@ -3,8 +3,7 @@ if ($config['log_ip']) {
 znote_visitor_insert_detailed_data(3);
 }
 ?>
-<div class="container">
-
+<div class="container-fluid">
 <?php
 if (empty($_POST) === false) {
 	/* if ($_POST['token'] == $_SESSION['token']) { */
