@@ -535,7 +535,7 @@ function count_guild_members($gid) {
 
 function average_guild_level($gid) {
 	$gid = (int)$gid;
-	return mysql_result(mysql_query("SELECT COUNT((SUM(p.level)/COUNT(p.id)),1) AS 'average' FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid"), 0, 'average');
+	return mysql_result(mysql_query("SELECT ROUND(SUM(p.level)/COUNT(p.id),1) AS 'average' FROM players AS p LEFT JOIN guild_ranks AS gr ON gr.id = p.rank_id WHERE gr.guild_id =$gid"), 0, 'average');
 }
 
 //
