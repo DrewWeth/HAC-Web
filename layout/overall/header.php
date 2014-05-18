@@ -21,5 +21,5 @@ include 'layout/head.php'; ?>
     <?php include 'layout/header.php'; ?>
     <div id="site_content">
       <?php include 'layout/aside.php'; ?>
-      <div class="well">
         <div class="content">
+          <div class="well">
