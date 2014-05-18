@@ -24,7 +24,8 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background: #303335 transparent url(../images/pattern88.png) no-repeat right; 
+  background: #303335 url(../images/pattern88.png); 
+
   color: #7A7A68;
 }
 /*
