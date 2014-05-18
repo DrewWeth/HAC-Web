@@ -1,5 +1,4 @@
 <?php require_once 'engine/init.php';
-protect_page();
 include 'layout/overall/header.php'; 
 
 // Import from config:
@@ -56,20 +55,22 @@ if (!empty($_POST['buy'])) {
 	//var_dump($buy);
 	//echo '<font color="red" size="4">'. $_POST['buy'] .'</font>';
 }
-echo "<div class=\"well\">";
 if ($shop['enabled']) {
 ?>
 
-<h1>Shop Offers</h1>
+<h2>Shop Offers</h2>
 <?php
-if (!empty($_POST['buy'])) {
-	if ($user_znote_data['points'] >= $buy['points']) {
-		?><td>You have <?php echo (int)($user_znote_data['points'] - $buy['points']); ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
+if (user_logged_in() == true)
+{
+	if (!empty($_POST['buy'])) {
+		if ($user_znote_data['points'] >= $buy['points']) {
+			?><td>You have <?php echo (int)($user_znote_data['points'] - $buy['points']); ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
+		} else {
+			?><td>You have <?php echo $user_znote_data['points']; ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
+		}
 	} else {
 		?><td>You have <?php echo $user_znote_data['points']; ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
 	}
-} else {
-	?><td>You have <?php echo $user_znote_data['points']; ?> points. (<a href="buypoints.php">Buy points</a>).</td><?php
 }
 ?>
 <tbody>
@@ -106,7 +107,5 @@ if (!empty($_POST['buy'])) {
 
 <?php 
 } else echo '<h1>Buy Points system disabled.</h1><p>Sorry, this functionality is disabled.</p>';
-
-echo '</div>';
 
 include 'layout/overall/footer.php'; ?>
