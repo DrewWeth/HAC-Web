@@ -330,8 +330,8 @@
 		register 1 account and 1 character.
 	*/
 	$config['ip_security'] = array(
-		'time_period' => 10, // In seconds
-		'max_activity' => 20, // page clicks/visits
+		'time_period' => 5, // In seconds
+		'max_activity' => 10, // page clicks/visits
 		'max_post' => 10, // register, create, highscore, character search such actions
 		'max_account' => 1, // register
 		'max_character' => 1, // create char
