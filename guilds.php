@@ -44,92 +44,89 @@ if (empty($_GET['name'])) {
 			</tr>
 		</table>
 	</tbody>
-<?php
-}
-else
-	echo "<p class=\"pull-right\">Log in to create a guild</p>";
-?>
-<hr>
+	<?php }
+	else
+		echo "<p class=\"pull-right\">Log in to create a guild</p>"; ?>
+	<hr>
 
-<?php
-$guilds = get_guilds_list();
-if ($guilds !== false) {
-?>
-<tbody>
-	<table class="table table-condensed table-striped" id="guildsTable">
-		<tr>
-			<td>Guild Name</td>
-			<td>Members</td>
-			<td>Average Level</td>
-			<td>Founded</td>
-		</tr>
-			<?php
-			foreach ($guilds as $guild) {
-				$gcount = count_guild_members($guild['id']);
-				if ($gcount >= 1) {
-					$url = url("guilds.php?name=". $guild['name']);
-					echo '<tr class="special" onclick="javascript:window.location.href=\'' . $url . '\'">';
-					echo '<td>'. $guild['name'] .'</td>';
-					echo '<td>'. count_guild_members($guild['id']) .'</td>';
-					echo '<td>'. average_guild_level($guild['id']) .'</td>';
-					echo '<td>'. date($config['date'],$guild['creationdata']) .'</td>';
-					echo '</tr>';
-				}
-			}
-			?>
-	</table>
-</tbody>
-<?php } else echo '<p>Guild list is empty.</p>';?>
-
-
-
-<!-- user stuff -->
-<?php
-if (user_logged_in() === true) {	
-	// post verifications
-	// CREATE GUILD
-	if (!empty($_POST['selected_char']) && !empty($_POST['guild_name'])) {
-		if (user_character_account_id($_POST['selected_char']) === $session_user_id) {
-			//code here
-			$name = sanitize($_POST['selected_char']);
-			$user_id = user_character_id($name);
-			$char_data = user_character_data($user_id, 'level', 'online');
-			
-			// If character level is high enough
-			if ($char_data['level'] >= $config['create_guild_level']) {
-			
-				// If character is offline
-				if ($char_data['online'] == 0) {
-					$acc_data = user_data($user_data['id'], 'premdays');
-					
-					// If character is premium
-					if ($config['guild_require_premium'] == false || $acc_data['premdays'] > 0) {
-					
-						if (get_character_guild_rank($user_id) < 1) {
-						
-							if (preg_match("/^[a-zA-Z_ ]+$/", $_POST['guild_name'])) {
-							// Only allow normal symbols as guild name
-								
-								$guildname = sanitize($_POST['guild_name']);
-								
-								$gid = get_guild_id($guildname);
-								if ($gid === false) {
-									create_guild($user_id, $guildname);
-									header('Location: success.php');
-									exit();
-								} else echo 'A guild with that name already exist.';
-							} else echo 'Guild name may only contain a-z, A-Z and spaces.';
-						} else echo 'You are already in a guild.';
-					} else echo 'You need a premium account to create a guild.';
-				} else echo 'Your character must be offline to create a guild.';
-			} else echo $name .' is level '. $char_data['level'] .'. But you need level '. $config['create_guild_level'] .'+ to create your own guild!';
-		}
-	}
-	// end	
+	<?php
+	$guilds = get_guilds_list();
+	if ($guilds !== false) {
 	?>
-	
-<?php
-} 
+	<tbody>
+		<table class="table table-condensed table-striped" id="guildsTable">
+			<tr>
+				<td>Guild Name</td>
+				<td>Members</td>
+				<td>Average Level</td>
+				<td>Founded</td>
+			</tr>
+				<?php
+				foreach ($guilds as $guild) {
+					$gcount = count_guild_members($guild['id']);
+					if ($gcount >= 1) {
+						$url = url("guilds.php?name=". $guild['name']);
+						echo '<tr class="special" onclick="javascript:window.location.href=\'' . $url . '\'">';
+						echo '<td>'. $guild['name'] .'</td>';
+						echo '<td>'. count_guild_members($guild['id']) .'</td>';
+						echo '<td>'. average_guild_level($guild['id']) .'</td>';
+						echo '<td>'. date($config['date'],$guild['creationdata']) .'</td>';
+						echo '</tr>';
+					}
+				}
+				?>
+		</table>
+	</tbody>
+	<?php 
+	} else 
+		echo '<p>Guild list is empty.</p>';?>
+
+
+	<!-- user stuff -->
+	<?php
+	if (user_logged_in() === true) {	
+		// post verifications
+		// CREATE GUILD
+		if (!empty($_POST['selected_char']) && !empty($_POST['guild_name'])) {
+			if (user_character_account_id($_POST['selected_char']) === $session_user_id) {
+				//code here
+				$name = sanitize($_POST['selected_char']);
+				$user_id = user_character_id($name);
+				$char_data = user_character_data($user_id, 'level', 'online');
+				
+				// If character level is high enough
+				if ($char_data['level'] >= $config['create_guild_level']) {
+				
+					// If character is offline
+					if ($char_data['online'] == 0) {
+						$acc_data = user_data($user_data['id'], 'premdays');
+						
+						// If character is premium
+						if ($config['guild_require_premium'] == false || $acc_data['premdays'] > 0) {
+						
+							if (get_character_guild_rank($user_id) < 1) {
+							
+								if (preg_match("/^[a-zA-Z_ ]+$/", $_POST['guild_name'])) {
+								// Only allow normal symbols as guild name
+									
+									$guildname = sanitize($_POST['guild_name']);
+									
+									$gid = get_guild_id($guildname);
+									if ($gid === false) {
+										create_guild($user_id, $guildname);
+										header('Location: success.php');
+										exit();
+									} else echo 'A guild with that name already exist.';
+								} else echo 'Guild name may only contain a-z, A-Z and spaces.';
+							} else echo 'You are already in a guild.';
+						} else echo 'You need a premium account to create a guild.';
+					} else echo 'Your character must be offline to create a guild.';
+				} else echo $name .' is level '. $char_data['level'] .'. But you need level '. $config['create_guild_level'] .'+ to create your own guild!';
+			}
+		}	
+	}
+}	
+ 
 else { // GUILD OVERVIEW
 	$gid = get_guild_id($_GET['name']);
 	if ($gid === false) {
@@ -171,7 +168,6 @@ else { // GUILD OVERVIEW
 			}
 		}
 	}
-}
 	// Display the specific guild page
 ?>
 
@@ -679,7 +675,6 @@ if (user_logged_in() === true) {
 
 		<?php
 		}	
-	
 	} // user logged in
 } // if warname as $_GET
 include 'layout/overall/footer.php';
