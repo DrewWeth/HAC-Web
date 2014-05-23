@@ -43,6 +43,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				?>
 				</tr>
 				<tr>
+					<td>Guild</td>
 					<td><font class="profile_font" name="profile_font_vocation"><b><?php echo $guild['rank_name']; ?></b> of <a href="guilds.php?name=<?php echo $guild_name; ?>"><?php echo $guild_name; ?></a></font>
 					</td>
 				</tr>
@@ -65,9 +66,9 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 					<td>
 						<?php 
 						if ($profile_data['online'] == 1) {
-							echo '<font class="profile_font" name="profile_font_online" color="green"><b>ONLINE</b></font>';
+							echo '<label class="label label-success">Online</label>';
 						} else {
-							echo '<font class="profile_font" name="profile_font_online" color="red"><b>OFFLINE</b></font>';
+							echo '<label class="label label-danger">Offline</label>';
 						}
 					?></td></tr>
 				<tr><td><font class="profile_font" name="profile_font_created">Created:
@@ -76,7 +77,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 						<?php echo(date($config['date'],$profile_znote_data['created'])); ?></font>
 					</td>
 				</tr>
-				<tr><td><font class="profile_font" name="profile_font_comment">Comment</font></td><td><textarea name="profile_comment_textarea" cols="50" rows="1" readonly="readonly"><?php echo $profile_znote_data['comment']; ?></textarea></td></tr>
+				<tr><td><font class="profile_font" name="profile_font_comment">Comment</font></td><td><?php echo $profile_znote_data['comment']; ?></td></tr>
 				<!-- DEATH LIST -->
 				</tbody>
 				</table>
@@ -152,31 +153,30 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				<?php
 				if (user_character_hide($profile_data['name']) != 1 && user_character_list_count(user_character_account_id($name)) > 1) {
 				?>
-					<li>
-						<b>Other visible characters on this account:</b><br>
+						<p><b>Other characters</b></p>
 						<?php
 						$characters = user_character_list(user_character_account_id($profile_data['name']));
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						if ($characters && count($characters) > 1) {
 							?>
 							<tbody>
-							<table id="characterprofileTable">
+							<table class="table table-striped table-condensed" id="characterprofileTable">
 								<tr>
-									<td>
-										Name:
-									</td>
-									<td>
-										Level:
-									</td>
-									<td>
-										Vocation:
-									</td>
-									<td>
-										Last login:
-									</td>
-									<td>
-										Status:
-									</td>
+									<th>
+										Name
+									</th>
+									<th>
+										Level
+									</th>
+									<th>
+										Vocation
+									</th>
+									<th>
+										Last login
+									</th>
+									<th>
+										Status
+									</th>
 								</tr>
 								<?php
 								// Design and present the list
@@ -202,7 +202,6 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 							}
 								//Done.
 							?>
-					</li>
 				<?php
 				}
 				?>

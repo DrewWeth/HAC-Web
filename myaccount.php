@@ -139,9 +139,10 @@ if (!empty($_POST['selected_comment'])) {
 					foreach ($char_array as $value) {
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						echo '<tr>';
-						echo '<td><a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a></td>';
+						echo '<td">';
+						echo '<a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a>';
 						?>
-						<td style="width:45%">
+						<div class="pull-right">
 							<form action="" class="inline" method="post">
 								<?php
 								echo '<input type="hidden" name="change_gender" value="'. $value['name'] .'"/>'; 	
@@ -176,6 +177,7 @@ if (!empty($_POST['selected_comment'])) {
 								?>
 								<input class="btn btn-danger" type="submit" value="Delete">	
 							</form>
+						</div>
 						</td>
 
 						<?php
