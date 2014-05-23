@@ -20,7 +20,7 @@ if ($cache->hasExpired()) {
 }
 if ($killers) {
 ?>
-<h1>Biggest Murders</h1>
+<h2>Biggest Murders</h2>
 <tbody>
 <table class="table table-condensed table-striped" id="killersTable">
 	<tr>
@@ -68,7 +68,6 @@ if ($victims) {
 	}
 	?>
 	<h2>Latest Killers</h2>
-	<hr>
 	<?php if (is_array($deaths)) { ?>
 		<table class="table table-condensed table-striped" id="deathsTable">
 			<tr>
