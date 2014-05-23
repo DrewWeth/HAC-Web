@@ -20,7 +20,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 		
 		<!-- PROFILE MARKUP HERE-->
 			<?php ?>
-			<h1><font class="profile_font" name="profile_font_header">Profile: <?php echo $profile_data['name']; ?></font></h1>
+			<h2><font class="profile_font" name="profile_font_header"><?php echo $profile_data['name']; ?></font></h2	>
 			<tbody>
 			<table class="table table-condensed table-striped">
 				<tr>
@@ -81,7 +81,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				<!-- DEATH LIST -->
 				</tbody>
 				</table>
-					<b>Death List:</b><br>
+					<b>Death List</b><br>
 					<?php
 					if ($config['TFSVersion'] == 'TFS_02') {
 						$array = user_fetch_deathlist($user_id);
@@ -152,7 +152,7 @@ if (isset($_GET['name']) === true && empty($_GET['name']) === false) {
 				<!-- CHARACTER LIST -->
 				<?php
 				if (user_character_hide($profile_data['name']) != 1 && user_character_list_count(user_character_account_id($name)) > 1) {
-				?>
+				?>		<br>
 						<p><b>Other characters</b></p>
 						<?php
 						$characters = user_character_list(user_character_account_id($profile_data['name']));
