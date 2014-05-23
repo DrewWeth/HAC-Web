@@ -23,5 +23,5 @@ include 'layout/head.php'; ?>
       <?php include 'layout/aside.php'; ?>
         <div class="content">
           <div class="well well-large">
-            <dic class="container">
+            <div class="container">
             
