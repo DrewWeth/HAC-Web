@@ -22,5 +22,6 @@ include 'layout/head.php'; ?>
     <div id="site_content">
       <?php include 'layout/aside.php'; ?>
         <div class="content">
-          <dic class="container">
-            <div class="well">
+          <div class="well">
+            <dic class="container">
+            
