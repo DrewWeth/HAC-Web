@@ -22,6 +22,6 @@ include 'layout/head.php'; ?>
     <div id="site_content">
       <?php include 'layout/aside.php'; ?>
         <div class="content">
-          <div class="well well-large">
+          <div class="well well-sm">
             <div class="container" style="width:inherit">
             
