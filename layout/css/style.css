@@ -24,8 +24,7 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
-  background: #061123; 
-
+  background: #061123 url(../images/bg.png); 
   color: #7A7A68;
 }
 /*
@@ -149,8 +148,6 @@ ol li {
 }
 
 header { 
-  background: #061123 url(../images/bg.png);
-  height: 100%;
   /* border-bottom: 1px solid #FFF; */
 }
 
