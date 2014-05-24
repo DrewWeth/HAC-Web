@@ -18,20 +18,17 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 */
 
-html {
-    background: #061123 url(../images/bg.png) no-repeat center; 
-    -webkit-background-size: contain;
-      -moz-background-size: contain;
-        -o-background-size: contain;
-          background-size: contain;
-}
-
 body { 
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 14px;
   line-height: 1.42857143;
   padding-top:0
   color: #7A7A68;
+  background: #061123 url(../images/bg.png) no-repeat center top; 
+    -webkit-background-size: contain;
+      -moz-background-size: contain;
+        -o-background-size: contain;
+          background-size: contain;
 }
 /*
 p { 
