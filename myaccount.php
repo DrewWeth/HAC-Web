@@ -139,7 +139,7 @@ if (!empty($_POST['selected_comment'])) {
 					foreach ($char_array as $value) {
 						// characters: [0] = name, [1] = level, [2] = vocation, [3] = town_id, [4] = lastlogin, [5] = online
 						echo '<tr>';
-						echo '<td">';
+						echo '<td>';
 						echo '<a href="characterprofile.php?name='. $value['name'] .'">'. $value['name'] .'</a>';
 						?>
 						<div class="pull-right">
@@ -179,9 +179,8 @@ if (!empty($_POST['selected_comment'])) {
 							</form>
 						</div>
 						</td>
-
+						</tr>
 						<?php
-						echo '</tr>';
 						$characters[] = $value['name'];
 					}
 				?>
