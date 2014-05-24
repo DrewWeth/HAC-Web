@@ -21,15 +21,15 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 
 body { 
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 14px;
-  line-height: 1.42857143;
-  background: #061123 url(../images/bg.png) no-repeat center center fixed; 
+  /*font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;*/
+  /*line-height: 1.42857143;*/
+  background: #061123 url(../images/bg.png) no-repeat center center; 
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
           background-size: cover;
-  color: #7A7A68;
+  /*color: #7A7A68;*/
 }
 /*
 p { 
@@ -40,7 +40,7 @@ p {
 img { 
   border: 0;
 }
-*/
+*//*
 h1, h2, h3, h4, h5, h6 { 
   color: #362C20;
   letter-spacing: 0em;
@@ -77,7 +77,7 @@ h5, h6 {
   font: italic 95% arial;
   letter-spacing: normal;
   padding: 0 0 15px 0;
-}
+}*/
 /*
 a, a:hover { 
   outline: none;
@@ -240,7 +240,7 @@ nav {
   -webkit-border: 7px 7px 7px 7px;
   padding: 0 15px 5px 13px;
 }
-  
+ /* 
 .sidebar h3, .content h1 { 
   padding: 5px 15px 20px 15px;
   font: 250% 'Yanone Kaffeesatz';
@@ -272,7 +272,7 @@ nav {
 .sidebar li a:hover { 
   text-decoration: underline;
 } 
-
+*/
 .sidebar_item, .content_item { 
   padding: 15px 0;
 }
@@ -305,7 +305,7 @@ nav {
   padding: 0 0 4px 28px;
   line-height: 1.5em;
 }
-
+/*
 footer { 
   width: 100%;
   font-family: 'lucida sans', sans-serif;
@@ -332,7 +332,7 @@ footer a:hover {
   color: #FFF;
   text-decoration: none;
 }
-
+*/
 .form_settings { 
   margin: 15px 0 0 0;
 }
@@ -411,18 +411,6 @@ table tr th, table tr td {
   text-align: left;
 }
 */
-
-tr.yellow td {
-  background: #555555;
-  color: #FFF;
-  padding: 7px 4px;
-  text-align: left;
-}
-  
-table tr td { 
-  color: #47433F;
-  border-top: 1px solid #FFF;
-}
 
 /* guild war */
 tr.special:hover td {
