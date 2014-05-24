@@ -149,8 +149,8 @@ ol li {
 }
 
 header { 
-  background: ##061123 url(../images/bg.png);
-  height: 200px;
+  background: #061123 url(../images/bg.png);
+  height: 100%;
   /* border-bottom: 1px solid #FFF; */
 }
 
