@@ -215,17 +215,17 @@ header {
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover { 
   padding: 10px 0 0 0;
-  color: #D30000;
+  color: #FFFFFF;
   text-decoration: none;
 }
 
 #logo_text h1 a .logo_colour { 
-  color: #9C9C9C;
+  color: #FFFFFF;
   font: normal 200%;
 }
 
 #logo_text a:hover .logo_colour { 
-  color: #FFF;
+  color: #D30000;
 }
 
 
