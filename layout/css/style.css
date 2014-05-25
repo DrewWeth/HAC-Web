@@ -42,13 +42,6 @@ article, aside, figure, footer, header, hgroup, nav, section {
    width: 100%;
   } 
 
-  .navbar-default {  
-margin: 40px auto 0 auto; 
-}
-
-.navbar {
-  margin-top: 100px;
-}
 
 .well {
   min-height: 20px;
