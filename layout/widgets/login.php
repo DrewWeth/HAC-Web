@@ -12,7 +12,7 @@
 				</tr>
 				<tr>
 					<td>
-						<input class="form-control" type="text" name="username">
+						<input class="form-control input-sm" type="text" name="username">
 					</td>
 				</tr>
 				<tr>
@@ -21,12 +21,12 @@
 					</td>
 				</tr>
 					<td>
-						<input class="form-control" type="password" name="password">
+						<input class="form-control input-sm" type="password" name="password">
 					</td>
 				</tr>
 				<tr>
 					<td colspan="2">
-						<center><input type="submit" class="btn btn-primary" value="Log in"></center>
+						<center><input type="submit" class="btn btn-primary btn-sm" value="Log in"></center>
 					</td>
 					<?php
 						/* Form file */

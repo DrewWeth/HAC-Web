@@ -17,6 +17,12 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 
 */
+
+a {
+  color: #5B4979;
+  text-decoration: none;
+}
+
 .table {  
    width: 100%;   
    margin-bottom: 5px;
