@@ -38,12 +38,12 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			<tbody>
 			<table id="housesTable" class="table table-striped">
 				<tr>
-					<td>Name</td>
-					<td>Size</td>
-					<td>Doors</td>
-					<td>Beds</td>
-					<td>Price</td>
-					<td>Owner</td>
+					<t>Name</th>
+					<th>Size</th>
+					<th>Doors</th>
+					<th>Beds</th>
+					<th>Price</th>
+					<th>Owner</th>
 					
 				</tr>
 					<?php

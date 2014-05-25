@@ -8,9 +8,9 @@ if ($array) {
 	<tbody>
 	<table class="table table-condensed" id="onlinelistTable">
 		<tr>
-			<td>Name</td>
-			<td>Level</td>
-			<td>Vocation</td>
+			<th>Name</th>
+			<th>Level</th>
+			<th>Vocation</th>
 		</tr>
 			<?php
 			foreach ($array as $value) {

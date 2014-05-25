@@ -4,9 +4,9 @@
 	<tbody>
 		<table class="table table-bordered">
 			<tr>
-				<td colspan="2">
-					<center><b>Windows Users</b></center>
-				</td>
+				<th colspan="2">
+					<center>Windows Users</center>
+				</th>
 			</tr>
 			<tr>
 				<td style="width:50%"><center><b>Custom Client</b></center></td><td><center><b>Original Client</b></center></td>
@@ -25,14 +25,17 @@
 				</td>
 
 			</tr>
-
+		</table>
+	</tbody>
+	<table>
+		<tbody>
 			<tr>
-				<td colspan="2">
-					<center><b>Linux Users</b></center>
-				</td>
+				<th>
+					<center>Linux Users</center>
+				</th>
 			</tr>	
 			<tr>
-				<td colspan="2">
+				<td>
 					We currently do not have a dedicated linux, Mac, or web client.
 					<hr>
 					However, if you download <a href="http://www.winehq.org/">Wine</a>, free software that allows you to run windows applications on linux machines, you can run our custom client to connect!

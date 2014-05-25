@@ -9,15 +9,15 @@
 	<tbody>
 		<table class="table table-condensed table-striped">
 			<tr>
-				<td>
+				<th>
 					Starting
-				</td>
-				<td>
+				</th>
+				<th>
 					Ending
-				</td>
-				<td>
+				</th>
+				<th>
 					Multiplier
-				</td>
+				</th>
 			</tr>
 			<tr><td>1</td><td>7</td><td>70x</td></tr>
 			<tr><td>8</td><td>29</td><td>60x</td></tr>

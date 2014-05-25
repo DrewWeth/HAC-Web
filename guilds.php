@@ -55,10 +55,10 @@ if (empty($_GET['name'])) {
 	<tbody>
 		<table class="table table-condensed table-striped" id="guildsTable">
 			<tr>
-				<td>Guild Name</td>
-				<td>Members</td>
-				<td>Average Level</td>
-				<td>Founded</td>
+				<th>Guild Name</th>
+				<th>Members</th>
+				<th>Average Level</th>
+				<th>Founded</th>
 			</tr>
 				<?php
 				foreach ($guilds as $guild) {
