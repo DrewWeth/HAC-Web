@@ -47,7 +47,7 @@ if (empty($_GET['name'])) {
 	<?php }
 	else
 		echo "<p class=\"pull-right\">Log in to create a guild</p>"; ?>
-
+	<hr>
 	<?php
 	$guilds = get_guilds_list();
 	if ($guilds !== false) {
