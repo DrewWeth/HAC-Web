@@ -15,8 +15,8 @@ include 'layout/head.php'; ?>
 
   ga('create', 'UA-50866761-1', 'honorandchaos.com');
   ga('send', 'pageview');
-
 </script>
+<link rel="shortcut icon" href="http://items.znote.eu/2413.gif">
   <div id="main">
     <?php include 'layout/header.php'; ?>
     <div id="site_content">
