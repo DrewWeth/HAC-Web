@@ -18,8 +18,19 @@ article, aside, figure, footer, header, hgroup, nav, section {
 
 */
 
+
+
+
+.label-success {
+  background-color: #3cb521;
+}
+.label-success[href]:hover,
+.label-success[href]:focus {
+  background-color: #128f76;
+}
+
 a {
-  color: #5B4979;
+  color: #07C;
   text-decoration: none;
 }
 
