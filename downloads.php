@@ -36,9 +36,10 @@
 			</tr>	
 			<tr>
 				<td>
-					We currently do not have a dedicated linux, Mac, or web client.
-					<hr>
-					However, if you download <a href="http://www.winehq.org/">Wine</a>, free software that allows you to run windows applications on linux machines, you can run our custom client to connect!
+					<ul>
+						<li>We currently do not have a dedicated linux, Mac, or web client.</li>
+						<li>However, if you download <a href="http://www.winehq.org/">Wine</a>, free software that allows you to run windows applications on linux machines, you can run our custom client to connect!</li>
+					</ul>
 				</td>
 				
 			</tr>
