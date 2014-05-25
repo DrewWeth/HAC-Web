@@ -121,11 +121,11 @@ if (!empty($_POST['selected_comment'])) {
 	// end
 	$char_count = user_character_list_count($session_user_id);
 	?>
-	<div>
-		<h2 class="inline">Account Management</h2><div class="pull-right"><a class="btn btn-primary inline" href='createcharacter.php'>Create Character</a></div>
+	<div style="margin-top: 20">
+		<h3 class="inline">Account Management</h3><div class="pull-right"><a class="btn btn-primary inline" href='createcharacter.php'>Create Character</a></div>
 	</div>
 		<hr>
-		<h3>Characters</h3>
+		<h2>Characters</h2>
 		<?php
 		// Echo character list!
 		$char_array = user_character_list($user_data['id']);

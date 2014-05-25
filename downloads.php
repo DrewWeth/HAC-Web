@@ -1,6 +1,6 @@
 <?php require_once 'engine/init.php'; include 'layout/overall/header.php'; ?>
-	<center><h2>Downloads</h2></center>
-	<h3>Connection Information</h3>
+	<center><h3>Downloads</h2></center>
+	<h2>Connection Information</h2>
 	<tbody>
 		<table class="table table-bordered table-striped">
 			<tr>
