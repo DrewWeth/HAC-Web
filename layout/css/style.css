@@ -36,7 +36,7 @@ article, aside, figure, footer, header, hgroup, nav, section {
  } 
 
  .navbar { 
-   position: relative;  
+   position:absolute;bottom:0;
    min-height: 44px; 
    margin: 40px auto 0 auto; 
    width: 100%;
@@ -178,7 +178,7 @@ ol li {
 
 .news-post-date {
   top: 5px;
-  right: 5px;
+  right: 10px;
   position: absolute
 }
 
@@ -194,6 +194,7 @@ header {
 #logo { 
   width: 1000px;
   height: 200px;
+  position: relative;
   background: transparent url(../images/logo.png) no-repeat right;
   color: #E70606;
   padding: 0;
