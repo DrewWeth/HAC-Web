@@ -121,7 +121,7 @@ if (!empty($_POST['selected_comment'])) {
 	// end
 	$char_count = user_character_list_count($session_user_id);
 	?>
-	<div style="margin-top: 20">
+	<div style="margin-top: 20px">
 		<h3 class="inline">Account Management</h3><div class="pull-right"><a class="btn btn-primary inline" href='createcharacter.php'>Create Character</a></div>
 	</div>
 		<hr>
