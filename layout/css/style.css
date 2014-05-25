@@ -196,7 +196,7 @@ header {
   height: 200px;
   position: relative;
   background: transparent url(../images/logo.png) no-repeat right;
-  color: #E70606;
+  color: #FFFFFF;
   padding: 0;
 }
 
@@ -215,7 +215,7 @@ header {
 
 #logo_text h1, #logo_text h1 a, #logo_text h1 a:hover { 
   padding: 10px 0 0 0;
-  color: #FFF;
+  color: #D30000;
   text-decoration: none;
 }
 
