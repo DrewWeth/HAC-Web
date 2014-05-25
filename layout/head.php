@@ -10,8 +10,7 @@
   <script type='text/javascript' src="layout/js/jquery-2.1.1.min.js"></script>
   <script type='text/javascript' src="layout/js/bootstrap.min.js"></script>
 
-
-
+  <link rel="shortcut icon" href="/icon.ico" >
 
   <!-- modernizr enables HTML5 elements and feature detects -->
 </head>
