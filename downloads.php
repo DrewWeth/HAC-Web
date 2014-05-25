@@ -2,7 +2,7 @@
 	<center><h2>Downloads</h2></center>
 	<h3>Connection Information</h3>
 	<tbody>
-		<table class="table table-bordered">
+		<table class="table table-bordered table-striped">
 			<tr>
 				<th colspan="2">
 					<center>Windows Users</center>
@@ -27,7 +27,7 @@
 			</tr>
 		</table>
 	</tbody>
-	<table>
+	<table class="table table-striped">
 		<tbody>
 			<tr>
 				<th>
