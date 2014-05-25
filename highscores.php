@@ -46,7 +46,7 @@ if (empty($_POST) === false) {
 				} ?>. <?php echo remaining_seconds_to_clock($cache->remainingTime()); ?>
 				</div>
 
-				<div class="col-sm-3">
+				<div class="col-sm-4">
 					<tbody>
 						<table class="table table-condensed">
 							<tr>
@@ -78,7 +78,7 @@ if (empty($_POST) === false) {
 						</table>
 					</tbody>
 				</div>
-				<div class="col-sm-9">
+				<div class="col-sm-8">
 				<tbody>
 					<table class="table table-condensed" id="highscoresTable">
 						<tr>
