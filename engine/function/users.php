@@ -1085,10 +1085,9 @@ function user_create_account($register_data) {
 	$data = '\''. implode('\', \'', $register_data) .'\'';
 	
 	mysql_query("INSERT INTO `accounts` ($fields) VALUES ($data)") or die(mysql_error());
-	
+
 	$account_id = user_id($register_data['name']);
-	mysql_query("INSERT INTO `znote_accounts` (`account_id`, `ip`, `created`) VALUES ('$account_id', '$ip', '$created')") or die(mysql_error());
-	
+	mysql_query("INSERT INTO `znote_accounts` (`account_id`, `ip`, `created`, `points`) VALUES ('$account_id', '$ip', '$created', 100)") or die(mysql_error());
 	//TO-DO: mail server and verification.
 	// http://www.web-development-blog.com/archives/send-e-mail-messages-via-smtp-with-phpmailer-and-gmail/
 }

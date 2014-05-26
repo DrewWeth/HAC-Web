@@ -38,7 +38,7 @@ if (empty($_POST) === false && $config['TFSVersion'] === 'TFS_03') {
 			<tbody>
 			<table id="housesTable" class="table table-striped">
 				<tr>
-					<t>Name</th>
+					<th>Name</th>
 					<th>Size</th>
 					<th>Doors</th>
 					<th>Beds</th>

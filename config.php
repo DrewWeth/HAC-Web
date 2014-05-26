@@ -16,7 +16,7 @@
 	$config['sqlUser'] = 'root';
 	
 	// phpmyadmin password for OT server:
-	$config['sqlPassword'] = '';
+	$config['sqlPassword'] = '96875252Abc';
 	
 	// The database name to connect to. (This is usually same as username).
 	$config['sqlDatabase'] = 'hac';
@@ -83,7 +83,7 @@
 	// ---------------- \\
 	
 	// Max characters on each account:
-	$config['max_characters'] = 7;
+	$config['max_characters'] = 8;
 	
 	// Available character vocation users can create.
 	$config['available_vocations'] = array(1, 2, 3, 4);
@@ -125,7 +125,7 @@
 	// ONLY FOR TFS 0.2 (TFS 0.3/4 users don't need to care about this, as its fully loaded from db)
 	$config['house'] = array(
 			'house_file' => 'C:\Users\Administrator\Desktop\HAC\server\data\world\Artii-house.xml',
-			'price_sqm' => '50', // price per house sqm
+			'price_sqm' => '200', // price per house sqm
 		);
 
 	$config['status'] = array(
