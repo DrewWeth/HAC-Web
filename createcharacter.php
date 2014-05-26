@@ -100,39 +100,62 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 		echo '</b></font>';
 	}
 	?>
+	<div class="col-sm-6">
 	<form action="" method="post">
-		<ul>
-			<li>
-				Name:<br>
-				<input type="text" name="name">
-			</li>
-			<li>
-				<!-- Available vocations to select from when creating character -->
-				Vocation:<br>
-				<select name="selected_vocation">
-				<?php foreach ($config['available_vocations'] as $id) { ?>
-				<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
-				<?php } ?>
-				</select>
-			</li>
-			<li>
-				<!-- Available genders to select from when creating character -->
-				Gender:<br>
-				<select name="selected_gender">
-				<option value="1">Male</option>
-				<option value="0">Female</option>
-				</select>
-			</li>
+		<table>
+			<tbody>
+				<tr>
+					<td>
+						Name <input type="text" name="name">
+					</td>
+				</tr>
+				<tr>
+					<td>
+					<!-- Available vocations to select from when creating character -->
+					Vocation
+					<select name="selected_vocation">
+					<?php foreach ($config['available_vocations'] as $id) { ?>
+					<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
+					<?php } ?>
+					</select>
+				</td>
+			</tr>
+			<tr>
+				<td>
+					Gender 
+					<select name="selected_gender">
+					<option value="1">Male</option>
+					<option value="0">Female</option>
+					</select>
+				</td>
+			</tr>
 			
 			<?php
 				/* Form file */
 				Token::create();
 			?>
-			<li>
-				<input type="submit" value="Create Character">
-			</li>
-		</ul>
+		</tbody>
+	</table>
+	<input type="submit" value="Create Character">		
 	</form>
+</div>
+<div class="col-sm-6">
+	<p id="desc"></p>
+<script>
+	function changeDesc(){
+		if (this.value == 1)
+			document.getElementById('desc').innerHtml = "Sorcerer cast aggressive spells. They gain 40 mana per level.";
+		else if (this.value == 2)
+			document.getElementById('desc').innerHtml = "Druids can cast cast support and healing spells. They gain 40 mana per level.";
+		else if (this.value == 3)
+			document.getElementById('desc').innerHtml = "Paladins have stamina (200 mana at all levels) and cast from that stamina pool.";
+		else
+			document.getElementById('desc').innerHtml = "Knights have no mana and cast spells based on exhaust.";
+	}
+	var select_vocation_button = document.getElementById('selected_vocation');
+	select_vocation_button.addEventListener('change',changeDesc);
+</script>
+</div>
 	<?php
 }
 include 'layout/overall/footer.php'; ?>
