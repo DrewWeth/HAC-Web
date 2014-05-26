@@ -113,9 +113,9 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 					<td>
 					<!-- Available vocations to select from when creating character -->
 					Vocation
-					<select name="selected_vocation">
+					<select multiple class="form-control" name="selected_vocation">
 					<?php foreach ($config['available_vocations'] as $id) { ?>
-					<option class="form-control" value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
+					<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
 					<?php } ?>
 					</select>
 				</td>
@@ -140,24 +140,12 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	</form>
 </div>
 <div class="col-sm-6">
-	<p id="desc"></p>
-<script>
-	
-	var select_vocation_button = document.getElementById('selected_vocation');
-	select_vocation_button.addEventListener('mouseup',function changeDesc(){
-		var opt = document.getElementById('selected_vocation').value;
-		if (opt == 1)
-			document.getElementById('desc').innerHtml = "Sorcerer cast aggressive spells. They gain 40 mana per level.";
-		else if (opt == 2)
-			document.getElementById('desc').innerHtml = "Druids can cast cast support and healing spells. They gain 40 mana per level.";
-		else if (opt == 3)
-			document.getElementById('desc').innerHtml = "Paladins have stamina (200 mana at all levels) and cast from that stamina pool.";
-		else if (opt == 4)
-			document.getElementById('desc').innerHtml = "Knights have no mana and cast spells based on exhaust.";
-		else
-			document.getElementById('desc').innerHtml = "Check input.";
-	});
-</script>
+	<p>
+		<ul>
+			<li>Knights have no mana, only timed exhaust.</li>
+			<li>Paladins have stamina- a pool of 200 mana to use spells with.</li>
+		</ul>
+	</p>
 </div>
 	<?php
 }
