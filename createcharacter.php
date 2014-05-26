@@ -136,7 +136,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			?>
 		</tbody>
 	</table>
-	<input type="submit" value="Create Character">		
+	<input class="btn btn-primary" type="submit" value="Create Character">		
 	</form>
 </div>
 <div class="col-sm-6">
