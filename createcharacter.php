@@ -143,14 +143,17 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	<p id="desc"></p>
 <script>
 	function changeDesc(){
-		if (this.value == 1)
+		var opt = document.getElementById('selected_vocation').value;
+		if (opt == 1)
 			document.getElementById('desc').innerHtml = "Sorcerer cast aggressive spells. They gain 40 mana per level.";
-		else if (this.value == 2)
+		else if (opt == 2)
 			document.getElementById('desc').innerHtml = "Druids can cast cast support and healing spells. They gain 40 mana per level.";
-		else if (this.value == 3)
+		else if (opt == 3)
 			document.getElementById('desc').innerHtml = "Paladins have stamina (200 mana at all levels) and cast from that stamina pool.";
-		else
+		else if (opt == 4)
 			document.getElementById('desc').innerHtml = "Knights have no mana and cast spells based on exhaust.";
+		else
+			document.getElementById('desc').innerHtml = "Check input.";
 	}
 	var select_vocation_button = document.getElementById('selected_vocation');
 	select_vocation_button.addEventListener('change',changeDesc);
