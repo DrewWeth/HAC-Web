@@ -102,17 +102,17 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	?>
 	<div class="col-sm-6">
 	<form action="" method="post">
-		<table class="table table-condensed table-striped">
+		<table class="table table-condensed">
 			<tbody>
 				<tr>
 					<td>
-						Name <input class="form-control" type="text" name="name">
+						<label>Name</label><input class="form-control" type="text" name="name">
 					</td>
 				</tr>
 				<tr>
 					<td>
 					<!-- Available vocations to select from when creating character -->
-					Vocation
+					<label>Vocation</label>
 					<select multiple class="form-control" name="selected_vocation">
 					<?php foreach ($config['available_vocations'] as $id) { ?>
 					<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
@@ -122,7 +122,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			</tr>
 			<tr>
 				<td>
-					Gender 
+					<label>Gender</label> 
 					<select class="form-control" name="selected_gender">
 					<option value="1">Male</option>
 					<option value="0">Female</option>
@@ -138,7 +138,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	</table>
 	<input class="btn btn-primary" type="submit" value="Create Character">		
 	</form>
-</div>
+</div>	
 <div class="col-sm-6">
 	<p>
 		<ul>
