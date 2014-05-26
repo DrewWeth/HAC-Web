@@ -102,7 +102,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 	?>
 	<div class="col-sm-6">
 	<form action="" method="post">
-		<table>
+		<table class="table table-condensed table-striped">
 			<tbody>
 				<tr>
 					<td>
