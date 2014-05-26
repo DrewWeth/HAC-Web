@@ -13,7 +13,7 @@
 	// ------------------------ \\
 	
 	// phpmyadmin username for OT server: (DONT USE "root" if ur hosting to public.).
-	$config['sqlUser'] = 'root';
+	$config['sqlUser'] = 'hac_user';
 	
 	// phpmyadmin password for OT server:
 	$config['sqlPassword'] = '96875252Abc';
