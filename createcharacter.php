@@ -106,7 +106,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			<tbody>
 				<tr>
 					<td>
-						Name <input type="text" name="name">
+						Name <input class="form-control" type="text" name="name">
 					</td>
 				</tr>
 				<tr>
@@ -115,7 +115,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 					Vocation
 					<select name="selected_vocation">
 					<?php foreach ($config['available_vocations'] as $id) { ?>
-					<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
+					<option class="form-control" value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
 					<?php } ?>
 					</select>
 				</td>
@@ -123,7 +123,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			<tr>
 				<td>
 					Gender 
-					<select name="selected_gender">
+					<select class="form-control" name="selected_gender">
 					<option value="1">Male</option>
 					<option value="0">Female</option>
 					</select>
@@ -142,7 +142,9 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 <div class="col-sm-6">
 	<p id="desc"></p>
 <script>
-	function changeDesc(){
+	
+	var select_vocation_button = document.getElementById('selected_vocation');
+	select_vocation_button.addEventListener('mouseup',function changeDesc(){
 		var opt = document.getElementById('selected_vocation').value;
 		if (opt == 1)
 			document.getElementById('desc').innerHtml = "Sorcerer cast aggressive spells. They gain 40 mana per level.";
@@ -154,9 +156,7 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 			document.getElementById('desc').innerHtml = "Knights have no mana and cast spells based on exhaust.";
 		else
 			document.getElementById('desc').innerHtml = "Check input.";
-	}
-	var select_vocation_button = document.getElementById('selected_vocation');
-	select_vocation_button.addEventListener('change',changeDesc);
+	});
 </script>
 </div>
 	<?php
