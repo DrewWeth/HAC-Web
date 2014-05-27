@@ -52,7 +52,8 @@
 		'3' => 'Fallen',
 		'5' => 'Selroth',
 		'6' => 'Seldia',
-		'7' => 'Shadow Wood',
+		'7' => 'Wayport',
+		'8' => 'Tutorial Island'
 	);
 	
 	// Leave on black square in map and player should get teleported to their selected town.
@@ -86,10 +87,10 @@
 	$config['max_characters'] = 8;
 	
 	// Available character vocation users can create.
-	$config['available_vocations'] = array(1, 2, 3, 4);
+	$config['available_vocations'] = array(0);
 	
 	// Available towns (specify town ids, etc: (0, 1, 2); to display 3 town options (town id 0, 1 and 2).
-	$config['available_towns'] = array(1);
+	$config['available_towns'] = array(8);
 	
 	$config['level'] = 8;
 	$config['health'] = 185;
@@ -101,7 +102,7 @@
 	$config['femaleOutfitId'] = 138;
 	
 	// No vocation info (if user select vocation id 0, we force thees configurations on him
-	$config['nvlevel'] = 1;
+	$config['nvlevel'] = 0;
 	$config['nvHealth'] = 150;
 	$config['nvMana'] = 0;
 	$config['nvCap'] = 400;
@@ -401,7 +402,7 @@
 			'itemid' => 8925, // item to get in-game
 			'count' => 1, //if type is 2, this represents premium days
 			'describtion' => "A solar axe", // Describtion shown on website
-			'points' => 3 // How many points this offer costs
+			'points' => 110 // How many points this offer costs
 		),
 		
 		// offer 2
@@ -410,15 +411,22 @@
 			'itemid' => 8931,
 			'count' => 1,
 			'describtion' => "An ember sword",
-			'points' => 3
+			'points' => 110
 		),
 
 		3 => array(
 			'type' => 1,
 			'itemid' => 2444,
-			'count' => 3,
+			'count' => 1,
 			'describtion' => "A hammer of wrath",
-			'points' => 2
+			'points' => 110
+		),
+		4 => array(
+			'type' => 1,
+			'itemid' => 2409,
+			'count' => 1,
+			'describtion' => "A serpent sword (atk: 29)",
+			'points' => 60
 		)
 	);
 ?>
