@@ -108,45 +108,30 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 					<td>
 						<label>Name</label><input class="form-control" type="text" name="name">
 					</td>
-				</tr>
+				</tr>				
+				<input type="hidden" name="selected_vocation" value="0">
+				
+				<!--
+					Bring this array back
+				-->
 				<tr>
 					<td>
-					<!-- Available vocations to select from when creating character -->
-					<label>Vocation</label>
-					<select multiple class="form-control" name="selected_vocation">
-					<?php foreach ($config['available_vocations'] as $id) { ?>
-					<option value="<?php echo $id; ?>"><?php echo vocation_id_to_name($id); ?></option>
-					<?php } ?>
-					</select>
-				</td>
-			</tr>
-			<tr>
-				<td>
-					<label>Gender</label> 
-					<select class="form-control" name="selected_gender">
-					<option value="1">Male</option>
-					<option value="0">Female</option>
-					</select>
-				</td>
-			</tr>
-			
+						<label>Gender</label> 
+						<select multiple class="form-control" name="selected_gender">
+						<option value="1">Male</option>
+						<option value="0">Female</option>
+						</select>
+					</td>
+				</tr>
 			<?php
 				/* Form file */
 				Token::create();
 			?>
-		</tbody>
-	</table>
-	<input class="btn btn-primary" type="submit" value="Create Character">		
+			</tbody>
+		</table>
+		<input class="btn btn-primary" type="submit" value="Create Character">		
 	</form>
-</div>	
-<div class="col-sm-6">
-	<p>
-		<ul>
-			<li>Knights have no mana, only timed exhaust.</li>
-			<li>Paladins have stamina- a pool of 200 mana to use spells with.</li>
-		</ul>
-	</p>
-</div>
+	</div>	
 	<?php
 }
 include 'layout/overall/footer.php'; ?>
