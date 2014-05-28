@@ -108,8 +108,8 @@
 	$config['nvCap'] = 400;
 	$config['nvSoul'] = 0;
 	
-	$config['nvForceTown'] = 0; // Force a town to no vocation even though he selected something else? 0 = no, 1 = yes.
-	$config['nvTown'] = 0; // Town id to force no vocations to get to, if nvForceTown is 1.
+	$config['nvForceTown'] = 1; // Force a town to no vocation even though he selected something else? 0 = no, 1 = yes.
+	$config['nvTown'] = 8; // Town id to force no vocations to get to, if nvForceTown is 1.
 	
 	// Minimum allowed character name letters. Etc 4 letters: "Kåre".
 	$config['minL'] = 4;
