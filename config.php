@@ -33,7 +33,15 @@
 	
 	// Vocation ids and names.
 	$config['vocations'] = array(
-		0 => 'No vocation'
+		0 => 'No vocation',
+		1 => 'Sorcerer',
+		2 => 'Druid',
+		3 => 'Paladin',
+		4 => 'Knight',
+		5 => 'Master Sorcerer',
+		6 => 'Elder Druid',
+		7 => 'Royal Paladin',
+		8 => 'Elite Knight'
 	);
 	
 	// Town ids and names: (In RME map editor, open map, click CTRL + T to view towns, their names and their IDs. 
