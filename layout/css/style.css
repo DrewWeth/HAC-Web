@@ -194,7 +194,7 @@ ol li {
 }
 
 .news-post-date {
-  top: 5px;
+  bottom: 5px;
   right: 10px;
   position: absolute
 }
