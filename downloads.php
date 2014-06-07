@@ -13,7 +13,7 @@
 			</tr>
 
 			<tr>
-				<td><center><a href="https://dl.dropboxusercontent.com/u/7902004/hac_client.zip"><img class="img-responsive" src="https://farm3.staticflickr.com/2912/14016545650_9866bd310b_o.gif"></a></center></td>
+				<td><center><a href="https://dl.dropboxusercontent.com/u/7902004/Honor%20and%20Chaos.zip"><img class="img-responsive" src="https://farm3.staticflickr.com/2912/14016545650_9866bd310b_o.gif"></a></center></td>
 				<td>
 					<label>Step One</label>
 					<a href="http://remeresmapeditor.com/rmedl.php?file=tibia<?php echo ($config['client']); ?>.exe">Download</a>, install, and start the tibia client if you havent already.
