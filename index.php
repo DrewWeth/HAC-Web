@@ -40,9 +40,11 @@
 
 			?>
 					<h2>
-						<?php echo TransformToBBCode($n['title'])."</h2><div class=\"news-post-date\">".date($config['date'], $n['date'])."</div>"; ?>
+						<?php echo TransformToBBCode($n['title'])."</h2>"; ?>
 		
-					<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
+					<p><?php echo TransformToBBCode(nl2br($n['text'])); 
+						echo date($config['date'], $n['date']);
+					?></p>
 			</div>
 			<?php
 			$i = $i + 1;
