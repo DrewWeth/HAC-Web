@@ -1,1 +1,1 @@
-[{"name":"Drew","level":"447","experience":"1471029110"},{"name":"Bereaver","level":"52","experience":"2164200"},{"name":"Shitface","level":"8","experience":"4200"},{"name":"Account Manager","level":"1","experience":"0"}]
+[{"name":"GM Drew","level":"79","experience":"7759200"},{"name":"E'rcde","level":"53","experience":"2218561"},{"name":"Bereaver","level":"52","experience":"2164200"},{"name":"Paladin","level":"42","experience":"1084200"},{"name":"Github","level":"38","experience":"817415"}]

@@ -20,10 +20,10 @@
 				</th>
 			</tr>
 			<tr><td>Tutorial Island</td><td></td><td>30x</td></tr>
-			<tr><td>8</td><td>29</td><td>60x</td></tr>
+			<tr><td>8</td><td>29</td><td>55x</td></tr>
 			<tr><td>30</td><td>49</td><td>50x</td></tr>
-			<tr><td>50</td><td>74</td><td>35x</td></tr>
-			<tr><td>75</td><td>94</td><td>20x</td></tr>
+			<tr><td>50</td><td>74</td><td>40x</td></tr>
+			<tr><td>75</td><td>94</td><td>25x</td></tr>
 			<tr><td>95</td><td>119</td><td>15x</td></tr>
 			<tr><td>120</td><td>149</td><td>10x</td></tr>
 			<tr><td>150</td><td>199</td><td>5x</td></tr>
