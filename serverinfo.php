@@ -19,7 +19,7 @@
 					Multiplier
 				</th>
 			</tr>
-			<tr><td>1</td><td>7</td><td>70x</td></tr>
+			<tr><td>Tutorial Island</td><td></td><td>30x</td></tr>
 			<tr><td>8</td><td>29</td><td>60x</td></tr>
 			<tr><td>30</td><td>49</td><td>50x</td></tr>
 			<tr><td>50</td><td>74</td><td>35x</td></tr>
