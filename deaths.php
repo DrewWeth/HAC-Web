@@ -16,11 +16,11 @@ echo "<h2>Latest Deaths</h2>";
 
 if ($deaths) {
 ?>
-<table id="deathsTable">
-	<tr class="yellow">
-		<td>Victim</td>
-		<td>Time</td>
-		<td>Killer</td>
+<table class="table table-striped table-condensed" id="deathsTable">
+	<tr>
+		<th>Victim</th>
+		<th>Time</th>
+		<th>Killer</th>
 	</tr>
 	<?php foreach ($deaths as $death) { 
 		echo '<tr>';
