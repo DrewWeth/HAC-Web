@@ -36,7 +36,7 @@
 			$i = 1;
 			foreach ($news as $n) {
 				if ($i != 1)
-					echo '<div class="well well-sm">';
+					echo '<div class="well-news">';
 
 			?>
 					<h2>
