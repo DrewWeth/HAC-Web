@@ -35,18 +35,19 @@
 			<div id="news">
 
 			<?php
-			int i = 1;
+			$i = 1;
 			foreach ($news as $n) {
-			if (i != 1)
-				echo '<div class="well well-sm">';
+				if ($i != 1)
+					echo '<div class="well well-sm">';
 			?>
 					<h2>
 						<?php echo TransformToBBCode($n['title'])."</h2><div class=\"news-post-date\">".date($config['date'], $n['date'])."</div>"; ?>
 						<hr>
 					<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
 			</div>
+			
 			<?php
-			i = i + 1;
+			$i = $i + 1;
 			}
 			?>
 			
