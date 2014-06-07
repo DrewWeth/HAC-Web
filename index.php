@@ -32,14 +32,10 @@
 			}
 			?>
 
-			<div id="news">
-
 			<?php
 			$i = 1;
 			foreach ($news as $n) {
-				if ($i == 1)
-					echo '</div>';
-				else
+				if ($i != 1)
 					echo '<div class="well well-sm">';
 
 			?>
