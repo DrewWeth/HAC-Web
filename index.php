@@ -40,7 +40,7 @@
 
 			?>
 					<h2>
-						<?php echo TransformToBBCode($n['title'])."</h2> <div class=\"small\">".date($config['date'], $n['date'])."</div>"; ?>
+						<?php echo TransformToBBCode($n['title'])."</h2> <small>".date($config['date'], $n['date'])."</small>"; ?>
 		
 					<p><?php echo TransformToBBCode(nl2br($n['text'])); ?></p>
 			</div>
