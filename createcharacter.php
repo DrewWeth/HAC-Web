@@ -109,8 +109,6 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 						<label>Name</label><input class="form-control" type="text" name="name">
 					</td>
 				</tr>				
-				<input type="hidden" name="selected_vocation" value="0">
-				
 				<!--
 					Bring this array back
 				-->
@@ -122,6 +120,18 @@ if (isset($_GET['success']) && empty($_GET['success'])) {
 						<option value="0">Female</option>
 						</select>
 					</td>
+				</tr>
+					<td>
+						<label>Vocation</label> 
+						<select multiple class="form-control" name="selected_vocation">
+						<option value="1">Sorcerer</option>
+						<option value="2">Druid</option>
+						<option value="3">Paladin</option>
+						<option value="4">Knight</option>
+						</select>
+					</td>
+				<tr>
+
 				</tr>
 			<?php
 				/* Form file */

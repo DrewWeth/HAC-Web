@@ -87,7 +87,7 @@
 	$config['max_characters'] = 8;
 	
 	// Available character vocation users can create.
-	$config['available_vocations'] = array(0);
+	$config['available_vocations'] = array(1, 2, 3, 4);
 	
 	// Available towns (specify town ids, etc: (0, 1, 2); to display 3 town options (town id 0, 1 and 2).
 	$config['available_towns'] = array(8);
@@ -102,7 +102,7 @@
 	$config['femaleOutfitId'] = 138;
 	
 	// No vocation info (if user select vocation id 0, we force thees configurations on him
-	$config['nvlevel'] = 0;
+	$config['nvlevel'] = 8;
 	$config['nvHealth'] = 150;
 	$config['nvMana'] = 0;
 	$config['nvCap'] = 400;
